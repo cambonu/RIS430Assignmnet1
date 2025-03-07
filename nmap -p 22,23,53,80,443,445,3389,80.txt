@@ -1,0 +1,18 @@
+nmap -p 22,23,53,80,443,445,3389,8080 10.0.0.116
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-03-04 20:17 EST
+Nmap scan report for 10.0.0.116
+Host is up (0.00049s latency).
+
+PORT     STATE  SERVICE
+22/tcp   closed ssh
+23/tcp   closed telnet
+53/tcp   closed domain
+80/tcp   open   http
+443/tcp  open   https
+445/tcp  closed microsoft-ds
+3389/tcp closed ms-wbt-server
+8080/tcp closed http-proxy
+MAC Address: 00:0C:29:CB:4D:D5 (VMware)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.25 seconds
+                                                            

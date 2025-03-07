@@ -1,0 +1,679 @@
+ nmap -A -oN detailed_scan.txt 10.0.0.0/24
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2025-03-04 11:45 EST
+Nmap scan report for 10.0.0.1
+Host is up (0.0058s latency).
+Not shown: 990 closed tcp ports (reset)
+PORT      STATE    SERVICE     VERSION
+22/tcp    filtered ssh
+23/tcp    filtered telnet
+53/tcp    open     domain      dnsmasq 2.83
+| dns-nsid: 
+|_  bind.version: dnsmasq-2.83
+80/tcp    open     http        Xfinity Broadband Router Server
+|_http-title: Rogers
+|_http-server-header: Xfinity Broadband Router Server
+|_http-trane-info: Problem with XML parsing of /evox/about
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Content-type: text/html
+|     X-robots-tag: noindex,nofollow
+|     X-Frame-Options: deny
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Strict-Transport-Security: max-age=15768000; includeSubdomains
+|     Pragma: no-cache
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Content-Security-Policy: default-src 'self' ; style-src 'self' ; frame-src 'self' ; font-src 'self' ; form-action 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; connect-src 'self'; object-src 'none'; media-src 'none'; script-nonce 'none'; plugin-types 'none'; reflected-xss 'none'; report-uri 'none';
+|     Content-Length: 8642
+|     Connection: close
+|     Date: Mon, 12 Jan 1970 13:57:14 GMT
+|     Server: Xfinity Broadband Router Server
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml"
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Content-type: text/html
+|     X-robots-tag: noindex,nofollow
+|     X-Frame-Options: deny
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Strict-Transport-Security: max-age=15768000; includeSubdomains
+|     Pragma: no-cache
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Content-Security-Policy: default-src 'self' ; style-src 'self' ; frame-src 'self' ; font-src 'self' ; form-action 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; connect-src 'self'; object-src 'none'; media-src 'none'; script-nonce 'none'; plugin-types 'none'; reflected-xss 'none'; report-uri 'none';
+|     Content-Length: 8642
+|     Connection: close
+|     Date: Mon, 12 Jan 1970 13:57:15 GMT
+|     Server: Xfinity Broadband Router Server
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+|_    <html xmlns="http://www.w3.org/1999/xhtml"
+111/tcp   filtered rpcbind
+443/tcp   open     ssl/https   Xfinity Broadband Router Server
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: Xfinity Broadband Router Server
+| ssl-cert: Subject: commonName=myrouter.io/organizationName=Comcast Corporation/stateOrProvinceName=Pennsylvania/countryName=US
+| Subject Alternative Name: DNS:myrouter.io
+| Not valid before: 2024-01-08T00:00:00
+|_Not valid after:  2025-01-07T23:59:59
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Content-type: text/html
+|     X-robots-tag: noindex,nofollow
+|     X-Frame-Options: deny
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Strict-Transport-Security: max-age=15768000; includeSubdomains
+|     Pragma: no-cache
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Content-Security-Policy: default-src 'self' ; style-src 'self' ; frame-src 'self' ; font-src 'self' ; form-action 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; connect-src 'self'; object-src 'none'; media-src 'none'; script-nonce 'none'; plugin-types 'none'; reflected-xss 'none'; report-uri 'none';
+|     Content-Length: 8642
+|     Connection: close
+|     Date: Mon, 12 Jan 1970 13:57:20 GMT
+|     Server: Xfinity Broadband Router Server
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+|     <html xmlns="http://www.w3.org/1999/xhtml"
+|   HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Content-type: text/html
+|     X-robots-tag: noindex,nofollow
+|     X-Frame-Options: deny
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Strict-Transport-Security: max-age=15768000; includeSubdomains
+|     Pragma: no-cache
+|     Cache-Control: no-store, no-cache, must-revalidate
+|     Content-Security-Policy: default-src 'self' ; style-src 'self' ; frame-src 'self' ; font-src 'self' ; form-action 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; connect-src 'self'; object-src 'none'; media-src 'none'; script-nonce 'none'; plugin-types 'none'; reflected-xss 'none'; report-uri 'none';
+|     Content-Length: 8642
+|     Connection: close
+|     Date: Mon, 12 Jan 1970 13:57:21 GMT
+|     Server: Xfinity Broadband Router Server
+|     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+|_    <html xmlns="http://www.w3.org/1999/xhtml"
+| tls-alpn: 
+|   http/1.0
+|_  http/1.1
+|_http-title: Rogers
+8080/tcp  filtered http-proxy
+8181/tcp  filtered intermapper
+9000/tcp  filtered cslistener
+49152/tcp open     upnp        Portable SDK for UPnP devices 1.6.22 (Linux 5.4.201-prod-23.2-231009; UPnP 1.0)
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.94SVN%I=7%D=3/4%Time=67C72F2B%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,24AD,"HTTP/1\.0\x20200\x20OK\r\nContent-type:\x20text/html\r\n
+SF:X-robots-tag:\x20noindex,nofollow\r\nX-Frame-Options:\x20deny\r\nX-XSS-
+SF:Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\r
+SF:\nStrict-Transport-Security:\x20max-age=15768000;\x20includeSubdomains\
+SF:r\nPragma:\x20no-cache\r\nCache-Control:\x20no-store,\x20no-cache,\x20m
+SF:ust-revalidate\r\nContent-Security-Policy:\x20default-src\x20'self'\x20
+SF:;\x20style-src\x20'self'\x20;\x20frame-src\x20'self'\x20;\x20font-src\x
+SF:20'self'\x20;\x20form-action\x20'self'\x20;\x20script-src\x20'self'\x20
+SF:'unsafe-inline'\x20'unsafe-eval';\x20img-src\x20'self';\x20connect-src\
+SF:x20'self';\x20object-src\x20'none';\x20media-src\x20'none';\x20script-n
+SF:once\x20'none';\x20plugin-types\x20'none';\x20reflected-xss\x20'none';\
+SF:x20report-uri\x20'none';\r\nContent-Length:\x208642\r\nConnection:\x20c
+SF:lose\r\nDate:\x20Mon,\x2012\x20Jan\x201970\x2013:57:14\x20GMT\r\nServer
+SF::\x20Xfinity\x20Broadband\x20Router\x20Server\r\n\r\n\n<!DOCTYPE\x20htm
+SF:l\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\"\x20\"http
+SF:://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\">\n<html\x20xmlns=\"h
+SF:ttp://www\.w3\.org/1999/xhtml\"")%r(HTTPOptions,24AD,"HTTP/1\.0\x20200\
+SF:x20OK\r\nContent-type:\x20text/html\r\nX-robots-tag:\x20noindex,nofollo
+SF:w\r\nX-Frame-Options:\x20deny\r\nX-XSS-Protection:\x201;\x20mode=block\
+SF:r\nX-Content-Type-Options:\x20nosniff\r\nStrict-Transport-Security:\x20
+SF:max-age=15768000;\x20includeSubdomains\r\nPragma:\x20no-cache\r\nCache-
+SF:Control:\x20no-store,\x20no-cache,\x20must-revalidate\r\nContent-Securi
+SF:ty-Policy:\x20default-src\x20'self'\x20;\x20style-src\x20'self'\x20;\x2
+SF:0frame-src\x20'self'\x20;\x20font-src\x20'self'\x20;\x20form-action\x20
+SF:'self'\x20;\x20script-src\x20'self'\x20'unsafe-inline'\x20'unsafe-eval'
+SF:;\x20img-src\x20'self';\x20connect-src\x20'self';\x20object-src\x20'non
+SF:e';\x20media-src\x20'none';\x20script-nonce\x20'none';\x20plugin-types\
+SF:x20'none';\x20reflected-xss\x20'none';\x20report-uri\x20'none';\r\nCont
+SF:ent-Length:\x208642\r\nConnection:\x20close\r\nDate:\x20Mon,\x2012\x20J
+SF:an\x201970\x2013:57:15\x20GMT\r\nServer:\x20Xfinity\x20Broadband\x20Rou
+SF:ter\x20Server\r\n\r\n\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20
+SF:XHTML\x201\.0\x20Strict//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/xh
+SF:tml1-strict\.dtd\">\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\""
+SF:);
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.94SVN%T=SSL%I=7%D=3/4%Time=67C72F31%P=x86_64-pc-linux-g
+SF:nu%r(GetRequest,24AD,"HTTP/1\.0\x20200\x20OK\r\nContent-type:\x20text/h
+SF:tml\r\nX-robots-tag:\x20noindex,nofollow\r\nX-Frame-Options:\x20deny\r\
+SF:nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20no
+SF:sniff\r\nStrict-Transport-Security:\x20max-age=15768000;\x20includeSubd
+SF:omains\r\nPragma:\x20no-cache\r\nCache-Control:\x20no-store,\x20no-cach
+SF:e,\x20must-revalidate\r\nContent-Security-Policy:\x20default-src\x20'se
+SF:lf'\x20;\x20style-src\x20'self'\x20;\x20frame-src\x20'self'\x20;\x20fon
+SF:t-src\x20'self'\x20;\x20form-action\x20'self'\x20;\x20script-src\x20'se
+SF:lf'\x20'unsafe-inline'\x20'unsafe-eval';\x20img-src\x20'self';\x20conne
+SF:ct-src\x20'self';\x20object-src\x20'none';\x20media-src\x20'none';\x20s
+SF:cript-nonce\x20'none';\x20plugin-types\x20'none';\x20reflected-xss\x20'
+SF:none';\x20report-uri\x20'none';\r\nContent-Length:\x208642\r\nConnectio
+SF:n:\x20close\r\nDate:\x20Mon,\x2012\x20Jan\x201970\x2013:57:20\x20GMT\r\
+SF:nServer:\x20Xfinity\x20Broadband\x20Router\x20Server\r\n\r\n\n<!DOCTYPE
+SF:\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\"\x2
+SF:0\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\">\n<html\x20xm
+SF:lns=\"http://www\.w3\.org/1999/xhtml\"")%r(HTTPOptions,24AD,"HTTP/1\.0\
+SF:x20200\x20OK\r\nContent-type:\x20text/html\r\nX-robots-tag:\x20noindex,
+SF:nofollow\r\nX-Frame-Options:\x20deny\r\nX-XSS-Protection:\x201;\x20mode
+SF:=block\r\nX-Content-Type-Options:\x20nosniff\r\nStrict-Transport-Securi
+SF:ty:\x20max-age=15768000;\x20includeSubdomains\r\nPragma:\x20no-cache\r\
+SF:nCache-Control:\x20no-store,\x20no-cache,\x20must-revalidate\r\nContent
+SF:-Security-Policy:\x20default-src\x20'self'\x20;\x20style-src\x20'self'\
+SF:x20;\x20frame-src\x20'self'\x20;\x20font-src\x20'self'\x20;\x20form-act
+SF:ion\x20'self'\x20;\x20script-src\x20'self'\x20'unsafe-inline'\x20'unsaf
+SF:e-eval';\x20img-src\x20'self';\x20connect-src\x20'self';\x20object-src\
+SF:x20'none';\x20media-src\x20'none';\x20script-nonce\x20'none';\x20plugin
+SF:-types\x20'none';\x20reflected-xss\x20'none';\x20report-uri\x20'none';\
+SF:r\nContent-Length:\x208642\r\nConnection:\x20close\r\nDate:\x20Mon,\x20
+SF:12\x20Jan\x201970\x2013:57:21\x20GMT\r\nServer:\x20Xfinity\x20Broadband
+SF:\x20Router\x20Server\r\n\r\n\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//
+SF:DTD\x20XHTML\x201\.0\x20Strict//EN\"\x20\"http://www\.w3\.org/TR/xhtml1
+SF:/DTD/xhtml1-strict\.dtd\">\n<html\x20xmlns=\"http://www\.w3\.org/1999/x
+SF:html\"");
+MAC Address: AC:4C:A5:FB:C8:4A (Technicolor CH USA)
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.8
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel:5.4.201-prod-23.2-231009
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   5.84 ms 10.0.0.1
+
+Nmap scan report for 10.0.0.92
+Host is up (0.0018s latency).
+Not shown: 992 closed tcp ports (reset)
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 3.0.5
+22/tcp   open  ssh         OpenSSH 8.9p1 Ubuntu 3ubuntu0.11 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 45:32:fa:19:5a:65:da:d3:fa:00:99:0f:e7:45:54:3e (ECDSA)
+|_  256 c2:8f:ea:4b:c6:83:d8:59:ec:2d:05:53:fb:59:84:0a (ED25519)
+25/tcp   open  smtp        Postfix smtpd
+| ssl-cert: Subject: commonName=ubuntu
+| Subject Alternative Name: DNS:ubuntu
+| Not valid before: 2025-02-13T16:53:59
+|_Not valid after:  2035-02-11T16:53:59
+|_smtp-commands: RIS430-Target.phub.net.cable.rogers.com, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, SMTPUTF8, CHUNKING
+|_ssl-date: TLS randomness does not represent time
+53/tcp   open  domain      ISC BIND 9.18.30-0ubuntu0.22.04.2 (Ubuntu Linux)
+| dns-nsid: 
+|_  bind.version: 9.18.30-0ubuntu0.22.04.2-Ubuntu
+80/tcp   open  http        Apache httpd 2.4.52 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.52 (Ubuntu)
+139/tcp  open  netbios-ssn Samba smbd 4.6.2
+445/tcp  open  netbios-ssn Samba smbd 4.6.2
+3128/tcp open  http-proxy  Squid http proxy 5.9
+|_http-title: ERROR: The requested URL could not be retrieved
+|_http-server-header: squid/5.9
+MAC Address: C0:BF:BE:4B:5D:07 (Unknown)
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.8
+Network Distance: 1 hop
+Service Info: Host:  RIS430-Target.phub.net.cable.rogers.com; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2025-03-04T16:52:42
+|_  start_date: N/A
+|_nbstat: NetBIOS name: RIS430-TARGET, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.82 ms 10.0.0.92
+
+Nmap scan report for 10.0.0.94
+Host is up (0.010s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+49152/tcp open  tcpwrapped
+62078/tcp open  tcpwrapped
+MAC Address: 5A:0B:43:68:87:A7 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=3/4%OT=62078%CT=1%CU=30620%PV=Y%DS=1%DC=D%G=Y%M=5A0
+OS:B43%TM=67C72FF5%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=104%TI=Z%CI=R
+OS:D%II=RI%TS=21)SEQ(SP=105%GCD=1%ISR=104%TI=Z%CI=RD%II=RI%TS=21)OPS(O1=M5B
+OS:4NW6NNT11SLL%O2=M5B4NW6NNT11SLL%O3=M5B4NW6NNT11%O4=M5B4NW6NNT11SLL%O5=M5
+OS:B4NW6NNT11SLL%O6=M5B4NNT11SLL)WIN(W1=B50%W2=AD8%W3=4E8%W4=FFFF%W5=418%W6
+OS:=1FA)ECN(R=Y%DF=Y%T=40%W=0%O=M5B4NW6SLL%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S
+OS:+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=
+OS:)T5(R=Y%DF=N%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%
+OS:A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=40%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)U1(R=Y%D
+OS:F=N%T=40%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=0%RUD=G)IE(R=Y%DFI=S%T=40
+OS:%CD=S)
+
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   10.02 ms 10.0.0.94
+
+Nmap scan report for 10.0.0.116
+Host is up (0.0011s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     nginx
+|_http-title: Did not follow redirect to https://10.0.0.116/
+443/tcp open  ssl/http nginx
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=gsm.gbuser.net/organizationName=Greenbone AG Customer/stateOrProvinceName=Niedersachsen/countryName=DE
+| Subject Alternative Name: DNS:gsm.gbuser.net
+| Not valid before: 2025-02-07T07:40:09
+|_Not valid after:  2027-02-07T07:40:09
+|_http-title: Greenbone Enterprise Appliance
+| http-robots.txt: 1 disallowed entry 
+|_/
+MAC Address: 00:0C:29:CB:4D:D5 (VMware)
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.8
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.06 ms 10.0.0.116
+
+Nmap scan report for 10.0.0.129
+Host is up (0.24s latency).
+All 1000 scanned ports on 10.0.0.129 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: F0:86:20:09:66:36 (Arcadyan)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT       ADDRESS
+1   241.67 ms 10.0.0.129
+
+Nmap scan report for 10.0.0.153
+Host is up (0.011s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+49152/tcp open  unknown
+62078/tcp open  tcpwrapped
+MAC Address: 06:B2:47:4A:5C:50 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=3/4%OT=49152%CT=1%CU=44241%PV=Y%DS=1%DC=D%G=Y%M=06B
+OS:247%TM=67C72FF5%P=x86_64-pc-linux-gnu)SEQ(SP=101%GCD=1%ISR=10C%TI=Z%CI=R
+OS:D%II=RI%TS=21)SEQ(SP=101%GCD=1%ISR=10D%TI=Z%CI=RD%II=RI%TS=21)SEQ(SP=102
+OS:%GCD=1%ISR=10B%TI=Z%CI=RD%II=RI%TS=21)SEQ(SP=102%GCD=1%ISR=10C%TI=Z%CI=R
+OS:D%II=RI%TS=21)SEQ(SP=105%GCD=1%ISR=10C%TI=Z%CI=RD%II=RI%TS=20)OPS(O1=M5B
+OS:4NW6NNT11SLL%O2=M5B4NW6NNT11SLL%O3=M5B4NW6NNT11%O4=M5B4NW6NNT11SLL%O5=M5
+OS:B4NW6NNT11SLL%O6=M5B4NNT11SLL)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFF
+OS:F%W6=FFFF)ECN(R=Y%DF=Y%T=40%W=FFFF%O=M5B4NW6SLL%CC=Y%Q=)T1(R=Y%DF=Y%T=40
+OS:%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=
+OS:%RD=0%Q=)T5(R=Y%DF=N%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%
+OS:W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=40%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)
+OS:U1(R=Y%DF=N%T=40%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=0%RUD=G)IE(R=Y%DF
+OS:I=S%T=40%CD=S)
+
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   11.17 ms 10.0.0.153
+
+Nmap scan report for 10.0.0.175
+Host is up (0.0074s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+7000/tcp open  rtsp    AirTunes rtspd 377.40.00
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+|_irc-info: Unable to open connection
+MAC Address: F8:A2:D6:1C:E3:68 (Liteon Technology)
+Device type: phone
+Running: Google Android 5.X
+OS CPE: cpe:/o:google:android:5.1.1
+OS details: Android 5.1.1
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   7.44 ms 10.0.0.175
+
+Nmap scan report for 10.0.0.176
+Host is up (0.015s latency).
+Not shown: 997 closed tcp ports (reset)
+PORT     STATE SERVICE VERSION
+5000/tcp open  rtsp
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 254266301
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 254261240
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 0
+|     X-Apple-RequestReceivedTimestamp: 254266278
+|   RTSPRequest: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 254261263
+|   SIPOptions: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     CSeq: 42 OPTIONS
+|     X-Apple-ProcessingTime: 1
+|_    X-Apple-RequestReceivedTimestamp: 254266326
+5001/tcp open  rtsp
+|_rtsp-methods: ANNOUNCE, SETUP, PLAY, DESCRIBE, REDIRECT, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Server: AirTunes/150.33
+|     Date: Tue, 04 Mar 2025 11:50:16 EST
+|     Content-Length: 0
+|   GenericLines: 
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Server: AirTunes/150.33
+|     Date: Tue, 04 Mar 2025 11:49:56 EST
+|     Content-Length: 0
+|   GetRequest: 
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Server: AirTunes/150.33
+|     Date: Tue, 04 Mar 2025 11:50:01 EST
+|     Content-Length: 0
+|   HTTPOptions: 
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Server: AirTunes/150.33
+|     Public: ANNOUNCE, SETUP, PLAY, DESCRIBE, REDIRECT, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET
+|     Date: Tue, 04 Mar 2025 11:50:06 EST
+|     Content-Length: 0
+|     Content-Type: application/octet-stream
+|   RTSPRequest: 
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Server: AirTunes/150.33
+|     Public: ANNOUNCE, SETUP, PLAY, DESCRIBE, REDIRECT, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET
+|     Date: Tue, 04 Mar 2025 11:50:11 EST
+|     Content-Length: 0
+|     Content-Type: application/octet-stream
+|   SIPOptions: 
+|     RTSP/1.0 200 OK
+|     CSeq: 42
+|     Server: AirTunes/150.33
+|     Public: ANNOUNCE, SETUP, PLAY, DESCRIBE, REDIRECT, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET
+|     Date: Tue, 04 Mar 2025 11:50:21 EST
+|     Content-Length: 0
+|     Content-Type: application/octet-stream
+|   WMSRequest: 
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Server: AirTunes/150.33
+|     Date: Tue, 04 Mar 2025 11:49:46 EST
+|     Content-Length: 0
+|   ZendJavaBridge: 
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Server: AirTunes/150.33
+|     Date: Tue, 04 Mar 2025 11:49:51 EST
+|_    Content-Length: 0
+7000/tcp open  rtsp
+|_irc-info: Unable to open connection
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 254286545
+|   GetRequest: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 254281427
+|   HTTPOptions: 
+|     HTTP/1.1 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 254281453
+|   RTSPRequest: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     X-Apple-ProcessingTime: 1
+|     X-Apple-RequestReceivedTimestamp: 254281535
+|   SIPOptions: 
+|     RTSP/1.0 403 Forbidden
+|     Content-Length: 0
+|     Server: AirTunes/835.19.5
+|     CSeq: 42 OPTIONS
+|     X-Apple-ProcessingTime: 1
+|_    X-Apple-RequestReceivedTimestamp: 254286575
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5000-TCP:V=7.94SVN%I=7%D=3/4%Time=67C72F2A%P=x86_64-pc-linux-gnu%r(
+SF:GetRequest,90,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Length:\x200\r\
+SF:nServer:\x20AirTunes/835\.19\.5\r\nX-Apple-ProcessingTime:\x201\r\nX-Ap
+SF:ple-RequestReceivedTimestamp:\x20254261240\r\n\r\n")%r(RTSPRequest,90,"
+SF:RTSP/1\.0\x20403\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20Air
+SF:Tunes/835\.19\.5\r\nX-Apple-ProcessingTime:\x201\r\nX-Apple-RequestRece
+SF:ivedTimestamp:\x20254261263\r\n\r\n")%r(HTTPOptions,90,"HTTP/1\.1\x2040
+SF:3\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/835\.19\.
+SF:5\r\nX-Apple-ProcessingTime:\x200\r\nX-Apple-RequestReceivedTimestamp:\
+SF:x20254266278\r\n\r\n")%r(FourOhFourRequest,90,"HTTP/1\.1\x20403\x20Forb
+SF:idden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/835\.19\.5\r\nX-Ap
+SF:ple-ProcessingTime:\x201\r\nX-Apple-RequestReceivedTimestamp:\x20254266
+SF:301\r\n\r\n")%r(SIPOptions,A2,"RTSP/1\.0\x20403\x20Forbidden\r\nContent
+SF:-Length:\x200\r\nServer:\x20AirTunes/835\.19\.5\r\nCSeq:\x2042\x20OPTIO
+SF:NS\r\nX-Apple-ProcessingTime:\x201\r\nX-Apple-RequestReceivedTimestamp:
+SF:\x20254266326\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5001-TCP:V=7.94SVN%I=7%D=3/4%Time=67C72F2F%P=x86_64-pc-linux-gnu%r(
+SF:WMSRequest,6D,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nServer:\x20AirTu
+SF:nes/150\.33\r\nDate:\x20Tue,\x2004\x20Mar\x202025\x2011:49:46\x20EST\r\
+SF:nContent-Length:\x200\r\n\r\n")%r(ZendJavaBridge,6D,"RTSP/1\.0\x20200\x
+SF:20OK\r\nCSeq:\x200\r\nServer:\x20AirTunes/150\.33\r\nDate:\x20Tue,\x200
+SF:4\x20Mar\x202025\x2011:49:51\x20EST\r\nContent-Length:\x200\r\n\r\n")%r
+SF:(GenericLines,6D,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nServer:\x20Ai
+SF:rTunes/150\.33\r\nDate:\x20Tue,\x2004\x20Mar\x202025\x2011:49:56\x20EST
+SF:\r\nContent-Length:\x200\r\n\r\n")%r(GetRequest,6D,"RTSP/1\.0\x20200\x2
+SF:0OK\r\nCSeq:\x200\r\nServer:\x20AirTunes/150\.33\r\nDate:\x20Tue,\x2004
+SF:\x20Mar\x202025\x2011:50:01\x20EST\r\nContent-Length:\x200\r\n\r\n")%r(
+SF:HTTPOptions,11A,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nServer:\x20Air
+SF:Tunes/150\.33\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20PLAY,\x20DESCRIBE,\x
+SF:20REDIRECT,\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20
+SF:GET_PARAMETER,\x20SET_PARAMETER,\x20POST,\x20GET\r\nDate:\x20Tue,\x2004
+SF:\x20Mar\x202025\x2011:50:06\x20EST\r\nContent-Length:\x200\r\nContent-T
+SF:ype:\x20application/octet-stream\r\n\r\n")%r(RTSPRequest,11A,"RTSP/1\.0
+SF:\x20200\x20OK\r\nCSeq:\x200\r\nServer:\x20AirTunes/150\.33\r\nPublic:\x
+SF:20ANNOUNCE,\x20SETUP,\x20PLAY,\x20DESCRIBE,\x20REDIRECT,\x20RECORD,\x20
+SF:PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMETER,\x20SET_PARA
+SF:METER,\x20POST,\x20GET\r\nDate:\x20Tue,\x2004\x20Mar\x202025\x2011:50:1
+SF:1\x20EST\r\nContent-Length:\x200\r\nContent-Type:\x20application/octet-
+SF:stream\r\n\r\n")%r(FourOhFourRequest,6D,"RTSP/1\.0\x20200\x20OK\r\nCSeq
+SF::\x200\r\nServer:\x20AirTunes/150\.33\r\nDate:\x20Tue,\x2004\x20Mar\x20
+SF:2025\x2011:50:16\x20EST\r\nContent-Length:\x200\r\n\r\n")%r(SIPOptions,
+SF:11B,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x2042\r\nServer:\x20AirTunes/150\.
+SF:33\r\nPublic:\x20ANNOUNCE,\x20SETUP,\x20PLAY,\x20DESCRIBE,\x20REDIRECT,
+SF:\x20RECORD,\x20PAUSE,\x20FLUSH,\x20TEARDOWN,\x20OPTIONS,\x20GET_PARAMET
+SF:ER,\x20SET_PARAMETER,\x20POST,\x20GET\r\nDate:\x20Tue,\x2004\x20Mar\x20
+SF:2025\x2011:50:21\x20EST\r\nContent-Length:\x200\r\nContent-Type:\x20app
+SF:lication/octet-stream\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port7000-TCP:V=7.94SVN%I=7%D=3/4%Time=67C72F3E%P=x86_64-pc-linux-gnu%r(
+SF:GetRequest,90,"HTTP/1\.1\x20403\x20Forbidden\r\nContent-Length:\x200\r\
+SF:nServer:\x20AirTunes/835\.19\.5\r\nX-Apple-ProcessingTime:\x201\r\nX-Ap
+SF:ple-RequestReceivedTimestamp:\x20254281427\r\n\r\n")%r(HTTPOptions,90,"
+SF:HTTP/1\.1\x20403\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20Air
+SF:Tunes/835\.19\.5\r\nX-Apple-ProcessingTime:\x201\r\nX-Apple-RequestRece
+SF:ivedTimestamp:\x20254281453\r\n\r\n")%r(RTSPRequest,90,"RTSP/1\.0\x2040
+SF:3\x20Forbidden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/835\.19\.
+SF:5\r\nX-Apple-ProcessingTime:\x201\r\nX-Apple-RequestReceivedTimestamp:\
+SF:x20254281535\r\n\r\n")%r(FourOhFourRequest,90,"HTTP/1\.1\x20403\x20Forb
+SF:idden\r\nContent-Length:\x200\r\nServer:\x20AirTunes/835\.19\.5\r\nX-Ap
+SF:ple-ProcessingTime:\x201\r\nX-Apple-RequestReceivedTimestamp:\x20254286
+SF:545\r\n\r\n")%r(SIPOptions,A2,"RTSP/1\.0\x20403\x20Forbidden\r\nContent
+SF:-Length:\x200\r\nServer:\x20AirTunes/835\.19\.5\r\nCSeq:\x2042\x20OPTIO
+SF:NS\r\nX-Apple-ProcessingTime:\x201\r\nX-Apple-RequestReceivedTimestamp:
+SF:\x20254286575\r\n\r\n");
+MAC Address: 3C:A6:F6:42:8A:B1 (Apple)
+Device type: general purpose
+Running: Apple macOS 11.X
+OS details: Apple macOS 11 (Big Sur) (Darwin 20.6.0)
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   15.36 ms 10.0.0.176
+
+Nmap scan report for 10.0.0.188
+Host is up (0.014s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+49152/tcp open  tcpwrapped
+62078/tcp open  tcpwrapped
+MAC Address: 36:AA:2E:62:60:52 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=3/4%OT=62078%CT=1%CU=43098%PV=Y%DS=1%DC=D%G=Y%M=36A
+OS:A2E%TM=67C72FF5%P=x86_64-pc-linux-gnu)SEQ(SP=108%GCD=1%ISR=10C%TI=Z%CI=R
+OS:D%TS=21)SEQ(SP=108%GCD=1%ISR=10C%TI=Z%CI=RD%II=RI%TS=21)OPS(O1=M5B4NW6NN
+OS:T11SLL%O2=M5B4NW6NNT11SLL%O3=M5B4NW6NNT11%O4=M5B4NW6NNT11SLL%O5=M5B4NW6N
+OS:NT11SLL%O6=M5B4NNT11SLL)WIN(W1=B50%W2=AD8%W3=4E8%W4=FFFF%W5=418%W6=1FA)E
+OS:CN(R=Y%DF=Y%T=40%W=0%O=M5B4NW6SLL%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS
+OS:%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=
+OS:Y%DF=N%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=
+OS:R%O=%RD=0%Q=)T7(R=Y%DF=N%T=40%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=
+OS:40%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=0%RUD=G)IE(R=Y%DFI=S%T=40%CD=S)
+
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   13.62 ms 10.0.0.188
+
+Nmap scan report for 10.0.0.190
+Host is up (0.0099s latency).
+All 1000 scanned ports on 10.0.0.190 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: C0:BF:BE:4B:5D:07 (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   9.90 ms 10.0.0.190
+
+Nmap scan report for 10.0.0.220
+Host is up (0.23s latency).
+All 1000 scanned ports on 10.0.0.220 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: C0:BF:BE:4B:5D:07 (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT       ADDRESS
+1   229.71 ms 10.0.0.220
+
+Nmap scan report for 10.0.0.237
+Host is up (0.0012s latency).
+All 1000 scanned ports on 10.0.0.237 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: A0:B3:39:5F:14:5A (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   1.17 ms 10.0.0.237
+
+Nmap scan report for 10.0.0.240
+Host is up (0.011s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+49152/tcp open  tcpwrapped
+62078/tcp open  tcpwrapped
+MAC Address: DA:4E:8F:28:7C:39 (Unknown)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=3/4%OT=62078%CT=1%CU=42222%PV=Y%DS=1%DC=D%G=Y%M=DA4
+OS:E8F%TM=67C72FF5%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10D%TI=Z%CI=R
+OS:D%II=RI%TS=22)SEQ(SP=106%GCD=1%ISR=10A%TI=Z%CI=RD%II=RI%TS=21)SEQ(SP=106
+OS:%GCD=1%ISR=10C%TI=Z%CI=RD%II=I%TS=21)SEQ(SP=107%GCD=1%ISR=109%TI=Z%CI=RD
+OS:%II=RI%TS=21)SEQ(SP=FD%GCD=1%ISR=10B%TI=Z%CI=RD%II=RI%TS=21)OPS(O1=M5B4N
+OS:W6NNT11SLL%O2=M5B4NW6NNT11SLL%O3=M5B4NW6NNT11%O4=M5B4NW6NNT11SLL%O5=M5B4
+OS:NW6NNT11SLL%O6=M5B4NNT11SLL)WIN(W1=B50%W2=AD8%W3=4E8%W4=FFFF%W5=418%W6=1
+OS:FA)ECN(R=Y%DF=Y%T=40%W=0%O=M5B4NW6SLL%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%
+OS:F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T
+OS:5(R=Y%DF=N%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=
+OS:Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=N%T=40%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)U1(R=Y%DF=
+OS:N%T=40%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=0%RUD=G)IE(R=Y%DFI=S%T=40%C
+OS:D=S)
+
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   10.91 ms 10.0.0.240
+
+Nmap scan report for 10.0.0.245
+Host is up (0.011s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT    STATE SERVICE  VERSION
+80/tcp  open  http     nginx
+|_http-title: Did not follow redirect to https://10.0.0.245/
+443/tcp open  ssl/http nginx
+| ssl-cert: Subject: commonName=gsm.gbuser.net/organizationName=Greenbone AG Customer/stateOrProvinceName=Niedersachsen/countryName=DE
+| Subject Alternative Name: DNS:gsm.gbuser.net
+| Not valid before: 2025-02-07T07:40:09
+|_Not valid after:  2027-02-07T07:40:09
+|_http-title: Greenbone Enterprise Appliance
+|_ssl-date: TLS randomness does not represent time
+| http-robots.txt: 1 disallowed entry 
+|_/
+MAC Address: C0:BF:BE:4B:5D:07 (Unknown)
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.8
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   10.67 ms 10.0.0.245
+
+Nmap scan report for 10.0.0.141
+Host is up (0.000041s latency).
+All 1000 scanned ports on 10.0.0.141 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 0 hops
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (15 hosts up) scanned in 445.27 seconds
