@@ -1,0 +1,409 @@
+C:\Program Files (x86)\Nmap>nmap -sS -A 192.168.2.0/24
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-01 22:58 Eastern Standard Time
+Stats: 0:04:59 elapsed; 247 hosts completed (8 up), 8 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 91.95% done; ETC: 23:03 (0:00:25 remaining)
+Stats: 0:05:57 elapsed; 247 hosts completed (8 up), 8 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 92.13% done; ETC: 23:04 (0:00:30 remaining)
+Stats: 0:05:59 elapsed; 247 hosts completed (8 up), 8 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 92.15% done; ETC: 23:04 (0:00:30 remaining)
+Warning: 192.168.2.80 giving up on port because retransmission cap hit (10).
+Stats: 0:16:24 elapsed; 247 hosts completed (8 up), 8 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 95.89% done; ETC: 23:15 (0:00:42 remaining)
+Stats: 0:16:24 elapsed; 247 hosts completed (8 up), 8 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 95.89% done; ETC: 23:15 (0:00:42 remaining)
+Stats: 0:26:05 elapsed; 247 hosts completed (8 up), 8 undergoing SYN Stealth Scan
+SYN Stealth Scan Timing: About 99.66% done; ETC: 23:24 (0:00:05 remaining)
+Stats: 0:30:37 elapsed; 247 hosts completed (8 up), 8 undergoing Service Scan
+Service scan Timing: About 95.45% done; ETC: 23:28 (0:00:02 remaining)
+Nmap scan report for 192.168.2.1
+Host is up (0.015s latency).
+Not shown: 845 closed tcp ports (reset), 149 filtered tcp ports (no-response)
+PORT      STATE SERVICE       VERSION
+53/tcp    open  domain        (unknown banner: UNKNOWN)
+| fingerprint-strings:
+|   DNSVersionBindReqTCP:
+|     version
+|     bind
+|_    UNKNOWN
+| dns-nsid:
+|_  bind.version: UNKNOWN
+80/tcp    open  http          lighttpd
+|_http-title: Site doesn't have a title (text/html).
+|_http-server-header: HTTP Server
+443/tcp   open  ssl/http      lighttpd
+| ssl-cert: Subject: commonName=self-signedkey/organizationName=Sagemcom Ca/countryName=FR
+| Not valid before: 2015-10-02T09:55:43
+|_Not valid after:  2115-09-08T09:55:43
+|_http-server-header: HTTP Server
+|_ssl-date: TLS randomness does not represent time
+|_http-title: Site doesn't have a title (text/html).
+445/tcp   open  microsoft-ds?
+| fingerprint-strings:
+|   Kerberos:
+|     \xa0
+|     krbtgt
+|   SMBProgNeg:
+|     SMB@
+|     NETWORK PROGRAM 1.0
+|_    MICR
+9000/tcp  open  upnp          TwonkyMedia UPnP (UPnP 1.0; pvConnect SDK 1.0; Twonky SDK 1.1)
+49152/tcp open  upnp          Portable SDK for UPnP 1.14.12 (Linux 4.1.52-5.02L.07; UPnP 1.0)
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.95%I=7%D=3/1%Time=67C3DE5A%P=i686-pc-windows-windows%r(D
+SF:NSVersionBindReqTCP,34,"\x002\0\x06\x85\x80\0\x01\0\x01\0\0\0\0\x07vers
+SF:ion\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x08\x07UNKNOWN"
+SF:);
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port445-TCP:V=7.95%I=7%D=3/1%Time=67C3DE5A%P=i686-pc-windows-windows%r(
+SF:SMBProgNeg,44,"\0\0\0@\xffSMB@\x0b\x01\0\xc0\0\0\0\0\0\0\0\x01\0\0\0\0\
+SF:0\0\0\0\0@\x06\0\0\x01\0\0\x81\0\x02PC\x20NETWORK\x20PROGRAM\x201\.0\0\
+SF:x02MICR")%r(Kerberos,4D,"\0\0\0Ij\x81n0@\0\0\0\x03\x02\0\xc0\x03\x02\x0
+SF:1\n\x01\0\0\0\\\xa0\x07\x03\x05\0P\x80\0\x10\xa2\x04\x1b\x02NM\xa3\x170
+SF:\x15\xa0\x03\x02\x01\0\xa1\x0e0\x0c\x1b\x06krbtgt\x1b\x02NM\xa5\x11\x18
+SF:\t\0\0\0\0\0\0\0\0");
+MAC Address: 34:5D:9E:F3:C8:E5 (Sagemcom Broadband SAS)
+Device type: WAP|general purpose|specialized|media device
+Running (JUST GUESSING): Linux 2.6.X|2.4.X|3.X (95%), Philips embedded (90%), Zgemma embedded (88%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6.22 cpe:/o:linux:linux_kernel:2.4 cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:2.4.18 cpe:/o:linux:linux_kernel:4.4
+Aggressive OS guesses: OpenWrt Kamikaze 7.09 (Linux 2.6.22) (95%), OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34) (94%), OpenWrt White Russian 0.9 (Linux 2.4.30) (94%), Linux 3.12 - 4.10 (90%), Philips Hue Bridge 2.0 (Linux 4.14) (90%), Linux 2.6.9 - 2.6.21 (90%), Linux 2.4.18 (89%), Zgemma H9 TV receiver (Linux 4.4) (88%), Asus RT-AC66U router (Linux 2.6) (88%), Linux 2.6.20.6 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel:2, cpe:/o:linux:linux_kernel:4.1.52-5.02l.07
+
+Host script results:
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   14.84 ms 192.168.2.1
+
+Nmap scan report for 192.168.2.20
+Host is up (0.016s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE    VERSION
+8001/tcp open  tcpwrapped
+8002/tcp open  tcpwrapped
+8080/tcp open  tcpwrapped
+9080/tcp open  tcpwrapped
+MAC Address: 70:09:71:31:74:86 (Samsung Electronics)
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   16.23 ms 192.168.2.20
+
+Nmap scan report for 192.168.2.61
+Host is up (0.017s latency).
+All 1000 scanned ports on 192.168.2.61 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+MAC Address: E6:86:7E:16:80:9F (Unknown)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   16.72 ms 192.168.2.61
+
+Nmap scan report for 192.168.2.66
+Host is up (0.014s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE      VERSION
+443/tcp  open  ssl/https?
+| ssl-cert: Subject: commonName=TPRI-DEVICE/organizationName=TPRI/stateOrProvinceName=CA/countryName=US
+| Not valid before: 2023-12-07T07:48:57
+|_Not valid after:  2073-11-24T07:48:57
+|_http-title: Site doesn't have a title.
+| fingerprint-strings:
+|   TLSSessionReq, ms-sql-s:
+|     HTTP/1.1 200 OK
+|     Connection: close
+|     Cache-Control: no-cache
+|     Content-Type: application/json;charset=UTF-8
+|     Transfer-Encoding: chunked
+|_    {"error_code":-40210}
+554/tcp  open  rtsp
+| fingerprint-strings:
+|   FourOhFourRequest:
+|     RTSP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, Mar 02 2025 04:28:25 GMT
+|   GenericLines:
+|     RTSP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, Mar 02 2025 04:28:15 GMT
+|   GetRequest:
+|     RTSP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, Mar 02 2025 04:28:05 GMT
+|   HTTPOptions:
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Date: Sun, Mar 02 2025 04:28:20 GMT
+|     Public: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, GET_PARAMETER, SET_PARAMETER
+|   RTSPRequest:
+|     RTSP/1.0 200 OK
+|     CSeq: 0
+|     Date: Sun, Mar 02 2025 04:28:10 GMT
+|     Public: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, GET_PARAMETER, SET_PARAMETER
+|   SIPOptions:
+|     RTSP/1.0 200 OK
+|     CSeq: 42
+|     Date: Sun, Mar 02 2025 04:28:30 GMT
+|_    Public: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, GET_PARAMETER, SET_PARAMETER
+|_rtsp-methods: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, GET_PARAMETER, SET_PARAMETER
+2020/tcp open  tcpwrapped
+8800/tcp open  sunwebadmin?
+| fingerprint-strings:
+|   DNSStatusRequestTCP:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:28:35 UTC
+|   DNSVersionBindReqTCP:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:28:30 UTC
+|   FourOhFourRequest:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:29:17 UTC
+|   GenericLines:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:28:05 UTC
+|   GetRequest:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:28:10 UTC
+|   HTTPOptions:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:28:15 UTC
+|   Kerberos:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:29:02 UTC
+|   LDAPSearchReq:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:29:27 UTC
+|   RPCCheck:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:28:25 UTC
+|   RTSPRequest:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:28:20 UTC
+|   SMBProgNeg:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:29:07 UTC
+|   SSLSessionReq:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:28:47 UTC
+|   TLSSessionReq:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:28:57 UTC
+|   TerminalServerCookie:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|     Date: Sun, 02 Mar 2025 04:28:52 UTC
+|   X11Probe:
+|     HTTP/1.0 400 Bad Request
+|     CSeq: 0
+|_    Date: Sun, 02 Mar 2025 04:29:12 UTC
+3 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.95%T=SSL%I=7%D=3/1%Time=67C3DE5C%P=i686-pc-windows-wind
+SF:ows%r(TLSSessionReq,AB,"HTTP/1\.1\x20200\x20OK\r\nConnection:\x20close\
+SF:r\nCache-Control:\x20no-cache\r\nContent-Type:\x20application/json;char
+SF:set=UTF-8\r\nTransfer-Encoding:\x20chunked\r\n\r\n17\r\n{\"error_code\"
+SF::-40210}\r\n\r\n0\r\n\r\n")%r(ms-sql-s,AB,"HTTP/1\.1\x20200\x20OK\r\nCo
+SF:nnection:\x20close\r\nCache-Control:\x20no-cache\r\nContent-Type:\x20ap
+SF:plication/json;charset=UTF-8\r\nTransfer-Encoding:\x20chunked\r\n\r\n17
+SF:\r\n{\"error_code\":-40210}\r\n\r\n0\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port554-TCP:V=7.95%I=7%D=3/1%Time=67C3DE5A%P=i686-pc-windows-windows%r(
+SF:GetRequest,4A,"RTSP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nDate
+SF::\x20Sun,\x20Mar\x2002\x202025\x2004:28:05\x20GMT\r\n\r\n")%r(RTSPReque
+SF:st,98,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nDate:\x20Sun,\x20Mar\x20
+SF:02\x202025\x2004:28:10\x20GMT\r\nPublic:\x20OPTIONS,\x20DESCRIBE,\x20SE
+SF:TUP,\x20TEARDOWN,\x20PLAY,\x20PAUSE,\x20GET_PARAMETER,\x20SET_PARAMETER
+SF:\r\n\r\n")%r(GenericLines,4A,"RTSP/1\.0\x20400\x20Bad\x20Request\r\nCSe
+SF:q:\x200\r\nDate:\x20Sun,\x20Mar\x2002\x202025\x2004:28:15\x20GMT\r\n\r\
+SF:n")%r(HTTPOptions,98,"RTSP/1\.0\x20200\x20OK\r\nCSeq:\x200\r\nDate:\x20
+SF:Sun,\x20Mar\x2002\x202025\x2004:28:20\x20GMT\r\nPublic:\x20OPTIONS,\x20
+SF:DESCRIBE,\x20SETUP,\x20TEARDOWN,\x20PLAY,\x20PAUSE,\x20GET_PARAMETER,\x
+SF:20SET_PARAMETER\r\n\r\n")%r(FourOhFourRequest,4A,"RTSP/1\.0\x20400\x20B
+SF:ad\x20Request\r\nCSeq:\x200\r\nDate:\x20Sun,\x20Mar\x2002\x202025\x2004
+SF::28:25\x20GMT\r\n\r\n")%r(SIPOptions,99,"RTSP/1\.0\x20200\x20OK\r\nCSeq
+SF::\x2042\r\nDate:\x20Sun,\x20Mar\x2002\x202025\x2004:28:30\x20GMT\r\nPub
+SF:lic:\x20OPTIONS,\x20DESCRIBE,\x20SETUP,\x20TEARDOWN,\x20PLAY,\x20PAUSE,
+SF:\x20GET_PARAMETER,\x20SET_PARAMETER\r\n\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8800-TCP:V=7.95%I=7%D=3/1%Time=67C3DE5A%P=i686-pc-windows-windows%r
+SF:(GenericLines,4A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nD
+SF:ate:\x20Sun,\x2002\x20Mar\x202025\x2004:28:05\x20UTC\r\n\r\n")%r(GetReq
+SF:uest,4A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nDate:\x20S
+SF:un,\x2002\x20Mar\x202025\x2004:28:10\x20UTC\r\n\r\n")%r(HTTPOptions,4A,
+SF:"HTTP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nDate:\x20Sun,\x200
+SF:2\x20Mar\x202025\x2004:28:15\x20UTC\r\n\r\n")%r(RTSPRequest,4A,"HTTP/1\
+SF:.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nDate:\x20Sun,\x2002\x20Mar
+SF:\x202025\x2004:28:20\x20UTC\r\n\r\n")%r(RPCCheck,4A,"HTTP/1\.0\x20400\x
+SF:20Bad\x20Request\r\nCSeq:\x200\r\nDate:\x20Sun,\x2002\x20Mar\x202025\x2
+SF:004:28:25\x20UTC\r\n\r\n")%r(DNSVersionBindReqTCP,4A,"HTTP/1\.0\x20400\
+SF:x20Bad\x20Request\r\nCSeq:\x200\r\nDate:\x20Sun,\x2002\x20Mar\x202025\x
+SF:2004:28:30\x20UTC\r\n\r\n")%r(DNSStatusRequestTCP,4A,"HTTP/1\.0\x20400\
+SF:x20Bad\x20Request\r\nCSeq:\x200\r\nDate:\x20Sun,\x2002\x20Mar\x202025\x
+SF:2004:28:35\x20UTC\r\n\r\n")%r(SSLSessionReq,4A,"HTTP/1\.0\x20400\x20Bad
+SF:\x20Request\r\nCSeq:\x200\r\nDate:\x20Sun,\x2002\x20Mar\x202025\x2004:2
+SF:8:47\x20UTC\r\n\r\n")%r(TerminalServerCookie,4A,"HTTP/1\.0\x20400\x20Ba
+SF:d\x20Request\r\nCSeq:\x200\r\nDate:\x20Sun,\x2002\x20Mar\x202025\x2004:
+SF:28:52\x20UTC\r\n\r\n")%r(TLSSessionReq,4A,"HTTP/1\.0\x20400\x20Bad\x20R
+SF:equest\r\nCSeq:\x200\r\nDate:\x20Sun,\x2002\x20Mar\x202025\x2004:28:57\
+SF:x20UTC\r\n\r\n")%r(Kerberos,4A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nC
+SF:Seq:\x200\r\nDate:\x20Sun,\x2002\x20Mar\x202025\x2004:29:02\x20UTC\r\n\
+SF:r\n")%r(SMBProgNeg,4A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200
+SF:\r\nDate:\x20Sun,\x2002\x20Mar\x202025\x2004:29:07\x20UTC\r\n\r\n")%r(X
+SF:11Probe,4A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nDate:\x
+SF:20Sun,\x2002\x20Mar\x202025\x2004:29:12\x20UTC\r\n\r\n")%r(FourOhFourRe
+SF:quest,4A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nDate:\x20
+SF:Sun,\x2002\x20Mar\x202025\x2004:29:17\x20UTC\r\n\r\n")%r(LDAPSearchReq,
+SF:4A,"HTTP/1\.0\x20400\x20Bad\x20Request\r\nCSeq:\x200\r\nDate:\x20Sun,\x
+SF:2002\x20Mar\x202025\x2004:29:27\x20UTC\r\n\r\n");
+MAC Address: 98:25:4A:E3:96:CA (TP-Link PTE.)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.95%E=4%D=3/1%OT=443%CT=1%CU=44728%PV=Y%DS=1%DC=D%G=Y%M=98254A%T
+OS:M=67C3DF1E%P=i686-pc-windows-windows)SEQ(SP=101%GCD=1%ISR=109%TI=Z%CI=Z%
+OS:II=I%TS=7)SEQ(SP=103%GCD=1%ISR=10D%TI=Z%CI=Z%II=I%TS=7)SEQ(SP=104%GCD=1%
+OS:ISR=105%TI=Z%CI=Z%II=I%TS=7)SEQ(SP=106%GCD=1%ISR=10C%TI=Z%CI=Z%II=I%TS=7
+OS:)SEQ(SP=FE%GCD=1%ISR=10E%TI=Z%CI=Z%II=I%TS=7)OPS(O1=M5A0ST11NW0%O2=M5A0S
+OS:T11NW0%O3=M5A0NNT11NW0%O4=M5A0ST11NW0%O5=M5A0ST11NW0%O6=M5A0ST11)WIN(W1=
+OS:37C8%W2=37C8%W3=37C8%W4=37C8%W5=37C8%W6=37C8)ECN(R=Y%DF=Y%T=40%W=3840%O=
+OS:M5A0NNSNW0%CC=N%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)
+OS:T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S
+OS:+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=
+OS:Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G
+OS:%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   13.51 ms 192.168.2.66
+
+Nmap scan report for 192.168.2.71
+Host is up (0.010s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+49152/tcp open  tcpwrapped
+62078/tcp open  tcpwrapped
+MAC Address: 22:C9:A5:D1:81:96 (Unknown)
+Device type: phone
+Running: Apple iOS 15.X
+OS CPE: cpe:/o:apple:iphone_os:15
+OS details: Apple iOS 15.0 - 15.6 (Darwin 21.1.0 - 21.6.0)
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   10.14 ms 192.168.2.71
+
+Nmap scan report for 192.168.2.80
+Host is up (0.085s latency).
+Not shown: 992 closed tcp ports (reset)
+PORT      STATE    SERVICE         VERSION
+83/tcp    filtered mit-ml-dev
+1047/tcp  filtered neod1
+1106/tcp  filtered isoipsigport-1
+2100/tcp  filtered amiganetfs
+8291/tcp  filtered unknown
+32776/tcp filtered sometimes-rpc15
+49152/tcp open     tcpwrapped
+62078/tcp open     tcpwrapped
+MAC Address: 80:96:98:B3:07:C7 (Unknown)
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   85.42 ms 192.168.2.80
+
+Nmap scan report for 192.168.2.89
+Host is up (0.023s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+49152/tcp open  tcpwrapped
+62078/tcp open  tcpwrapped
+MAC Address: 26:55:5E:36:76:DC (Unknown)
+Device type: phone
+Running: Apple iOS 15.X
+OS CPE: cpe:/o:apple:iphone_os:15
+OS details: Apple iOS 15.0 - 15.6 (Darwin 21.1.0 - 21.6.0)
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   23.26 ms 192.168.2.89
+
+Nmap scan report for 192.168.2.103
+Host is up (0.065s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+49152/tcp open  tcpwrapped
+62078/tcp open  tcpwrapped
+MAC Address: EE:52:C5:FE:93:8F (Unknown)
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+No OS matches for host
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   64.63 ms 192.168.2.103
+
+Nmap scan report for 192.168.2.98
+Host is up (0.00047s latency).
+Not shown: 995 closed tcp ports (reset)
+PORT    STATE SERVICE         VERSION
+135/tcp open  msrpc           Microsoft Windows RPC
+139/tcp open  netbios-ssn     Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds?
+902/tcp open  ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+912/tcp open  vmware-auth     VMware Authentication Daemon 1.0 (Uses VNC, SOAP)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.95%E=4%D=3/1%OT=135%CT=1%CU=38519%PV=Y%DS=0%DC=L%G=Y%TM=67C3DF3
+OS:C%P=i686-pc-windows-windows)SEQ(SP=100%GCD=1%ISR=109%TI=I%CI=I%II=I%SS=S
+OS:%TS=A)SEQ(SP=101%GCD=1%ISR=108%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=103%GCD=1
+OS:%ISR=103%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=107%GCD=1%ISR=10A%TI=I%CI=I%II=
+OS:I%SS=S%TS=A)SEQ(SP=FF%GCD=1%ISR=108%TI=I%CI=I%II=I%SS=S%TS=A)OPS(O1=MFFD
+OS:7NW8ST11%O2=MFFD7NW8ST11%O3=MFFD7NW8NNT11%O4=MFFD7NW8ST11%O5=MFFD7NW8ST1
+OS:1%O6=MFFD7ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN(R
+OS:=Y%DF=Y%T=80%W=FFFF%O=MFFD7NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS
+OS:%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W
+OS:=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T
+OS:5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=
+OS:O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF
+OS:=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=Z%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80
+OS:%CD=Z)
+
+Network Distance: 0 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time:
+|   date: 2025-03-02T04:31:45
+|_  start_date: N/A
+| smb2-security-mode:
+|   3:1:1:
+|_    Message signing enabled but not required
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (9 hosts up) scanned in 2026.01 seconds

@@ -1,0 +1,37 @@
+C:\Program Files (x86)\Nmap>nmap -sV -O 192.168.2.1
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-01 23:36 Eastern Standard Time
+Nmap scan report for 192.168.2.1
+Host is up (0.0066s latency).
+Not shown: 845 closed tcp ports (reset), 149 filtered tcp ports (no-response)
+PORT      STATE SERVICE       VERSION
+53/tcp    open  domain        (unknown banner: UNKNOWN)
+80/tcp    open  http          lighttpd
+443/tcp   open  ssl/http      lighttpd
+445/tcp   open  microsoft-ds?
+9000/tcp  open  upnp          TwonkyMedia UPnP (UPnP 1.0; pvConnect SDK 1.0; Twonky SDK 1.1)
+49152/tcp open  upnp          Portable SDK for UPnP 1.14.12 (Linux 4.1.52-5.02L.07; UPnP 1.0)
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port53-TCP:V=7.95%I=7%D=3/1%Time=67C3E05F%P=i686-pc-windows-windows%r(D
+SF:NSVersionBindReqTCP,34,"\x002\0\x06\x85\x80\0\x01\0\x01\0\0\0\0\x07vers
+SF:ion\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x08\x07UNKNOWN"
+SF:);
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port445-TCP:V=7.95%I=7%D=3/1%Time=67C3E05F%P=i686-pc-windows-windows%r(
+SF:SMBProgNeg,44,"\0\0\0@\xffSMB@\x0b\x01\0\xc0\0\0\0\0\0\0\0\x01\0\0\0\0\
+SF:0\0\0\0\0@\x06\0\0\x01\0\0\x81\0\x02PC\x20NETWORK\x20PROGRAM\x201\.0\0\
+SF:x02MICR")%r(Kerberos,4D,"\0\0\0Ij\x81n0@\0\0\0\x03\x02\0\xc0\x03\x02\x0
+SF:1\n\x01\0\0\0\\\xa0\x07\x03\x05\0P\x80\0\x10\xa2\x04\x1b\x02NM\xa3\x170
+SF:\x15\xa0\x03\x02\x01\0\xa1\x0e0\x0c\x1b\x06krbtgt\x1b\x02NM\xa5\x11\x18
+SF:\t\0\0\0\0\0\0\0\0");
+MAC Address: 34:5D:9E:F3:C8:E5 (Sagemcom Broadband SAS)
+Device type: WAP|general purpose|specialized|media device
+Running (JUST GUESSING): Linux 2.6.X|2.4.X|3.X (95%), Philips embedded (90%), Zgemma embedded (89%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6.22 cpe:/o:linux:linux_kernel:2.4 cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:4.4 cpe:/o:linux:linux_kernel:2.4.18
+Aggressive OS guesses: OpenWrt Kamikaze 7.09 (Linux 2.6.22) (95%), OpenWrt 0.9 - 7.09 (Linux 2.4.30 - 2.4.34) (94%), OpenWrt White Russian 0.9 (Linux 2.4.30) (94%), Linux 3.12 - 4.10 (90%), Philips Hue Bridge 2.0 (Linux 4.14) (90%), Linux 2.6.9 - 2.6.21 (90%), Zgemma H9 TV receiver (Linux 4.4) (89%), Linux 2.4.18 (89%), Asus RT-AC66U router (Linux 2.6) (88%), Linux 2.6.20.6 (88%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel:2, cpe:/o:linux:linux_kernel:4.1.52-5.02l.07
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 45.66 seconds

@@ -1,0 +1,1493 @@
+IP,Hostname,Port,Port Protocol,CVSS,Severity,QoD,Solution Type,NVT Name,Summary,Specific Result,NVT OID,CVEs,Task ID,Task Name,Timestamp,Result ID,Impact,Solution,Affected Software/OS,Vulnerability Insight,Vulnerability Detection Method,Product Detection Result,BIDs,CERTs,Other References
+      192.168.2.1,mynetwork.home,80,tcp,6.1,Medium,80,"VendorFix","jQuery < 1.9.0 XSS Vulnerability","jQuery is prone to a cross-site scripting (XSS)
+  vulnerability.","Installed version: 1.8.3
+Fixed version:     1.9.0
+Installation
+path / port:       /js/thirdParty/jquery-1.8.3.min.js
+
+Detection info (see OID: 1.3.6.1.4.1.25623.1.0.150658 for more info):
+- Identified file: http://mynetwork.home/js/thirdParty/jquery-1.8.3.min.js
+- Referenced at:   http://mynetwork.home/
+",1.3.6.1.4.1.25623.1.0.141636,"CVE-2012-6708",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,052b172b-8fc6-4ff9-99c5-0276c3e6d516,"","Update to version 1.9.0 or later.","jQuery prior to version 1.9.0.","The jQuery(strInput) function does not differentiate selectors
+  from HTML in a reliable fashion. In vulnerable versions, jQuery determined whether the input was
+  HTML by looking for the '<' character anywhere in the string, giving attackers more flexibility
+  when attempting to construct a malicious payload. In fixed versions, jQuery only deems the input
+  to be HTML if it explicitly starts with the '<' character, limiting exploitability only to
+  attackers who can control the beginning of a string, which is far less common.","Checks if a vulnerable version is present on the target host.
+Details:
+jQuery < 1.9.0 XSS Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.141636)
+Version used: 2023-07-14T05:06:08Z
+","","","DFN-CERT-2023-1197,DFN-CERT-2020-0590,WID-SEC-2022-0673,CB-K22/0045,CB-K18/1131",""
+192.168.2.1,mynetwork.home,443,tcp,6.1,Medium,80,"VendorFix","jQuery < 1.9.0 XSS Vulnerability","jQuery is prone to a cross-site scripting (XSS)
+  vulnerability.","Installed version: 1.8.3
+Fixed version:     1.9.0
+Installation
+path / port:       /js/thirdParty/jquery-1.8.3.min.js
+
+Detection info (see OID: 1.3.6.1.4.1.25623.1.0.150658 for more info):
+- Identified file: https://mynetwork.home/js/thirdParty/jquery-1.8.3.min.js
+- Referenced at:   https://mynetwork.home/
+",1.3.6.1.4.1.25623.1.0.141636,"CVE-2012-6708",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,d01e4a37-5e48-4356-8501-644502dddbbd,"","Update to version 1.9.0 or later.","jQuery prior to version 1.9.0.","The jQuery(strInput) function does not differentiate selectors
+  from HTML in a reliable fashion. In vulnerable versions, jQuery determined whether the input was
+  HTML by looking for the '<' character anywhere in the string, giving attackers more flexibility
+  when attempting to construct a malicious payload. In fixed versions, jQuery only deems the input
+  to be HTML if it explicitly starts with the '<' character, limiting exploitability only to
+  attackers who can control the beginning of a string, which is far less common.","Checks if a vulnerable version is present on the target host.
+Details:
+jQuery < 1.9.0 XSS Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.141636)
+Version used: 2023-07-14T05:06:08Z
+","","","DFN-CERT-2023-1197,DFN-CERT-2020-0590,WID-SEC-2022-0673,CB-K22/0045,CB-K18/1131",""
+192.168.2.1,mynetwork.home,443,tcp,5.0,Medium,70,"VendorFix","SSL/TLS: Renegotiation DoS Vulnerability (CVE-2011-1473, CVE-2011-5094)","The remote SSL/TLS service is prone to a denial of service (DoS)
+  vulnerability.","The following indicates that the remote SSL/TLS service is affected:
+
+Protocol Version | Successful re-done SSL/TLS handshakes (Renegotiation) over an existing / already established SSL/TLS connection
+----------------------------------------------------------------------------------------------------------------------------------
+TLSv1.2          | 10
+",1.3.6.1.4.1.25623.1.0.117761,"CVE-2011-1473,CVE-2011-5094",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,d26527d8-b29b-4894-b82d-c6ff39372435,"The flaw might make it easier for remote attackers to cause a
+  DoS (CPU consumption) by performing many renegotiations within a single connection.","Users should contact their vendors for specific patch information.
+
+  A general solution is to remove/disable renegotiation capabilities altogether from/in the affected
+  SSL/TLS service.","Every SSL/TLS service which does not properly restrict
+  client-initiated renegotiation.","The flaw exists because the remote SSL/TLS service does not
+  properly restrict client-initiated renegotiation within the SSL and TLS protocols.
+
+  Note: The referenced CVEs are affecting OpenSSL and Mozilla Network Security Services (NSS) but
+  both are in a DISPUTED state with the following rationale:
+
+  > It can also be argued that it is the responsibility of server deployments, not a security
+  library, to prevent or limit renegotiation when it is inappropriate within a specific environment.
+
+  Both CVEs are still kept in this VT as a reference to the origin of this flaw.","Checks if the remote service allows to re-do the same SSL/TLS
+  handshake (Renegotiation) over an existing / already established SSL/TLS connection.
+Details:
+SSL/TLS: Renegotiation DoS Vulnerability (CVE-2011-1473, CVE-2011-5094)
+(OID: 1.3.6.1.4.1.25623.1.0.117761)
+Version used: 2024-09-27T05:05:23Z
+","","","DFN-CERT-2017-1013,DFN-CERT-2017-1012,DFN-CERT-2014-0809,DFN-CERT-2013-1928,DFN-CERT-2012-1112,WID-SEC-2024-1591,WID-SEC-2024-0796,WID-SEC-2023-1435,CB-K17/0980,CB-K17/0979,CB-K14/0772,CB-K13/0915,CB-K13/0462",""
+192.168.2.1,mynetwork.home,9443,tcp,4.3,Medium,98,"Mitigation","SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection","It was possible to detect the usage of the deprecated TLSv1.0
+  and/or TLSv1.1 protocol on this system.","The service is only providing the deprecated TLSv1.0 protocol and supports one or more ciphers. Those supported ciphers can be found in the 'SSL/TLS: Report Supported Cipher Suites' (OID: 1.3.6.1.4.1.25623.1.0.802067) VT.
+",1.3.6.1.4.1.25623.1.0.117274,"CVE-2011-3389,CVE-2015-0204",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,5b0dd603-ec57-42ff-ae79-5079cff91331,"An attacker might be able to use the known cryptographic flaws
+  to eavesdrop the connection between clients and the service to get access to sensitive data
+  transferred within the secured connection.
+
+  Furthermore newly uncovered vulnerabilities in this protocols won't receive security updates
+  anymore.","It is recommended to disable the deprecated TLSv1.0 and/or
+  TLSv1.1 protocols in favor of the TLSv1.2+ protocols. Please see the references for more
+  information.","All services providing an encrypted communication using the
+  TLSv1.0 and/or TLSv1.1 protocols.","The TLSv1.0 and TLSv1.1 protocols contain known cryptographic
+  flaws like:
+
+  - CVE-2011-3389: Browser Exploit Against SSL/TLS (BEAST)
+
+  - CVE-2015-0204: Factoring Attack on RSA-EXPORT Keys Padding Oracle On Downgraded Legacy
+  Encryption (FREAK)","Check the used TLS protocols of the services provided by this
+  system.
+Details:
+SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection
+(OID: 1.3.6.1.4.1.25623.1.0.117274)
+Version used: 2024-09-27T05:05:23Z
+","Product: cpe:/a:ietf:transport_layer_security:1.0
+Method: SSL/TLS: Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.105782)
+","","DFN-CERT-2020-0177,DFN-CERT-2020-0111,DFN-CERT-2019-0068,DFN-CERT-2018-1441,DFN-CERT-2018-1408,DFN-CERT-2016-1372,DFN-CERT-2016-1164,DFN-CERT-2016-0388,DFN-CERT-2015-1853,DFN-CERT-2015-1332,DFN-CERT-2015-0884,DFN-CERT-2015-0800,DFN-CERT-2015-0758,DFN-CERT-2015-0567,DFN-CERT-2015-0544,DFN-CERT-2015-0530,DFN-CERT-2015-0396,DFN-CERT-2015-0375,DFN-CERT-2015-0374,DFN-CERT-2015-0305,DFN-CERT-2015-0199,DFN-CERT-2015-0079,DFN-CERT-2015-0021,DFN-CERT-2014-1414,DFN-CERT-2013-1847,DFN-CERT-2013-1792,DFN-CERT-2012-1979,DFN-CERT-2012-1829,DFN-CERT-2012-1530,DFN-CERT-2012-1380,DFN-CERT-2012-1377,DFN-CERT-2012-1292,DFN-CERT-2012-1214,DFN-CERT-2012-1213,DFN-CERT-2012-1180,DFN-CERT-2012-1156,DFN-CERT-2012-1155,DFN-CERT-2012-1039,DFN-CERT-2012-0956,DFN-CERT-2012-0908,DFN-CERT-2012-0868,DFN-CERT-2012-0867,DFN-CERT-2012-0848,DFN-CERT-2012-0838,DFN-CERT-2012-0776,DFN-CERT-2012-0722,DFN-CERT-2012-0638,DFN-CERT-2012-0627,DFN-CERT-2012-0451,DFN-CERT-2012-0418,DFN-CERT-2012-0354,DFN-CERT-2012-0234,DFN-CERT-2012-0221,DFN-CERT-2012-0177,DFN-CERT-2012-0170,DFN-CERT-2012-0146,DFN-CERT-2012-0142,DFN-CERT-2012-0126,DFN-CERT-2012-0123,DFN-CERT-2012-0095,DFN-CERT-2012-0051,DFN-CERT-2012-0047,DFN-CERT-2012-0021,DFN-CERT-2011-1953,DFN-CERT-2011-1946,DFN-CERT-2011-1844,DFN-CERT-2011-1826,DFN-CERT-2011-1774,DFN-CERT-2011-1743,DFN-CERT-2011-1738,DFN-CERT-2011-1706,DFN-CERT-2011-1628,DFN-CERT-2011-1627,DFN-CERT-2011-1619,DFN-CERT-2011-1482,WID-SEC-2023-1435,CB-K18/0799,CB-K16/1289,CB-K16/1096,CB-K15/1751,CB-K15/1266,CB-K15/0850,CB-K15/0764,CB-K15/0720,CB-K15/0548,CB-K15/0526,CB-K15/0509,CB-K15/0493,CB-K15/0384,CB-K15/0365,CB-K15/0364,CB-K15/0302,CB-K15/0192,CB-K15/0079,CB-K15/0016,CB-K14/1342,CB-K14/0231,CB-K13/0845,CB-K13/0796,CB-K13/0790",""
+192.168.2.1,mynetwork.home,443,tcp,4.0,Medium,80,"Workaround","SSL/TLS: Diffie-Hellman Key Exchange Insufficient DH Group Strength Vulnerability","The SSL/TLS service uses Diffie-Hellman groups with insufficient strength
+  (key size < 2048).","Server Temporary Key Size: 1024 bits
+
+",1.3.6.1.4.1.25623.1.0.106223,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,b59e10ec-58b4-4f31-b9c4-8f2baa6e12a2,"An attacker might be able to decrypt the SSL/TLS communication offline.","Deploy (Ephemeral) Elliptic-Curve Diffie-Hellman (ECDHE) or use
+  a 2048-bit or stronger Diffie-Hellman group (see the references).
+
+  For Apache Web Servers:
+  Beginning with version 2.4.7, mod_ssl will use DH parameters which include primes with lengths of more than 1024 bits.","","The Diffie-Hellman group are some big numbers that are used as base for
+  the DH computations. They can be, and often are, fixed. The security of the final secret depends on the size
+  of these parameters. It was found that 512 and 768 bits to be weak, 1024 bits to be breakable by really
+  powerful attackers like governments.","Checks the DHE temporary public key size.
+Details:
+SSL/TLS: Diffie-Hellman Key Exchange Insufficient DH Group Strength Vulnerab...
+(OID: 1.3.6.1.4.1.25623.1.0.106223)
+Version used: 2024-09-30T08:38:05Z
+","","","",""
+192.168.2.1,mynetwork.home,9443,tcp,4.0,Medium,80,"Mitigation","SSL/TLS: Certificate Signed Using A Weak Signature Algorithm","The remote service is using a SSL/TLS certificate in the certificate chain that has been signed using a
+  cryptographically weak hashing algorithm.","The following certificates are part of the certificate chain but using insecure signature algorithms:
+
+Subject:              CN=*,L=SanDiego,ST=California,OU=TwonkyServer,O=PacketVideo,C=US
+Signature Algorithm:  sha1WithRSAEncryption
+
+
+",1.3.6.1.4.1.25623.1.0.105880,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,77ba427a-387c-4baf-8981-1db649597f8e,"","Servers that use SSL/TLS certificates signed with a weak SHA-1, MD5, MD4 or MD2 hashing algorithm will need to obtain new
+  SHA-2 signed SSL/TLS certificates to avoid web browser SSL/TLS certificate warnings.","","The following hashing algorithms used for signing SSL/TLS certificates are considered cryptographically weak
+  and not secure enough for ongoing use:
+
+  - Secure Hash Algorithm 1 (SHA-1)
+
+  - Message Digest 5 (MD5)
+
+  - Message Digest 4 (MD4)
+
+  - Message Digest 2 (MD2)
+
+  Beginning as late as January 2017 and as early as June 2016, browser developers such as Microsoft and Google will begin warning users when visiting
+  web sites that use SHA-1 signed Secure Socket Layer (SSL) certificates.
+
+  NOTE: The script preference allows to set one or more custom SHA-1 fingerprints of CA certificates which are trusted by this routine. The fingerprints
+  needs to be passed comma-separated and case-insensitive:
+
+  Fingerprint1
+
+  or
+
+  fingerprint1, Fingerprint2","Check which hashing algorithm was used to sign the remote SSL/TLS certificate.
+Details:
+SSL/TLS: Certificate Signed Using A Weak Signature Algorithm
+(OID: 1.3.6.1.4.1.25623.1.0.105880)
+Version used: 2021-10-15T11:13:32Z
+","","","",""
+192.168.2.1,mynetwork.home,,,2.1,Low,80,"Mitigation","ICMP Timestamp Reply Information Disclosure","The remote host responded to an ICMP timestamp request.","The following response / ICMP packet has been received:
+- ICMP Type: 14
+- ICMP Code: 0
+",1.3.6.1.4.1.25623.1.0.103190,"CVE-1999-0524",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,3805dc90-2a22-43f3-ba10-e409a01887f1,"This information could theoretically be used to exploit weak
+  time-based random number generators in other services.","Various mitigations are possible:
+
+  - Disable the support for ICMP timestamp on the remote host completely
+
+  - Protect the remote host by a firewall, and block ICMP packets passing through the firewall in
+  either direction (either completely or only for untrusted networks)","","The Timestamp Reply is an ICMP message which replies to a
+  Timestamp message. It consists of the originating timestamp sent by the sender of the Timestamp as
+  well as a receive timestamp and a transmit timestamp.","Sends an ICMP Timestamp (Type 13) request and checks if a
+  Timestamp Reply (Type 14) is received.
+Details:
+ICMP Timestamp Reply Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.103190)
+Version used: 2025-01-21T05:37:33Z
+","","","DFN-CERT-2014-0658,CB-K15/1514,CB-K14/0632",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,98,"","SSL/TLS: Collect and Report Certificate Details","This script collects and reports the details of all SSL/TLS
+  certificates.
+
+  This data will be used by other tests to verify server certificates.","The following certificate details of the remote service were collected.
+
+Certificate details:
+fingerprint (SHA-1)             | 645D99D4857F87CFFB5FFAAD34613E6D97482745
+fingerprint (SHA-256)           | D19A4E88FB88E985C49DE3E75FC085D55E47CACF8870AC429A692B8E7B1497FA
+issued by                       | CN=self-signedkey,O=Sagemcom Ca,C=FR
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 00C4BBECECC04303A2
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=self-signedkey,O=Sagemcom Ca,C=FR
+subject alternative names (SAN) | None
+valid from                      | 2015-10-02 09:55:43 UTC
+valid until                     | 2115-09-08 09:55:43 UTC
+",1.3.6.1.4.1.25623.1.0.103692,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,ee5a4050-663d-4922-a5a4-6270437d0e2d,"","","","","
+Details:
+SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+Version used: 2024-09-27T05:05:23Z
+","","","",""
+192.168.2.1,mynetwork.home,,,0.0,Log,98,"","SSL/TLS: Hostname discovery from server certificate","It was possible to discover an additional hostname
+  of this server from its certificate Common or Subject Alt Name.","The following additional but not resolvable hostnames were detected:
+
+self-signedkey
+
+
+",1.3.6.1.4.1.25623.1.0.111010,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,daef3f73-11bb-47be-8b5f-6edeae3673af,"","","","","
+Details:
+SSL/TLS: Hostname discovery from server certificate
+(OID: 1.3.6.1.4.1.25623.1.0.111010)
+Version used: 2021-11-22T15:32:39Z
+","","","",""
+192.168.2.1,mynetwork.home,80,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A web server is running on this port
+",1.3.6.1.4.1.25623.1.0.10330,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,c0fcdaec-b883-4539-8541-34d438ac9207,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+192.168.2.1,mynetwork.home,10080,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A web server is running on this port
+",1.3.6.1.4.1.25623.1.0.10330,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,353fe267-39b7-4dcd-b825-7acb488b09e5,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A TLScustom server answered on this port
+
+",1.3.6.1.4.1.25623.1.0.10330,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,eeaaf5f4-0a9c-48c2-9eab-01a345cb35f1,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A web server is running on this port through SSL
+",1.3.6.1.4.1.25623.1.0.10330,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,47437b69-3da3-4ac0-a8f9-b3f352bcf0e5,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,80,"","Response Time / No 404 Error Code Check","This VT tests if the remote web server does not reply with a 404
+  error code and checks if it is replying to the scanners requests in a reasonable amount of time.","The service is responding with a 200 HTTP status code to non-existent files/urls. The following pattern is used to work around possible false detections:
+-----
+ class=""splash""
+
+-----
+",1.3.6.1.4.1.25623.1.0.10386,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,90d06d5e-b3b9-4fa0-96db-52562f4a5f23,"","","","This web server might show the following issues:
+
+  - it is [mis]configured in that it does not return '404 Not Found' error codes when a non-existent
+  file is requested, perhaps returning a site map, search page, authentication page or redirect instead.
+
+  The Scanner might enabled some counter measures for that, however they might be insufficient. If a
+  great number of security issues are reported for this port, they might not all be accurate.
+
+  - it doesn't response in a reasonable amount of time to various HTTP requests sent by this VT.
+
+  In order to keep the scan total time to a reasonable amount, the remote web server might not be
+  tested. If the remote server should be tested it has to be fixed to have it reply to the scanners
+  requests in a reasonable amount of time.
+
+  Alternatively the 'Maximum response time (in seconds)' preference could be raised to a higher
+  value if longer scan times are accepted.","
+Details:
+Response Time / No 404 Error Code Check
+(OID: 1.3.6.1.4.1.25623.1.0.10386)
+Version used: 2023-07-07T05:05:26Z
+","","","",""
+192.168.2.1,mynetwork.home,10080,tcp,0.0,Log,80,"","Response Time / No 404 Error Code Check","This VT tests if the remote web server does not reply with a 404
+  error code and checks if it is replying to the scanners requests in a reasonable amount of time.","The host returns a 30x (e.g. 301) error code when a non-existent file is requested. Some HTTP-related checks have been disabled.
+",1.3.6.1.4.1.25623.1.0.10386,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,ed5be82b-6431-49af-bb33-a285e40fc8e2,"","","","This web server might show the following issues:
+
+  - it is [mis]configured in that it does not return '404 Not Found' error codes when a non-existent
+  file is requested, perhaps returning a site map, search page, authentication page or redirect instead.
+
+  The Scanner might enabled some counter measures for that, however they might be insufficient. If a
+  great number of security issues are reported for this port, they might not all be accurate.
+
+  - it doesn't response in a reasonable amount of time to various HTTP requests sent by this VT.
+
+  In order to keep the scan total time to a reasonable amount, the remote web server might not be
+  tested. If the remote server should be tested it has to be fixed to have it reply to the scanners
+  requests in a reasonable amount of time.
+
+  Alternatively the 'Maximum response time (in seconds)' preference could be raised to a higher
+  value if longer scan times are accepted.","
+Details:
+Response Time / No 404 Error Code Check
+(OID: 1.3.6.1.4.1.25623.1.0.10386)
+Version used: 2023-07-07T05:05:26Z
+","","","",""
+192.168.2.1,mynetwork.home,80,tcp,0.0,Log,80,"","Response Time / No 404 Error Code Check","This VT tests if the remote web server does not reply with a 404
+  error code and checks if it is replying to the scanners requests in a reasonable amount of time.","The service is responding with a 200 HTTP status code to non-existent files/urls. The following pattern is used to work around possible false detections:
+-----
+ class=""splash""
+
+-----
+",1.3.6.1.4.1.25623.1.0.10386,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,3b10346c-9558-4405-87b3-d55c39ed0f6d,"","","","This web server might show the following issues:
+
+  - it is [mis]configured in that it does not return '404 Not Found' error codes when a non-existent
+  file is requested, perhaps returning a site map, search page, authentication page or redirect instead.
+
+  The Scanner might enabled some counter measures for that, however they might be insufficient. If a
+  great number of security issues are reported for this port, they might not all be accurate.
+
+  - it doesn't response in a reasonable amount of time to various HTTP requests sent by this VT.
+
+  In order to keep the scan total time to a reasonable amount, the remote web server might not be
+  tested. If the remote server should be tested it has to be fixed to have it reply to the scanners
+  requests in a reasonable amount of time.
+
+  Alternatively the 'Maximum response time (in seconds)' preference could be raised to a higher
+  value if longer scan times are accepted.","
+Details:
+Response Time / No 404 Error Code Check
+(OID: 1.3.6.1.4.1.25623.1.0.10386)
+Version used: 2023-07-07T05:05:26Z
+","","","",""
+192.168.2.1,mynetwork.home,,,0.0,Log,80,"","Unknown OS and Service Banner Reporting","This VT consolidates and reports the information collected by
+  the following VTs:
+
+  - Collect banner of unknown services (OID: 1.3.6.1.4.1.25623.1.0.11154)
+
+  - Service Detection (unknown) with nmap (OID: 1.3.6.1.4.1.25623.1.0.66286)
+
+  - Service Detection (wrapped) with nmap (OID: 1.3.6.1.4.1.25623.1.0.108525)
+
+  - OS Detection Consolidation and Reporting (OID: 1.3.6.1.4.1.25623.1.0.105937)
+
+  If you know any of the information reported here, please send the full output to
+  the referenced community forum.","Unknown banners have been collected which might help to identify the OS running on this host. If these banners containing information about the host OS please report the following information to https://forum.greenbone.net/c/vulnerability-tests/7:
+
+Banner: UNKNOWN
+Identified from: DNS server banner on port 53/tcp
+
+Banner: Server: HTTP Server
+Identified from: HTTP Server banner on port 10080/tcp
+
+Banner: Server: HTTP Server
+Identified from: HTTP Server banner on port 443/tcp
+
+Banner: Server: HTTP Server
+Identified from: HTTP Server banner on port 80/tcp
+",1.3.6.1.4.1.25623.1.0.108441,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,b78472fc-d74d-42cc-b663-451a90b912ac,"","","","","
+Details:
+Unknown OS and Service Banner Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.108441)
+Version used: 2023-06-22T10:34:15Z
+","","","",""
+192.168.2.1,mynetwork.home,9000,tcp,0.0,Log,80,"","UPnP Detection (TCP)","TCP based detection of the UPnP protocol.
+
+  The script sends a HTTP request to URLs for the root description XML, either based on previously
+  detected location or a list of known possible locations.","The remote Host exposes an UPnP root device XML on port 9000/tcp.
+
+The XML can be found at the location:
+  http://mynetwork.home:9000/rss/Starter_desc.xml
+",1.3.6.1.4.1.25623.1.0.170204,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,1596b7ca-5e27-4c5f-b700-e08b018ee27d,"","","","","
+Details:
+UPnP Detection (TCP)
+(OID: 1.3.6.1.4.1.25623.1.0.170204)
+Version used: 2024-09-06T15:39:29Z
+","","","",""
+192.168.2.1,mynetwork.home,9443,tcp,0.0,Log,80,"","Unknown OS and Service Banner Reporting","This VT consolidates and reports the information collected by
+  the following VTs:
+
+  - Collect banner of unknown services (OID: 1.3.6.1.4.1.25623.1.0.11154)
+
+  - Service Detection (unknown) with nmap (OID: 1.3.6.1.4.1.25623.1.0.66286)
+
+  - Service Detection (wrapped) with nmap (OID: 1.3.6.1.4.1.25623.1.0.108525)
+
+  - OS Detection Consolidation and Reporting (OID: 1.3.6.1.4.1.25623.1.0.105937)
+
+  If you know any of the information reported here, please send the full output to
+  the referenced community forum.","An unknown service is running on this port. If you know this service, please report the following information to https://forum.greenbone.net/c/vulnerability-tests/7:
+
+Method: get_httpHex
+
+0x00:  15 03 01 00 02 02 28 15 03 01 00 02 02 00          ......(.......  
+
+
+Nmap service detection (unknown) result for this port: ssl|tungsten-https
+
+This is a guess. A confident identification of the service was not possible.
+
+Hint: If you're running a recent nmap version try to run nmap with the following command: 'nmap -sV -Pn -p 9443 192.168.2.1' and submit a possible collected fingerprint to the nmap database.
+",1.3.6.1.4.1.25623.1.0.108441,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,d15c3966-e048-4905-a023-ac63c6c8ef46,"","","","","
+Details:
+Unknown OS and Service Banner Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.108441)
+Version used: 2023-06-22T10:34:15Z
+","","","",""
+192.168.2.1,mynetwork.home,9000,tcp,0.0,Log,80,"","HTTP Server Banner Enumeration","This script tries to detect / enumerate different HTTP server
+  banner (e.g. from a frontend, backend or proxy server) by sending various different HTTP requests
+  (valid and invalid ones).","It was possible to enumerate the following HTTP server banner(s):
+
+Server banner                                                              | Enumeration technique
+---------------------------------------------------------------------------------------------------------------------------------------------
+Server: Linux/2.x.x, UPnP/1.0, pvConnect UPnP SDK/1.0, Twonky UPnP SDK/1.1 | Invalid HTTP 00.5 GET request (non-existent HTTP version) to '/'
+",1.3.6.1.4.1.25623.1.0.108708,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,ff13caab-53c3-4fd7-a54d-a441657a2218,"","","","","
+Details:
+HTTP Server Banner Enumeration
+(OID: 1.3.6.1.4.1.25623.1.0.108708)
+Version used: 2025-01-31T15:39:24Z
+","","","",""
+192.168.2.1,mynetwork.home,,,0.0,Log,80,"","OS Detection Consolidation and Reporting","This script consolidates the OS information detected by several
+  VTs and tries to find the best matching OS.
+
+  Furthermore it reports all previously collected information leading to this best matching OS. It
+  also reports possible additional information which might help to improve the OS detection.
+
+  If any of this information is wrong or could be improved please consider to report these to the
+  referenced community forum.","Best matching OS:
+
+OS:           Linux 2.x.x
+Version:      2.x.x
+CPE:          cpe:/o:linux:kernel:2.x.x
+Found by VT:  1.3.6.1.4.1.25623.1.0.111067 (Operating System (OS) Detection (HTTP))
+Concluded from HTTP Server banner on port 9000/tcp: Server: Linux/2.x.x, UPnP/1.0, pvConnect UPnP SDK/1.0, Twonky UPnP SDK/1.1
+Setting key ""Host/runs_unixoide"" based on this information
+",1.3.6.1.4.1.25623.1.0.105937,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,bc4fc701-62f5-40f2-bd72-777eeeeac554,"","","","","
+Details:
+OS Detection Consolidation and Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.105937)
+Version used: 2025-01-31T15:39:24Z
+","","","",""
+192.168.2.1,mynetwork.home,,,0.0,Log,70,"","IP Forwarding Enabled - Active Check","Checks if the remote host has IP forwarding enabled.","It was possible to route a TCP packet through the target host and received an answer which means IP forwarding is enabled.
+",1.3.6.1.4.1.25623.1.0.147205,"CVE-1999-0511",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,99962ce7-3c7d-41dc-984a-33361926c39f,"","","","","Sends a crafted Local Link Layer (LLL) frame and checks the
+  response.
+Details:
+IP Forwarding Enabled - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.147205)
+Version used: 2021-12-03T08:27:06Z
+","","","",""
+192.168.2.1,mynetwork.home,22,tcp,0.0,Log,80,"","SSH Login Failed For Authenticated Checks","It was NOT possible to login using the provided SSH
+  credentials. Hence authenticated checks are NOT enabled.","It was not possible to login using the provided SSH credentials. Hence authenticated checks are not enabled.
+
+If the SSH credentials are correct the login might have failed because of the following reasons:
+
+- The password of the provided SSH credentials has expired and the user is required to change it before a login is possible again.
+",1.3.6.1.4.1.25623.1.0.105936,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,7cd5bb9f-159e-4df3-93c6-855c8ab5f8c7,"","Recheck the SSH credentials for authenticated checks or
+  evaluate the script output for the required algorithms on the remote SSH server or the scanner.","","","
+Details:
+SSH Login Failed For Authenticated Checks
+(OID: 1.3.6.1.4.1.25623.1.0.105936)
+Version used: 2022-09-22T10:44:54Z
+","","","",""
+192.168.2.1,mynetwork.home,445,tcp,0.0,Log,80,"","SMB Remote Version Detection","Detection of Server Message Block(SMB).
+
+  This script sends SMB Negotiation request and try to get the version from the
+  response.","SMBv1, SMBv2 and SMBv3 are enabled on remote target
+",1.3.6.1.4.1.25623.1.0.807830,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,37dda7f7-697e-48a1-afa9-3bd5c4af0494,"","","","","
+Details:
+SMB Remote Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.807830)
+Version used: 2023-07-26T05:05:09Z
+","","","",""
+192.168.2.1,mynetwork.home,,,0.0,Log,80,"","Traceroute","Collect information about the network route and
+  network distance between the scanner host and the target host.","Network route from scanner (192.168.2.108) to target (192.168.2.1):
+
+192.168.2.108
+192.168.2.1
+
+Network distance between scanner and target: 2
+",1.3.6.1.4.1.25623.1.0.51662,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,5ef5a2eb-dee2-4e02-a2f7-ea93c3da4e49,"","","","For internal networks, the distances are usually
+  small, often less than 4 hosts between scanner and target. For public targets the
+  distance is greater and might be 10 hosts or more.","A combination of the protocols ICMP and TCP is used
+  to determine the route. This method is applicable for IPv4 only and it is also known as
+  'traceroute'.
+Details:
+Traceroute
+(OID: 1.3.6.1.4.1.25623.1.0.51662)
+Version used: 2022-10-17T11:13:19Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,98,"","SSL/TLS: Certificate - Self-Signed Certificate Detection","The SSL/TLS certificate on this port is self-signed.","The certificate of the remote service is self signed.
+
+Certificate details:
+fingerprint (SHA-1)             | 645D99D4857F87CFFB5FFAAD34613E6D97482745
+fingerprint (SHA-256)           | D19A4E88FB88E985C49DE3E75FC085D55E47CACF8870AC429A692B8E7B1497FA
+issued by                       | CN=self-signedkey,O=Sagemcom Ca,C=FR
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 00C4BBECECC04303A2
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=self-signedkey,O=Sagemcom Ca,C=FR
+subject alternative names (SAN) | None
+valid from                      | 2015-10-02 09:55:43 UTC
+valid until                     | 2115-09-08 09:55:43 UTC
+",1.3.6.1.4.1.25623.1.0.103140,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,96f61c14-2c83-4924-acaf-2ab6e4ac9df9,"","","","","
+Details:
+SSL/TLS: Certificate - Self-Signed Certificate Detection
+(OID: 1.3.6.1.4.1.25623.1.0.103140)
+Version used: 2024-06-14T05:05:48Z
+","Product: cpe:/a:ietf:transport_layer_security
+Method: SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,98,"","SSL/TLS: Certificate - Subject Common Name Does Not Match Server FQDN","The SSL/TLS certificate contains a common name (CN) that does not match the hostname.","The certificate of the remote service contains a common name (CN) that does not match the hostname ""mynetwork.home"".
+
+Certificate details:
+fingerprint (SHA-1)             | 645D99D4857F87CFFB5FFAAD34613E6D97482745
+fingerprint (SHA-256)           | D19A4E88FB88E985C49DE3E75FC085D55E47CACF8870AC429A692B8E7B1497FA
+issued by                       | CN=self-signedkey,O=Sagemcom Ca,C=FR
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 00C4BBECECC04303A2
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=self-signedkey,O=Sagemcom Ca,C=FR
+subject alternative names (SAN) | None
+valid from                      | 2015-10-02 09:55:43 UTC
+valid until                     | 2115-09-08 09:55:43 UTC
+",1.3.6.1.4.1.25623.1.0.103141,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,0eec11db-b1f6-400e-91ca-b244f269c7cc,"","","","","
+Details:
+SSL/TLS: Certificate - Subject Common Name Does Not Match Server FQDN
+(OID: 1.3.6.1.4.1.25623.1.0.103141)
+Version used: 2024-06-14T05:05:48Z
+","Product: cpe:/a:ietf:transport_layer_security
+Method: SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,99,"Mitigation","SSL/TLS: Certificate Too Long Valid","The remote server's SSL/TLS certificate expiration date is too
+  far in the future.","The certificate of the remote service is valid for more than 15 years from now and will expire on 2115-09-08 09:55:43.
+
+Certificate details:
+fingerprint (SHA-1)             | 645D99D4857F87CFFB5FFAAD34613E6D97482745
+fingerprint (SHA-256)           | D19A4E88FB88E985C49DE3E75FC085D55E47CACF8870AC429A692B8E7B1497FA
+issued by                       | CN=self-signedkey,O=Sagemcom Ca,C=FR
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 00C4BBECECC04303A2
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=self-signedkey,O=Sagemcom Ca,C=FR
+subject alternative names (SAN) | None
+valid from                      | 2015-10-02 09:55:43 UTC
+valid until                     | 2115-09-08 09:55:43 UTC
+",1.3.6.1.4.1.25623.1.0.103958,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,35bfed99-b986-46fa-8c8c-ee979ffa281b,"","Replace the SSL/TLS certificate by a new one.","","This script checks expiry dates of certificates associated with
+  SSL/TLS-enabled services on the target and reports whether any do not have a reasonable expiration
+  date.","
+Details:
+SSL/TLS: Certificate Too Long Valid
+(OID: 1.3.6.1.4.1.25623.1.0.103958)
+Version used: 2024-06-14T05:05:48Z
+","Product: cpe:/a:ietf:transport_layer_security
+Method: SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+","","",""
+192.168.2.1,mynetwork.home,445,tcp,0.0,Log,80,"","SMB Login Successful For Authenticated Checks","It was possible to login using the provided SMB
+  credentials. Hence authenticated checks are enabled.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.108539,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,e0cd1d9a-0597-4d80-9945-29ee06f7df3e,"","","","","
+Details:
+SMB Login Successful For Authenticated Checks
+(OID: 1.3.6.1.4.1.25623.1.0.108539)
+Version used: 2023-07-28T16:09:07Z
+","","","",""
+192.168.2.1,mynetwork.home,445,tcp,0.0,Log,80,"","Microsoft Windows SMB Accessible Shares","The script detects the Windows SMB Accessible Shares and sets the
+  result into KB.","The following shares were found
+IPC$
+
+",1.3.6.1.4.1.25623.1.0.902425,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,d7e0c686-0ab2-4eb8-a698-3b726ef1db2d,"","","","","
+Details:
+Microsoft Windows SMB Accessible Shares
+(OID: 1.3.6.1.4.1.25623.1.0.902425)
+Version used: 2023-01-31T10:08:41Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,80,"Workaround","SSL/TLS: HTTP Strict Transport Security (HSTS) Missing","The remote web server is not enforcing HTTP Strict Transport
+  Security (HSTS).","The remote web server is not enforcing HSTS.
+
+HTTP-Banner:
+
+HTTP/1.1 200 OK
+Content-Language: en
+Content-Type: text/html
+Accept-Ranges: bytes
+ETag: ""***replaced***""
+Last-Modified: ***replaced***
+Content-Length: ***replaced***
+Connection: close
+Date: ***replaced***
+Server: HTTP Server
+",1.3.6.1.4.1.25623.1.0.105879,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,4a936448-c419-49bd-9b7a-2af0630a94a3,"","Enable HSTS or add / configure the required directives
+  correctly following the guides linked in the references.
+
+  Note: Some web servers are not sending headers on specific status codes by default. Please review
+  your web server or application configuration to always send these headers on every response
+  independently from the status code.
+
+  - Apache: Use 'Header always set' instead of 'Header set'.
+
+  - nginx: Append the 'always' keyword to each 'add_header' directive.
+
+  For different applications or web severs please refer to the related documentation for a similar
+  configuration possibility.","","","
+Details:
+SSL/TLS: HTTP Strict Transport Security (HSTS) Missing
+(OID: 1.3.6.1.4.1.25623.1.0.105879)
+Version used: 2024-02-08T05:05:59Z
+","","","",""
+192.168.2.1,mynetwork.home,,,0.0,Log,80,"","Hostname Determination Reporting","The script reports information on how the hostname of the target
+  was determined.","Hostname determination for IP 192.168.2.1:
+
+Hostname|Source
+mynetwork.home|Reverse-DNS
+",1.3.6.1.4.1.25623.1.0.108449,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,7b248afc-bf83-458a-a98a-3fcec702f93f,"","","","","
+Details:
+Hostname Determination Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.108449)
+Version used: 2022-07-27T10:11:28Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,80,"Workaround","SSL/TLS: HTTP Public Key Pinning (HPKP) Missing","The remote web server is not enforcing HTTP Public Key Pinning
+  (HPKP).
+
+  Note: Most major browsers have dropped / deprecated support for this header in 2020.","The remote web server is not enforcing HPKP.
+
+HTTP-Banner:
+
+HTTP/1.1 200 OK
+Content-Language: en
+Content-Type: text/html
+Accept-Ranges: bytes
+ETag: ""***replaced***""
+Last-Modified: ***replaced***
+Content-Length: ***replaced***
+Connection: close
+Date: ***replaced***
+Server: HTTP Server
+",1.3.6.1.4.1.25623.1.0.108247,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,5a2ff916-ab76-4f3a-97fa-98122fafaf23,"","Enable HPKP or add / configure the required directives
+  correctly following the guides linked in the references.
+
+  Note: Some web servers are not sending headers on specific status codes by default. Please review
+  your web server or application configuration to always send these headers on every response
+  independently from the status code.
+
+  - Apache: Use 'Header always set' instead of 'Header set'.
+
+  - nginx: Append the 'always' keyword to each 'add_header' directive.
+
+  For different applications or web severs please refer to the related documentation for a similar
+  configuration possibility.","","","
+Details:
+SSL/TLS: HTTP Public Key Pinning (HPKP) Missing
+(OID: 1.3.6.1.4.1.25623.1.0.108247)
+Version used: 2024-02-08T05:05:59Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,80,"","HTTP Security Headers Detection","All known security headers are being checked on the remote web
+  server.
+
+  On completion a report will hand back whether a specific security header has been implemented
+  (including its value and if it is deprecated) or is missing on the target.","Missing Headers                   | More Information
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Content-Security-Policy           | https://owasp.org/www-project-secure-headers/#content-security-policy
+Cross-Origin-Embedder-Policy      | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Cross-Origin-Opener-Policy        | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Cross-Origin-Resource-Policy      | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Document-Policy                   | https://w3c.github.io/webappsec-feature-policy/document-policy#document-policy-http-header
+Expect-CT                         | https://owasp.org/www-project-secure-headers/#expect-ct, Note: This is an upcoming header
+Feature-Policy                    | https://owasp.org/www-project-secure-headers/#feature-policy, Note: The Feature Policy header has been renamed to Permissions Policy
+Permissions-Policy                | https://w3c.github.io/webappsec-feature-policy/#permissions-policy-http-header-field
+Public-Key-Pins                   | Please check the output of the VTs including 'SSL/TLS:' and 'HPKP' in their name for more information and configuration help. Note: Most major browsers have dropped / deprecated support for this header in 2020.
+Referrer-Policy                   | https://owasp.org/www-project-secure-headers/#referrer-policy
+Sec-Fetch-Dest                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-Mode                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-Site                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-User                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Strict-Transport-Security         | Please check the output of the VTs including 'SSL/TLS:' and 'HSTS' in their name for more information and configuration help.
+X-Content-Type-Options            | https://owasp.org/www-project-secure-headers/#x-content-type-options
+X-Frame-Options                   | https://owasp.org/www-project-secure-headers/#x-frame-options
+X-Permitted-Cross-Domain-Policies | https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies
+X-XSS-Protection                  | https://owasp.org/www-project-secure-headers/#x-xss-protection, Note: Most major browsers have dropped / deprecated support for this header in 2020.
+",1.3.6.1.4.1.25623.1.0.112081,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,c89b83ec-b609-4ee2-ba5b-1deb045fa3ad,"","","","","
+Details:
+HTTP Security Headers Detection
+(OID: 1.3.6.1.4.1.25623.1.0.112081)
+Version used: 2021-07-14T06:19:43Z
+","","","",""
+192.168.2.1,mynetwork.home,80,tcp,0.0,Log,80,"Workaround","SSL/TLS: HPKP / HSTS / Expect-CT Headers sent via plain HTTP","This script checks if the remote HTTP server is sending a HPKP, HSTS
+  and/or Expect-CT header via plain HTTP.
+
+  Note: Most major browsers have dropped / deprecated support for this header in 2020.","The remote HTTP server is sending HPKP, HSTS and/or Expect-CT headers via plain HTTP.
+
+HSTS-Header:
+
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+",1.3.6.1.4.1.25623.1.0.108248,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,c7c4524f-c92e-40d9-9f99-9407a4d7de5d,"","Configure the remote host to only send HPKP, HSTS and Expect-CT headers
+  via HTTPS. Sending those headers via plain HTTP doesn't comply with the referenced RFCs.","","","
+Details:
+SSL/TLS: HPKP / HSTS / Expect-CT Headers sent via plain HTTP
+(OID: 1.3.6.1.4.1.25623.1.0.108248)
+Version used: 2023-07-25T05:05:58Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,98,"","SSL/TLS: Report Perfect Forward Secrecy (PFS) Cipher Suites","This routine reports all SSL/TLS cipher suites accepted by a
+  service which are supporting Perfect Forward Secrecy (PFS).","Cipher suites supporting Perfect Forward Secrecy (PFS) are accepted by this service via the TLSv1.2 protocol:
+
+TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+
+Cipher suites supporting Perfect Forward Secrecy (PFS) are accepted by this service via the TLSv1.3 protocol:
+
+TLS_AES_128_GCM_SHA256
+TLS_AES_256_GCM_SHA384
+TLS_CHACHA20_POLY1305_SHA256
+
+
+",1.3.6.1.4.1.25623.1.0.105018,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,0d6f8d1d-cde7-4f11-93de-bdbcd9ce40dd,"","","","","
+Details:
+SSL/TLS: Report Perfect Forward Secrecy (PFS) Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.105018)
+Version used: 2024-09-30T08:38:05Z
+","Product: cpe:/a:ietf:transport_layer_security
+Method: SSL/TLS: Report Supported Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.802067)
+","","",""
+192.168.2.1,mynetwork.home,9443,tcp,0.0,Log,98,"","SSL/TLS: Perfect Forward Secrecy Cipher Suites Missing","The remote service is missing support for SSL/TLS cipher suites supporting Perfect Forward Secrecy.","The remote service does not support perfect forward secrecy cipher suites.
+",1.3.6.1.4.1.25623.1.0.105092,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,58b6655d-8291-49ff-891d-0435a76ca326,"","","","","
+Details:
+SSL/TLS: Perfect Forward Secrecy Cipher Suites Missing
+(OID: 1.3.6.1.4.1.25623.1.0.105092)
+Version used: 2024-09-27T05:05:23Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,98,"","SSL/TLS: Report Medium Cipher Suites","This routine reports all Medium SSL/TLS cipher suites accepted
+  by a service.","'Medium' cipher suites accepted by this service via the TLSv1.2 protocol:
+
+TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_RSA_WITH_AES_256_CBC_SHA256
+TLS_RSA_WITH_AES_256_GCM_SHA384
+
+'Medium' cipher suites accepted by this service via the TLSv1.3 protocol:
+
+TLS_AES_128_GCM_SHA256
+
+
+",1.3.6.1.4.1.25623.1.0.902816,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,97166311-2dc4-4c37-bbf9-f55000a79785,"","","","Any cipher suite considered to be secure for only the next 10
+  years is considered as medium.","
+Details:
+SSL/TLS: Report Medium Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.902816)
+Version used: 2024-09-27T05:05:23Z
+","Product: cpe:/a:ietf:transport_layer_security
+Method: SSL/TLS: Report Supported Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.802067)
+","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,98,"","SSL/TLS: Report Non Weak Cipher Suites","This routine reports all Non Weak SSL/TLS cipher suites
+  accepted by a service.","'Non Weak' cipher suites accepted by this service via the TLSv1.2 protocol:
+
+TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_RSA_WITH_AES_256_CBC_SHA256
+TLS_RSA_WITH_AES_256_GCM_SHA384
+
+'Non Weak' cipher suites accepted by this service via the TLSv1.3 protocol:
+
+TLS_AES_128_GCM_SHA256
+TLS_AES_256_GCM_SHA384
+TLS_CHACHA20_POLY1305_SHA256
+
+
+",1.3.6.1.4.1.25623.1.0.103441,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,0d1fd961-dc68-4f1c-9fda-ca18c84c60b7,"","","","","
+Details:
+SSL/TLS: Report Non Weak Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.103441)
+Version used: 2024-09-27T05:05:23Z
+","Product: cpe:/a:ietf:transport_layer_security
+Method: SSL/TLS: Report Supported Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.802067)
+","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,98,"","SSL/TLS: Report Supported Cipher Suites","This routine reports all SSL/TLS cipher suites accepted by a
+  service.","'Strong' cipher suites accepted by this service via the TLSv1.2 protocol:
+
+TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+
+'Medium' cipher suites accepted by this service via the TLSv1.2 protocol:
+
+TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_RSA_WITH_AES_256_CBC_SHA256
+TLS_RSA_WITH_AES_256_GCM_SHA384
+
+No 'Weak' cipher suites accepted by this service via the TLSv1.2 protocol.
+
+No 'Null' cipher suites accepted by this service via the TLSv1.2 protocol.
+
+No 'Anonymous' cipher suites accepted by this service via the TLSv1.2 protocol.
+
+'Strong' cipher suites accepted by this service via the TLSv1.3 protocol:
+
+TLS_AES_256_GCM_SHA384
+TLS_CHACHA20_POLY1305_SHA256
+
+'Medium' cipher suites accepted by this service via the TLSv1.3 protocol:
+
+TLS_AES_128_GCM_SHA256
+
+No 'Weak' cipher suites accepted by this service via the TLSv1.3 protocol.
+
+No 'Null' cipher suites accepted by this service via the TLSv1.3 protocol.
+
+No 'Anonymous' cipher suites accepted by this service via the TLSv1.3 protocol.
+
+
+",1.3.6.1.4.1.25623.1.0.802067,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,83c96116-273e-4995-a38a-f3b6d54aa42c,"","","","Notes:
+
+  - As the VT 'SSL/TLS: Check Supported Cipher Suites' (OID: 1.3.6.1.4.1.25623.1.0.900234) might run
+  into a timeout the actual reporting of all accepted cipher suites takes place in this VT instead.
+
+  - SSLv2 ciphers are not getting reported as the protocol itself is deprecated, needs to be
+  considered as weak and is reported separately as deprecated.","
+Details:
+SSL/TLS: Report Supported Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.802067)
+Version used: 2024-09-27T05:05:23Z
+","","","",""
+192.168.2.1,mynetwork.home,9443,tcp,0.0,Log,98,"","SSL/TLS: Report Supported Cipher Suites","This routine reports all SSL/TLS cipher suites accepted by a
+  service.","No 'Strong' cipher suites accepted by this service via the TLSv1.0 protocol.
+
+No 'Medium' cipher suites accepted by this service via the TLSv1.0 protocol.
+
+No 'Weak' cipher suites accepted by this service via the TLSv1.0 protocol.
+
+No 'Null' cipher suites accepted by this service via the TLSv1.0 protocol.
+
+No 'Anonymous' cipher suites accepted by this service via the TLSv1.0 protocol.
+
+
+",1.3.6.1.4.1.25623.1.0.802067,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,d1a034e7-a555-4a31-95f0-5e7d4e57b717,"","","","Notes:
+
+  - As the VT 'SSL/TLS: Check Supported Cipher Suites' (OID: 1.3.6.1.4.1.25623.1.0.900234) might run
+  into a timeout the actual reporting of all accepted cipher suites takes place in this VT instead.
+
+  - SSLv2 ciphers are not getting reported as the protocol itself is deprecated, needs to be
+  considered as weak and is reported separately as deprecated.","
+Details:
+SSL/TLS: Report Supported Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.802067)
+Version used: 2024-09-27T05:05:23Z
+","","","",""
+192.168.2.1,mynetwork.home,9443,tcp,0.0,Log,98,"","SSL/TLS: Safe/Secure Renegotiation Support Status","Checks and reports if a remote SSL/TLS service supports
+  safe/secure renegotiation.","Protocol Version | Safe/Secure Renegotiation Support Status
+----------------------------------------------------------------------------------
+SSLv3            | Unknown, Reason: Failed to open a socket to the remote service.
+TLSv1.0          | Unknown, Reason: Failed to open a socket to the remote service.
+TLSv1.1          | Unknown, Reason: Failed to open a socket to the remote service.
+TLSv1.2          | Unknown, Reason: Failed to open a socket to the remote service.
+TLSv1.3          | Unknown, Reason: Failed to open a socket to the remote service.
+",1.3.6.1.4.1.25623.1.0.117757,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,3281ff1d-327b-44e2-b7ce-b0d9b2c27bc0,"","","","","
+Details:
+SSL/TLS: Safe/Secure Renegotiation Support Status
+(OID: 1.3.6.1.4.1.25623.1.0.117757)
+Version used: 2024-09-27T05:05:23Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,98,"","SSL/TLS: Safe/Secure Renegotiation Support Status","Checks and reports if a remote SSL/TLS service supports
+  safe/secure renegotiation.","Protocol Version | Safe/Secure Renegotiation Support Status
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SSLv3            | Unknown, Reason: Scanner failed to negotiate an SSL/TLS connection (Either the scanner or the remote host is probably not supporting / accepting this SSL/TLS protocol version).
+TLSv1.0          | Unknown, Reason: Scanner failed to negotiate an SSL/TLS connection (Either the scanner or the remote host is probably not supporting / accepting this SSL/TLS protocol version).
+TLSv1.1          | Unknown, Reason: Scanner failed to negotiate an SSL/TLS connection (Either the scanner or the remote host is probably not supporting / accepting this SSL/TLS protocol version).
+TLSv1.2          | Enabled, Note: While the remote service announces the support of safe/secure renegotiation it still might not support / accept renegotiation at all.
+TLSv1.3          | Disabled (The TLSv1.3 protocol generally doesn't support renegotiation so this is always reported as 'Disabled')
+",1.3.6.1.4.1.25623.1.0.117757,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,5a314691-8d64-4e8a-b546-cc04f9a4dd07,"","","","","
+Details:
+SSL/TLS: Safe/Secure Renegotiation Support Status
+(OID: 1.3.6.1.4.1.25623.1.0.117757)
+Version used: 2024-09-27T05:05:23Z
+","","","",""
+192.168.2.1,mynetwork.home,10080,tcp,0.0,Log,80,"","HTTP Security Headers Detection","All known security headers are being checked on the remote web
+  server.
+
+  On completion a report will hand back whether a specific security header has been implemented
+  (including its value and if it is deprecated) or is missing on the target.","Missing Headers                   | More Information
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Content-Security-Policy           | https://owasp.org/www-project-secure-headers/#content-security-policy
+Cross-Origin-Embedder-Policy      | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Cross-Origin-Opener-Policy        | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Cross-Origin-Resource-Policy      | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Document-Policy                   | https://w3c.github.io/webappsec-feature-policy/document-policy#document-policy-http-header
+Feature-Policy                    | https://owasp.org/www-project-secure-headers/#feature-policy, Note: The Feature Policy header has been renamed to Permissions Policy
+Permissions-Policy                | https://w3c.github.io/webappsec-feature-policy/#permissions-policy-http-header-field
+Referrer-Policy                   | https://owasp.org/www-project-secure-headers/#referrer-policy
+Sec-Fetch-Dest                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-Mode                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-Site                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-User                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+X-Content-Type-Options            | https://owasp.org/www-project-secure-headers/#x-content-type-options
+X-Frame-Options                   | https://owasp.org/www-project-secure-headers/#x-frame-options
+X-Permitted-Cross-Domain-Policies | https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies
+X-XSS-Protection                  | https://owasp.org/www-project-secure-headers/#x-xss-protection, Note: Most major browsers have dropped / deprecated support for this header in 2020.
+",1.3.6.1.4.1.25623.1.0.112081,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,4e90429e-629f-46d2-8863-1a18ab813c19,"","","","","
+Details:
+HTTP Security Headers Detection
+(OID: 1.3.6.1.4.1.25623.1.0.112081)
+Version used: 2021-07-14T06:19:43Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,98,"","SSL/TLS: Untrusted Certificate Detection","Checks and reports if a remote SSL/TLS service is using a
+  certificate which is untrusted / the verification against the system wide trust store has failed.","The remote SSL/TLS server is using the following certificate(s) which failed the verification against the system wide trust store (serial:issuer):
+
+00C4BBECECC04303A2:CN=self-signedkey,O=Sagemcom Ca,C=FR (Server certificate)
+",1.3.6.1.4.1.25623.1.0.117764,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,a998f982-f4ff-47a2-8b5b-49e584505cca,"","","","","
+Details:
+SSL/TLS: Untrusted Certificate Detection
+(OID: 1.3.6.1.4.1.25623.1.0.117764)
+Version used: 2024-09-27T05:05:23Z
+","","","",""
+192.168.2.1,mynetwork.home,80,tcp,0.0,Log,80,"","HTTP Security Headers Detection","All known security headers are being checked on the remote web
+  server.
+
+  On completion a report will hand back whether a specific security header has been implemented
+  (including its value and if it is deprecated) or is missing on the target.","Header Name            | Header Value
+--------------------------------------
+X-Content-Type-Options | nosniff
+X-Frame-Options        | DENY
+X-XSS-Protection       | 1; mode=block
+
+Missing Headers                   | More Information
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Content-Security-Policy           | https://owasp.org/www-project-secure-headers/#content-security-policy
+Cross-Origin-Embedder-Policy      | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Cross-Origin-Opener-Policy        | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Cross-Origin-Resource-Policy      | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Document-Policy                   | https://w3c.github.io/webappsec-feature-policy/document-policy#document-policy-http-header
+Feature-Policy                    | https://owasp.org/www-project-secure-headers/#feature-policy, Note: The Feature Policy header has been renamed to Permissions Policy
+Permissions-Policy                | https://w3c.github.io/webappsec-feature-policy/#permissions-policy-http-header-field
+Referrer-Policy                   | https://owasp.org/www-project-secure-headers/#referrer-policy
+Sec-Fetch-Dest                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-Mode                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-Site                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-User                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+X-Permitted-Cross-Domain-Policies | https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies
+",1.3.6.1.4.1.25623.1.0.112081,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,6547810c-a59d-4ec3-bbbc-422ede7a5c93,"","","","","
+Details:
+HTTP Security Headers Detection
+(OID: 1.3.6.1.4.1.25623.1.0.112081)
+Version used: 2021-07-14T06:19:43Z
+","","","",""
+192.168.2.1,mynetwork.home,9000,tcp,0.0,Log,80,"","HTTP Security Headers Detection","All known security headers are being checked on the remote web
+  server.
+
+  On completion a report will hand back whether a specific security header has been implemented
+  (including its value and if it is deprecated) or is missing on the target.","Missing Headers                   | More Information
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Content-Security-Policy           | https://owasp.org/www-project-secure-headers/#content-security-policy
+Cross-Origin-Embedder-Policy      | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Cross-Origin-Opener-Policy        | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Cross-Origin-Resource-Policy      | https://scotthelme.co.uk/coop-and-coep/, Note: This is an upcoming header
+Document-Policy                   | https://w3c.github.io/webappsec-feature-policy/document-policy#document-policy-http-header
+Feature-Policy                    | https://owasp.org/www-project-secure-headers/#feature-policy, Note: The Feature Policy header has been renamed to Permissions Policy
+Permissions-Policy                | https://w3c.github.io/webappsec-feature-policy/#permissions-policy-http-header-field
+Referrer-Policy                   | https://owasp.org/www-project-secure-headers/#referrer-policy
+Sec-Fetch-Dest                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-Mode                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-Site                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+Sec-Fetch-User                    | https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers#fetch_metadata_request_headers, Note: This is a new header supported only in newer browsers like e.g. Firefox 90
+X-Content-Type-Options            | https://owasp.org/www-project-secure-headers/#x-content-type-options
+X-Frame-Options                   | https://owasp.org/www-project-secure-headers/#x-frame-options
+X-Permitted-Cross-Domain-Policies | https://owasp.org/www-project-secure-headers/#x-permitted-cross-domain-policies
+X-XSS-Protection                  | https://owasp.org/www-project-secure-headers/#x-xss-protection, Note: Most major browsers have dropped / deprecated support for this header in 2020.
+",1.3.6.1.4.1.25623.1.0.112081,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,103bded6-3502-44f2-befc-5dff124bb796,"","","","","
+Details:
+HTTP Security Headers Detection
+(OID: 1.3.6.1.4.1.25623.1.0.112081)
+Version used: 2021-07-14T06:19:43Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,80,"","HTTP Server type and version","This script detects and reports the HTTP Server's banner
+  which might provide the type and version of it.","The remote HTTP Server banner is:
+
+Server: HTTP Server
+",1.3.6.1.4.1.25623.1.0.10107,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,fa66e510-438c-4ded-ab28-3827663accf7,"","","","","
+Details:
+HTTP Server type and version
+(OID: 1.3.6.1.4.1.25623.1.0.10107)
+Version used: 2023-08-01T13:29:10Z
+","","","",""
+192.168.2.1,mynetwork.home,10080,tcp,0.0,Log,80,"","HTTP Server type and version","This script detects and reports the HTTP Server's banner
+  which might provide the type and version of it.","The remote HTTP Server banner is:
+
+Server: HTTP Server
+",1.3.6.1.4.1.25623.1.0.10107,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,a8a93eb9-549d-4c85-98ac-2127a6679ff3,"","","","","
+Details:
+HTTP Server type and version
+(OID: 1.3.6.1.4.1.25623.1.0.10107)
+Version used: 2023-08-01T13:29:10Z
+","","","",""
+192.168.2.1,mynetwork.home,80,tcp,0.0,Log,80,"","HTTP Server type and version","This script detects and reports the HTTP Server's banner
+  which might provide the type and version of it.","The remote HTTP Server banner is:
+
+Server: HTTP Server
+",1.3.6.1.4.1.25623.1.0.10107,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,99dce60d-029a-478e-a227-a44281fcaa66,"","","","","
+Details:
+HTTP Server type and version
+(OID: 1.3.6.1.4.1.25623.1.0.10107)
+Version used: 2023-08-01T13:29:10Z
+","","","",""
+192.168.2.1,mynetwork.home,9000,tcp,0.0,Log,80,"","HTTP Server type and version","This script detects and reports the HTTP Server's banner
+  which might provide the type and version of it.","The remote HTTP Server banner is:
+
+Server: Linux/2.x.x, UPnP/1.0, pvConnect UPnP SDK/1.0, Twonky UPnP SDK/1.1
+",1.3.6.1.4.1.25623.1.0.10107,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,db5d4260-9712-4a2e-a9e6-f6f81aba37e6,"","","","","
+Details:
+HTTP Server type and version
+(OID: 1.3.6.1.4.1.25623.1.0.10107)
+Version used: 2023-08-01T13:29:10Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,80,"","HTTP Server Banner Enumeration","This script tries to detect / enumerate different HTTP server
+  banner (e.g. from a frontend, backend or proxy server) by sending various different HTTP requests
+  (valid and invalid ones).","It was possible to enumerate the following HTTP server banner(s):
+
+Server banner       | Enumeration technique
+--------------------------------------------------------------------------------------
+Server: HTTP Server | Invalid HTTP 00.5 GET request (non-existent HTTP version) to '/'
+",1.3.6.1.4.1.25623.1.0.108708,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,57817454-ac2f-4dae-a207-e810b2bf55cb,"","","","","
+Details:
+HTTP Server Banner Enumeration
+(OID: 1.3.6.1.4.1.25623.1.0.108708)
+Version used: 2025-01-31T15:39:24Z
+","","","",""
+192.168.2.1,mynetwork.home,10080,tcp,0.0,Log,80,"","HTTP Server Banner Enumeration","This script tries to detect / enumerate different HTTP server
+  banner (e.g. from a frontend, backend or proxy server) by sending various different HTTP requests
+  (valid and invalid ones).","It was possible to enumerate the following HTTP server banner(s):
+
+Server banner       | Enumeration technique
+--------------------------------------------------------------------------------------
+Server: HTTP Server | Invalid HTTP 00.5 GET request (non-existent HTTP version) to '/'
+",1.3.6.1.4.1.25623.1.0.108708,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,5e0849bc-3b24-4765-91df-3ad9b3a724bc,"","","","","
+Details:
+HTTP Server Banner Enumeration
+(OID: 1.3.6.1.4.1.25623.1.0.108708)
+Version used: 2025-01-31T15:39:24Z
+","","","",""
+192.168.2.1,mynetwork.home,80,tcp,0.0,Log,80,"","HTTP Server Banner Enumeration","This script tries to detect / enumerate different HTTP server
+  banner (e.g. from a frontend, backend or proxy server) by sending various different HTTP requests
+  (valid and invalid ones).","It was possible to enumerate the following HTTP server banner(s):
+
+Server banner       | Enumeration technique
+--------------------------------------------------------------------------------------
+Server: HTTP Server | Invalid HTTP 00.5 GET request (non-existent HTTP version) to '/'
+",1.3.6.1.4.1.25623.1.0.108708,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,13fd4d82-706e-4964-94ab-285d2c5e9ac2,"","","","","
+Details:
+HTTP Server Banner Enumeration
+(OID: 1.3.6.1.4.1.25623.1.0.108708)
+Version used: 2025-01-31T15:39:24Z
+","","","",""
+192.168.2.1,mynetwork.home,445,tcp,0.0,Log,80,"","SMBv1 Enabled - Active Check","The host has enabled SMBv1 for the SMB Server.","SMBv1 is enabled for the SMB Server
+",1.3.6.1.4.1.25623.1.0.140151,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,b40457d2-5892-4397-bd6d-f11d151321ef,"","","","","Checks if SMBv1 is enabled for the SMB Server based on the
+  information provided by the following VT:
+
+  - SMB Remote Version Detection (OID: 1.3.6.1.4.1.25623.1.0.807830).
+Details:
+SMBv1 Enabled - Active Check
+(OID: 1.3.6.1.4.1.25623.1.0.140151)
+Version used: 2024-01-09T05:06:46Z
+","","","",""
+192.168.2.1,mynetwork.home,9000,tcp,0.0,Log,80,"","Web Application Scanning Consolidation / Info Reporting","The script consolidates and reports various information for web
+  application (formerly called 'CGI') scanning.
+
+  This information is based on the following scripts / settings:
+
+  - HTTP-Version Detection (OID: 1.3.6.1.4.1.25623.1.0.100034)
+
+  - No 404 check (OID: 1.3.6.1.4.1.25623.1.0.10386)
+
+  - Web mirroring / webmirror.nasl (OID: 1.3.6.1.4.1.25623.1.0.10662)
+
+  - Directory Scanner / DDI_Directory_Scanner.nasl (OID: 1.3.6.1.4.1.25623.1.0.11032)
+
+  - The configured 'cgi_path' within the 'Scanner Preferences' of the scan config in use
+
+  - The configured 'Enable CGI scanning', 'Enable generic web application scanning' and
+  'Add historic /scripts and /cgi-bin to directories for CGI scanning' within the
+  'Global variable settings' of the scan config in use
+
+  If you think any of this information is wrong please report it to the referenced community
+  forum.","The Hostname/IP ""mynetwork.home"" was used to access the remote host.
+
+Generic web application scanning is disabled for this host via the ""Enable generic web application scanning"" option within the ""Global variable settings"" of the scan config in use.
+
+This service seems to be able to host PHP scripts.
+
+This service seems to be able to host ASP scripts.
+
+The User-Agent ""Mozilla/5.0 [en] (X11, U; Greenbone OS 22.04.27)"" was used to access the remote host.
+
+Historic /scripts and /cgi-bin are not added to the directories used for web application scanning. You can enable this again with the ""Add historic /scripts and /cgi-bin to directories for CGI scanning"" option within the ""Global variable settings"" of the scan config in use.
+
+The following directories were used for web application scanning:
+
+http://mynetwork.home:9000/
+
+While this is not, in and of itself, a bug, you should manually inspect these directories to ensure that they are in compliance with company security standards
+",1.3.6.1.4.1.25623.1.0.111038,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,0f1d7302-2243-4fe5-8b42-c1e59cc443c3,"","","","","
+Details:
+Web Application Scanning Consolidation / Info Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.111038)
+Version used: 2024-09-19T05:05:57Z
+","","","",""
+192.168.2.1,mynetwork.home,,,0.0,Log,80,"","jQuery Detection Consolidation","Consolidation of jQuery detections.","Detected jQuery
+
+Version:       1.8.3
+Location:      /js/thirdParty/jquery-1.8.3.min.js
+CPE:           cpe:/a:jquery:jquery:1.8.3
+
+Concluded from version/product identification result:
+src=""/js/thirdParty/jquery-1.8.3.min.js
+
+Concluded from version/product identification location:
+- Identified file: https://mynetwork.home/js/thirdParty/jquery-1.8.3.min.js
+- Referenced at:   https://mynetwork.home/
+
+Detected jQuery
+
+Version:       1.8.3
+Location:      /js/thirdParty/jquery-1.8.3.min.js
+CPE:           cpe:/a:jquery:jquery:1.8.3
+
+Concluded from version/product identification result:
+src=""/js/thirdParty/jquery-1.8.3.min.js
+
+Concluded from version/product identification location:
+- Identified file: http://mynetwork.home/js/thirdParty/jquery-1.8.3.min.js
+- Referenced at:   http://mynetwork.home/
+",1.3.6.1.4.1.25623.1.0.150658,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,932ca5bc-7aa7-4666-83d2-6da4d70e2a58,"","","","","
+Details:
+jQuery Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.150658)
+Version used: 2023-07-14T05:06:08Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,80,"","Web Application Scanning Consolidation / Info Reporting","The script consolidates and reports various information for web
+  application (formerly called 'CGI') scanning.
+
+  This information is based on the following scripts / settings:
+
+  - HTTP-Version Detection (OID: 1.3.6.1.4.1.25623.1.0.100034)
+
+  - No 404 check (OID: 1.3.6.1.4.1.25623.1.0.10386)
+
+  - Web mirroring / webmirror.nasl (OID: 1.3.6.1.4.1.25623.1.0.10662)
+
+  - Directory Scanner / DDI_Directory_Scanner.nasl (OID: 1.3.6.1.4.1.25623.1.0.11032)
+
+  - The configured 'cgi_path' within the 'Scanner Preferences' of the scan config in use
+
+  - The configured 'Enable CGI scanning', 'Enable generic web application scanning' and
+  'Add historic /scripts and /cgi-bin to directories for CGI scanning' within the
+  'Global variable settings' of the scan config in use
+
+  If you think any of this information is wrong please report it to the referenced community
+  forum.","The Hostname/IP ""mynetwork.home"" was used to access the remote host.
+
+Generic web application scanning is disabled for this host via the ""Enable generic web application scanning"" option within the ""Global variable settings"" of the scan config in use.
+
+The service is responding with a 200 HTTP status code to non-existent files/urls. The following pattern is used to work around possible false detections:
+-----
+ class=""splash""
+
+-----
+
+Requests to this service are done via HTTP/1.1.
+
+This service seems to be able to host PHP scripts.
+
+This service seems to be able to host ASP scripts.
+
+The User-Agent ""Mozilla/5.0 [en] (X11, U; Greenbone OS 22.04.27)"" was used to access the remote host.
+
+Historic /scripts and /cgi-bin are not added to the directories used for web application scanning. You can enable this again with the ""Add historic /scripts and /cgi-bin to directories for CGI scanning"" option within the ""Global variable settings"" of the scan config in use.
+
+The following directories were used for web application scanning:
+
+https://mynetwork.home/
+
+While this is not, in and of itself, a bug, you should manually inspect these directories to ensure that they are in compliance with company security standards
+
+The following directories were excluded from web application scanning because the ""Regex pattern to exclude directories from CGI scanning"" setting of the VT ""Global variable settings"" (OID: 1.3.6.1.4.1.25623.1.0.12288) for this scan was: ""/(index\.php|image|img|css|js$|js/|javascript|style|theme|icon|jquery|graphic|grafik|picture|bilder|thumbnail|media/|skins?/)""
+
+https://mynetwork.home/gui/js
+https://mynetwork.home/js/thirdParty
+https://mynetwork.home/js/thirdParty/noUiSlider
+https://mynetwork.home/js/thirdParty/pikaday
+https://mynetwork.home/js/thirdParty/pikaday/css
+https://mynetwork.home/js/thirdParty/pikaday/plugins
+https://mynetwork.home/layout/css/desktop
+
+The following cgi scripts were excluded from web application scanning because of the ""Regex pattern to exclude cgi scripts"" setting of the VT ""Web mirroring"" (OID: 1.3.6.1.4.1.25623.1.0.10662) for this scan was: ""\.(js|css)$""
+
+Syntax : cginame (arguments [default value])
+
+https://mynetwork.home/common-bundle.js (_v [7.2.4] )
+https://mynetwork.home/gui/js/gui-api.js (_v [7.2.4] )
+https://mynetwork.home/gui/js/gui-core.js (_v [7.2.4] )
+https://mynetwork.home/gui/js/jquery-utils.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/IPSubnetCalculator.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/attrchange.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/circle-progress.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/cssua.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/dust-full-0.3.0.min.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/dust-helpers-1.1.1.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/jquery-1.8.3.min.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/jquery.csv-0.71.min.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/jquery.nouislider.min.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/jquery.sortElements.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/md5.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/modernizr.custom.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/noUiSlider/nouislider.css (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/noUiSlider/nouislider.min.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/noUiSlider/wNumb.min.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/pikaday/css/pikaday.css (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/pikaday/css/theme.css (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/pikaday/moment.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/pikaday/pikaday.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/pikaday/plugins/pikaday.jquery.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/raphael.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/typeahead.js (_v [7.2.4] )
+https://mynetwork.home/js/thirdParty/yepnope.1.5.4-min.js (_v [7.2.4] )
+https://mynetwork.home/layout/css/desktop/desktop.css (_v [7.2.4] )
+https://mynetwork.home/main-bundle.js (_v [7.2.4] )
+https://mynetwork.home/system-csp-production.js (_v [7.2.4] )
+",1.3.6.1.4.1.25623.1.0.111038,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,ae7f652d-96a4-4f37-bea0-78c7b85ab47e,"","","","","
+Details:
+Web Application Scanning Consolidation / Info Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.111038)
+Version used: 2024-09-19T05:05:57Z
+","","","",""
+192.168.2.1,mynetwork.home,10080,tcp,0.0,Log,80,"","Web Application Scanning Consolidation / Info Reporting","The script consolidates and reports various information for web
+  application (formerly called 'CGI') scanning.
+
+  This information is based on the following scripts / settings:
+
+  - HTTP-Version Detection (OID: 1.3.6.1.4.1.25623.1.0.100034)
+
+  - No 404 check (OID: 1.3.6.1.4.1.25623.1.0.10386)
+
+  - Web mirroring / webmirror.nasl (OID: 1.3.6.1.4.1.25623.1.0.10662)
+
+  - Directory Scanner / DDI_Directory_Scanner.nasl (OID: 1.3.6.1.4.1.25623.1.0.11032)
+
+  - The configured 'cgi_path' within the 'Scanner Preferences' of the scan config in use
+
+  - The configured 'Enable CGI scanning', 'Enable generic web application scanning' and
+  'Add historic /scripts and /cgi-bin to directories for CGI scanning' within the
+  'Global variable settings' of the scan config in use
+
+  If you think any of this information is wrong please report it to the referenced community
+  forum.","The Hostname/IP ""mynetwork.home"" was used to access the remote host.
+
+Generic web application scanning is disabled for this host via the ""Enable generic web application scanning"" option within the ""Global variable settings"" of the scan config in use.
+
+Requests to this service are done via HTTP/1.1.
+
+This service seems to be able to host PHP scripts.
+
+This service seems to be able to host ASP scripts.
+
+The User-Agent ""Mozilla/5.0 [en] (X11, U; Greenbone OS 22.04.27)"" was used to access the remote host.
+
+Historic /scripts and /cgi-bin are not added to the directories used for web application scanning. You can enable this again with the ""Add historic /scripts and /cgi-bin to directories for CGI scanning"" option within the ""Global variable settings"" of the scan config in use.
+
+The following directories were used for web application scanning:
+
+http://mynetwork.home:10080/
+
+While this is not, in and of itself, a bug, you should manually inspect these directories to ensure that they are in compliance with company security standards
+",1.3.6.1.4.1.25623.1.0.111038,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,5a712432-b645-43b7-80eb-800167e93c6a,"","","","","
+Details:
+Web Application Scanning Consolidation / Info Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.111038)
+Version used: 2024-09-19T05:05:57Z
+","","","",""
+192.168.2.1,mynetwork.home,80,tcp,0.0,Log,80,"","Web Application Scanning Consolidation / Info Reporting","The script consolidates and reports various information for web
+  application (formerly called 'CGI') scanning.
+
+  This information is based on the following scripts / settings:
+
+  - HTTP-Version Detection (OID: 1.3.6.1.4.1.25623.1.0.100034)
+
+  - No 404 check (OID: 1.3.6.1.4.1.25623.1.0.10386)
+
+  - Web mirroring / webmirror.nasl (OID: 1.3.6.1.4.1.25623.1.0.10662)
+
+  - Directory Scanner / DDI_Directory_Scanner.nasl (OID: 1.3.6.1.4.1.25623.1.0.11032)
+
+  - The configured 'cgi_path' within the 'Scanner Preferences' of the scan config in use
+
+  - The configured 'Enable CGI scanning', 'Enable generic web application scanning' and
+  'Add historic /scripts and /cgi-bin to directories for CGI scanning' within the
+  'Global variable settings' of the scan config in use
+
+  If you think any of this information is wrong please report it to the referenced community
+  forum.","The Hostname/IP ""mynetwork.home"" was used to access the remote host.
+
+Generic web application scanning is disabled for this host via the ""Enable generic web application scanning"" option within the ""Global variable settings"" of the scan config in use.
+
+The service is responding with a 200 HTTP status code to non-existent files/urls. The following pattern is used to work around possible false detections:
+-----
+ class=""splash""
+
+-----
+
+Requests to this service are done via HTTP/1.1.
+
+This service seems to be able to host PHP scripts.
+
+This service seems to be able to host ASP scripts.
+
+The User-Agent ""Mozilla/5.0 [en] (X11, U; Greenbone OS 22.04.27)"" was used to access the remote host.
+
+Historic /scripts and /cgi-bin are not added to the directories used for web application scanning. You can enable this again with the ""Add historic /scripts and /cgi-bin to directories for CGI scanning"" option within the ""Global variable settings"" of the scan config in use.
+
+The following directories were used for web application scanning:
+
+http://mynetwork.home/
+
+While this is not, in and of itself, a bug, you should manually inspect these directories to ensure that they are in compliance with company security standards
+
+The following directories were excluded from web application scanning because the ""Regex pattern to exclude directories from CGI scanning"" setting of the VT ""Global variable settings"" (OID: 1.3.6.1.4.1.25623.1.0.12288) for this scan was: ""/(index\.php|image|img|css|js$|js/|javascript|style|theme|icon|jquery|graphic|grafik|picture|bilder|thumbnail|media/|skins?/)""
+
+http://mynetwork.home/gui/js
+http://mynetwork.home/js/thirdParty
+http://mynetwork.home/js/thirdParty/noUiSlider
+http://mynetwork.home/js/thirdParty/pikaday
+http://mynetwork.home/js/thirdParty/pikaday/css
+http://mynetwork.home/js/thirdParty/pikaday/plugins
+http://mynetwork.home/layout/css/desktop
+
+The following cgi scripts were excluded from web application scanning because of the ""Regex pattern to exclude cgi scripts"" setting of the VT ""Web mirroring"" (OID: 1.3.6.1.4.1.25623.1.0.10662) for this scan was: ""\.(js|css)$""
+
+Syntax : cginame (arguments [default value])
+
+http://mynetwork.home/common-bundle.js (_v [7.2.4] )
+http://mynetwork.home/gui/js/gui-api.js (_v [7.2.4] )
+http://mynetwork.home/gui/js/gui-core.js (_v [7.2.4] )
+http://mynetwork.home/gui/js/jquery-utils.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/IPSubnetCalculator.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/attrchange.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/circle-progress.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/cssua.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/dust-full-0.3.0.min.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/dust-helpers-1.1.1.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/jquery-1.8.3.min.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/jquery.csv-0.71.min.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/jquery.nouislider.min.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/jquery.sortElements.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/md5.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/modernizr.custom.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/noUiSlider/nouislider.css (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/noUiSlider/nouislider.min.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/noUiSlider/wNumb.min.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/pikaday/css/pikaday.css (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/pikaday/css/theme.css (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/pikaday/moment.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/pikaday/pikaday.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/pikaday/plugins/pikaday.jquery.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/raphael.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/typeahead.js (_v [7.2.4] )
+http://mynetwork.home/js/thirdParty/yepnope.1.5.4-min.js (_v [7.2.4] )
+http://mynetwork.home/layout/css/desktop/desktop.css (_v [7.2.4] )
+http://mynetwork.home/main-bundle.js (_v [7.2.4] )
+http://mynetwork.home/system-csp-production.js (_v [7.2.4] )
+",1.3.6.1.4.1.25623.1.0.111038,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,2bc6e027-844d-4a3d-934e-a63fe78e0a5e,"","","","","
+Details:
+Web Application Scanning Consolidation / Info Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.111038)
+Version used: 2024-09-19T05:05:57Z
+","","","",""
+192.168.2.1,mynetwork.home,,,0.0,Log,80,"","CPE Inventory","This routine uses information collected by other routines about
+  CPE identities of operating systems, services and applications detected during the scan.
+
+  Note: Some CPEs for specific products might show up twice or more in the output. Background:
+
+  After a product got renamed or a specific vendor was acquired by another one it might happen that
+  a product gets a new CPE within the NVD CPE Dictionary but older entries are kept with the older
+  CPE.","192.168.2.1|cpe:/a:ietf:transport_layer_security:1.0
+192.168.2.1|cpe:/a:ietf:transport_layer_security:1.2
+192.168.2.1|cpe:/a:ietf:transport_layer_security:1.3
+192.168.2.1|cpe:/a:jquery:jquery:1.8.3
+192.168.2.1|cpe:/o:linux:kernel:2.x.x
+
+",1.3.6.1.4.1.25623.1.0.810002,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,af65990e-dd8e-4dd4-8cdf-7381845c9978,"","","","","
+Details:
+CPE Inventory
+(OID: 1.3.6.1.4.1.25623.1.0.810002)
+Version used: 2022-07-27T10:11:28Z
+","","","",""
+192.168.2.1,mynetwork.home,445,tcp,0.0,Log,80,"","SMB/CIFS Server Detection","This script detects whether port 445 and 139 are open and
+  if they are running a CIFS/SMB server.","A CIFS server is running on this port
+",1.3.6.1.4.1.25623.1.0.11011,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,f8132314-f578-4a6b-8c0d-bbfeeb074444,"","","","","
+Details:
+SMB/CIFS Server Detection
+(OID: 1.3.6.1.4.1.25623.1.0.11011)
+Version used: 2023-08-01T13:29:10Z
+","","","",""
+192.168.2.1,mynetwork.home,,,0.0,Log,80,"","Authenticated Scan / LSC Info Consolidation (Windows SMB Login)","Consolidation and reporting of various technical information
+  about authenticated scans / local security checks (LSC) via SMB for Windows targets.","Description (Knowledge base entry)                                                              : Value/Content
+---------------------------------------------------------------------------------------------------------------
+Access to the registry possible (SMB/registry_access)                                           : TRUE
+Access via WMI possible (WMI/access_successful)                                                 : FALSE
+Architecture of the OS (SMB/Windows/Arch)                                                       : Empty/None
+Build number of the OS (SMB/WindowsBuild)                                                       : Empty/None
+Disable file search via WMI on Windows (win/lsc/disable_wmi_search)                             : FALSE
+Disable the usage of win_cmd_exec for remote commands on Windows (win/lsc/disable_win_cmd_exec) : FALSE
+Domain used for authenticated scans (kb_smb_domain())                                           : Empty/None
+Enable Detection of Portable Apps on Windows (win/lsc/search_portable_apps)                     : FALSE
+Extended SMB support available via openvas-smb module (Tools/Present/smb)                       : TRUE
+Extended WMI support available via openvas-smb module (Tools/Present/wmi)                       : TRUE
+Login via SMB failed (login/SMB/failed)                                                         : FALSE
+Login via SMB successful (login/SMB/success)                                                    : TRUE
+Missing access permissions to the registry (SMB/registry_access_missing_permissions)            : FALSE
+Name of the most recent service pack installed (SMB/CSDVersion)                                 : Empty/None
+Never send SMB credentials in clear text (SMB/dont_send_in_cleartext)                           : TRUE
+Only use NTLMv2 (SMB/dont_send_ntlmv1)                                                          : FALSE
+Path to the OS SystemRoot (smb_get_systemroot())                                                : Empty/None
+Path to the OS SystemRoot for 32bit (smb_get_system32root())                                    : Empty/None
+Port configured for authenticated scans (kb_smb_transport())                                    : 445/tcp
+Port used for the successful login via SMB                                                      : 445/tcp
+Product name of the OS (SMB/WindowsName)                                                        : Empty/None
+SMB name used for authenticated scans (kb_smb_name())                                           : 192.168.2.1
+User used for authenticated scans (kb_smb_login())                                              : harlin
+Version number of the OS (SMB/WindowsVersion)                                                   : Empty/None
+Version string of the OS (SMB/WindowsVersionString)                                             : FALSE
+Workgroup of the SMB server (SMB/workgroup)                                                     : Empty/None
+",1.3.6.1.4.1.25623.1.0.108442,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,d08260ee-b33e-4c80-8dbe-bee0e58622e2,"","","","","
+Details:
+Authenticated Scan / LSC Info Consolidation (Windows SMB Login)
+(OID: 1.3.6.1.4.1.25623.1.0.108442)
+Version used: 2023-08-03T05:05:16Z
+","","","",""
+192.168.2.1,mynetwork.home,445,tcp,0.0,Log,97,"","SMB log in","This script attempts to logon into the remote host using
+  login/password credentials.","It was possible to log into the remote host using the SMB protocol.
+",1.3.6.1.4.1.25623.1.0.10394,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,913a4051-d171-49a1-af47-ea5358c6f718,"","","","","
+Details:
+SMB log in
+(OID: 1.3.6.1.4.1.25623.1.0.10394)
+Version used: 2023-11-28T05:05:32Z
+","","","",""
+192.168.2.1,mynetwork.home,22,tcp,0.0,Log,80,"","SSH Authorization Check","This script tries to login with provided credentials.
+
+  If the login was successful, it marks this port as available for any authenticated tests.","It was not possible to login using the provided SSH credentials. Hence authenticated checks are not enabled.
+",1.3.6.1.4.1.25623.1.0.90022,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,c15fa249-dbce-4313-b58c-4c0013d470ec,"","","","","
+Details:
+SSH Authorization Check
+(OID: 1.3.6.1.4.1.25623.1.0.90022)
+Version used: 2023-07-28T16:09:07Z
+","","","",""
+192.168.2.1,mynetwork.home,53,tcp,0.0,Log,80,"","DNS Server Detection (TCP)","TCP based detection of a DNS server.","The remote DNS server banner is:
+
+UNKNOWN
+",1.3.6.1.4.1.25623.1.0.108018,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,7c2450a5-13fc-4e48-af65-ff95d613c263,"","","","","
+Details:
+DNS Server Detection (TCP)
+(OID: 1.3.6.1.4.1.25623.1.0.108018)
+Version used: 2021-11-30T08:05:58Z
+","","","",""
+192.168.2.1,mynetwork.home,9443,tcp,0.0,Log,80,"","SSL/TLS: Version Detection","Enumeration and reporting of SSL/TLS protocol versions supported
+  by a remote service.","The remote SSL/TLS service supports the following SSL/TLS protocol version(s):
+
+TLSv1.0
+",1.3.6.1.4.1.25623.1.0.105782,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,d63648fb-679b-4aa8-bc38-bcb92fe274bd,"","","","","Sends multiple connection requests to the remote service and
+  attempts to determine the SSL/TLS protocol versions supported by the service from the replies.
+
+  Note: The supported SSL/TLS protocol versions included in the report of this VT are reported
+  independently from the allowed / supported SSL/TLS ciphers.
+Details:
+SSL/TLS: Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.105782)
+Version used: 2024-09-27T05:05:23Z
+","","","",""
+192.168.2.1,mynetwork.home,443,tcp,0.0,Log,80,"","SSL/TLS: Version Detection","Enumeration and reporting of SSL/TLS protocol versions supported
+  by a remote service.","The remote SSL/TLS service supports the following SSL/TLS protocol version(s):
+
+TLSv1.2
+TLSv1.3
+",1.3.6.1.4.1.25623.1.0.105782,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,bfa4a59b-7ede-434e-b735-df5863394095,"","","","","Sends multiple connection requests to the remote service and
+  attempts to determine the SSL/TLS protocol versions supported by the service from the replies.
+
+  Note: The supported SSL/TLS protocol versions included in the report of this VT are reported
+  independently from the allowed / supported SSL/TLS ciphers.
+Details:
+SSL/TLS: Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.105782)
+Version used: 2024-09-27T05:05:23Z
+","","","",""
+192.168.2.1,mynetwork.home,9000,tcp,0.0,Log,80,"","Services","This plugin performs service detection.","A web server is running on this port
+",1.3.6.1.4.1.25623.1.0.10330,"",56875cf6-8120-4bb5-b7cd-0b484cc6aba4,"cred ",2025-03-06T02:52:44Z,fe440d69-805b-474d-8e21-1017728aaeb6,"","","","This plugin attempts to guess which service is running on the
+  remote port(s). For instance, it searches for a web server which could listen on another port than
+  80 or 443 and makes this information available for other check routines.","
+Details:
+Services
+(OID: 1.3.6.1.4.1.25623.1.0.10330)
+Version used: 2023-06-14T05:05:19Z
+","","","",""
