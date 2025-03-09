@@ -1,7 +1,7 @@
-nmap -A -T4 10.0.0.0/24
-Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-01 19:09 Eastern Standard Time
+nmap -A -oN detailed_scan.txt 10.0.0.0/24
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-01 19:17 Eastern Standard Time
 Nmap scan report for 10.0.0.1
-Host is up (0.012s latency).
+Host is up (0.027s latency).
 Not shown: 990 closed tcp ports (reset)
 PORT      STATE    SERVICE     VERSION
 22/tcp    filtered ssh
@@ -24,7 +24,7 @@ PORT      STATE    SERVICE     VERSION
 |     Content-Security-Policy: default-src 'self' ; style-src 'self' ; frame-src 'self' ; font-src 'self' ; form-action 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; connect-src 'self'; object-src 'none'; media-src 'none'; script-nonce 'none'; plugin-types 'none'; reflected-xss 'none'; report-uri 'none';
 |     Content-Length: 8642
 |     Connection: close
-|     Date: Fri, 09 Jan 1970 21:17:46 GMT
+|     Date: Fri, 09 Jan 1970 21:26:03 GMT
 |     Server: Xfinity Broadband Router Server
 |     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 |     <html xmlns="http://www.w3.org/1999/xhtml"
@@ -41,7 +41,7 @@ PORT      STATE    SERVICE     VERSION
 |     Content-Security-Policy: default-src 'self' ; style-src 'self' ; frame-src 'self' ; font-src 'self' ; form-action 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; connect-src 'self'; object-src 'none'; media-src 'none'; script-nonce 'none'; plugin-types 'none'; reflected-xss 'none'; report-uri 'none';
 |     Content-Length: 8642
 |     Connection: close
-|     Date: Fri, 09 Jan 1970 21:17:47 GMT
+|     Date: Fri, 09 Jan 1970 21:26:04 GMT
 |     Server: Xfinity Broadband Router Server
 |     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 |_    <html xmlns="http://www.w3.org/1999/xhtml"
@@ -63,7 +63,7 @@ PORT      STATE    SERVICE     VERSION
 |     Content-Security-Policy: default-src 'self' ; style-src 'self' ; frame-src 'self' ; font-src 'self' ; form-action 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; connect-src 'self'; object-src 'none'; media-src 'none'; script-nonce 'none'; plugin-types 'none'; reflected-xss 'none'; report-uri 'none';
 |     Content-Length: 8642
 |     Connection: close
-|     Date: Fri, 09 Jan 1970 21:17:52 GMT
+|     Date: Fri, 09 Jan 1970 21:26:09 GMT
 |     Server: Xfinity Broadband Router Server
 |     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 |     <html xmlns="http://www.w3.org/1999/xhtml"
@@ -80,19 +80,19 @@ PORT      STATE    SERVICE     VERSION
 |     Content-Security-Policy: default-src 'self' ; style-src 'self' ; frame-src 'self' ; font-src 'self' ; form-action 'self' ; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self'; connect-src 'self'; object-src 'none'; media-src 'none'; script-nonce 'none'; plugin-types 'none'; reflected-xss 'none'; report-uri 'none';
 |     Content-Length: 8642
 |     Connection: close
-|     Date: Fri, 09 Jan 1970 21:17:53 GMT
+|     Date: Fri, 09 Jan 1970 21:26:10 GMT
 |     Server: Xfinity Broadband Router Server
 |     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 |_    <html xmlns="http://www.w3.org/1999/xhtml"
+| tls-alpn:
+|   http/1.0
+|_  http/1.1
+|_http-server-header: Xfinity Broadband Router Server
 | ssl-cert: Subject: commonName=myrouter.io/organizationName=Comcast Corporation/stateOrProvinceName=Pennsylvania/countryName=US
 | Subject Alternative Name: DNS:myrouter.io
 | Not valid before: 2024-01-08T00:00:00
 |_Not valid after:  2025-01-07T23:59:59
-|_http-server-header: Xfinity Broadband Router Server
 |_ssl-date: TLS randomness does not represent time
-| tls-alpn:
-|   http/1.0
-|_  http/1.1
 |_http-title: Rogers
 8080/tcp  filtered http-proxy
 8181/tcp  filtered intermapper
@@ -100,7 +100,7 @@ PORT      STATE    SERVICE     VERSION
 49152/tcp open     upnp        Portable SDK for UPnP devices 1.6.22 (Linux 5.4.201-prod-23.2-231009; UPnP 1.0)
 2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port80-TCP:V=7.95%I=7%D=3/1%Time=67C3A1EC%P=i686-pc-windows-windows%r(G
+SF-Port80-TCP:V=7.95%I=7%D=3/1%Time=67C3A3DD%P=i686-pc-windows-windows%r(G
 SF:etRequest,24AD,"HTTP/1\.0\x20200\x20OK\r\nContent-type:\x20text/html\r\
 SF:nX-robots-tag:\x20noindex,nofollow\r\nX-Frame-Options:\x20deny\r\nX-XSS
 SF:-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20nosniff\
@@ -113,7 +113,7 @@ SF:0'unsafe-inline'\x20'unsafe-eval';\x20img-src\x20'self';\x20connect-src
 SF:\x20'self';\x20object-src\x20'none';\x20media-src\x20'none';\x20script-
 SF:nonce\x20'none';\x20plugin-types\x20'none';\x20reflected-xss\x20'none';
 SF:\x20report-uri\x20'none';\r\nContent-Length:\x208642\r\nConnection:\x20
-SF:close\r\nDate:\x20Fri,\x2009\x20Jan\x201970\x2021:17:46\x20GMT\r\nServe
+SF:close\r\nDate:\x20Fri,\x2009\x20Jan\x201970\x2021:26:03\x20GMT\r\nServe
 SF:r:\x20Xfinity\x20Broadband\x20Router\x20Server\r\n\r\n\n<!DOCTYPE\x20ht
 SF:ml\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\"\x20\"htt
 SF:p://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\">\n<html\x20xmlns=\"
@@ -130,13 +130,13 @@ SF:';\x20img-src\x20'self';\x20connect-src\x20'self';\x20object-src\x20'no
 SF:ne';\x20media-src\x20'none';\x20script-nonce\x20'none';\x20plugin-types
 SF:\x20'none';\x20reflected-xss\x20'none';\x20report-uri\x20'none';\r\nCon
 SF:tent-Length:\x208642\r\nConnection:\x20close\r\nDate:\x20Fri,\x2009\x20
-SF:Jan\x201970\x2021:17:47\x20GMT\r\nServer:\x20Xfinity\x20Broadband\x20Ro
+SF:Jan\x201970\x2021:26:04\x20GMT\r\nServer:\x20Xfinity\x20Broadband\x20Ro
 SF:uter\x20Server\r\n\r\n\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C//DTD\x2
 SF:0XHTML\x201\.0\x20Strict//EN\"\x20\"http://www\.w3\.org/TR/xhtml1/DTD/x
 SF:html1-strict\.dtd\">\n<html\x20xmlns=\"http://www\.w3\.org/1999/xhtml\"
 SF:");
 ==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
-SF-Port443-TCP:V=7.95%T=SSL%I=7%D=3/1%Time=67C3A1F2%P=i686-pc-windows-wind
+SF-Port443-TCP:V=7.95%T=SSL%I=7%D=3/1%Time=67C3A3E3%P=i686-pc-windows-wind
 SF:ows%r(GetRequest,24AD,"HTTP/1\.0\x20200\x20OK\r\nContent-type:\x20text/
 SF:html\r\nX-robots-tag:\x20noindex,nofollow\r\nX-Frame-Options:\x20deny\r
 SF:\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Options:\x20n
@@ -149,7 +149,7 @@ SF:elf'\x20'unsafe-inline'\x20'unsafe-eval';\x20img-src\x20'self';\x20conn
 SF:ect-src\x20'self';\x20object-src\x20'none';\x20media-src\x20'none';\x20
 SF:script-nonce\x20'none';\x20plugin-types\x20'none';\x20reflected-xss\x20
 SF:'none';\x20report-uri\x20'none';\r\nContent-Length:\x208642\r\nConnecti
-SF:on:\x20close\r\nDate:\x20Fri,\x2009\x20Jan\x201970\x2021:17:52\x20GMT\r
+SF:on:\x20close\r\nDate:\x20Fri,\x2009\x20Jan\x201970\x2021:26:09\x20GMT\r
 SF:\nServer:\x20Xfinity\x20Broadband\x20Router\x20Server\r\n\r\n\n<!DOCTYP
 SF:E\x20html\x20PUBLIC\x20\"-//W3C//DTD\x20XHTML\x201\.0\x20Strict//EN\"\x
 SF:20\"http://www\.w3\.org/TR/xhtml1/DTD/xhtml1-strict\.dtd\">\n<html\x20x
@@ -166,38 +166,22 @@ SF:fe-eval';\x20img-src\x20'self';\x20connect-src\x20'self';\x20object-src
 SF:\x20'none';\x20media-src\x20'none';\x20script-nonce\x20'none';\x20plugi
 SF:n-types\x20'none';\x20reflected-xss\x20'none';\x20report-uri\x20'none';
 SF:\r\nContent-Length:\x208642\r\nConnection:\x20close\r\nDate:\x20Fri,\x2
-SF:009\x20Jan\x201970\x2021:17:53\x20GMT\r\nServer:\x20Xfinity\x20Broadban
+SF:009\x20Jan\x201970\x2021:26:10\x20GMT\r\nServer:\x20Xfinity\x20Broadban
 SF:d\x20Router\x20Server\r\n\r\n\n<!DOCTYPE\x20html\x20PUBLIC\x20\"-//W3C/
 SF:/DTD\x20XHTML\x201\.0\x20Strict//EN\"\x20\"http://www\.w3\.org/TR/xhtml
 SF:1/DTD/xhtml1-strict\.dtd\">\n<html\x20xmlns=\"http://www\.w3\.org/1999/
 SF:xhtml\"");
 MAC Address: AC:4C:A5:FB:C8:4A (Vantiva USA)
-Device type: general purpose|router
-Running: Linux 4.X|5.X, MikroTik RouterOS 7.X
-OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3
-OS details: Linux 4.15 - 5.19, OpenWrt 21.02 (Linux 5.4), MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.19
 Network Distance: 1 hop
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel:5.4.201-prod-23.2-231009
 
 TRACEROUTE
 HOP RTT      ADDRESS
-1   11.89 ms 10.0.0.1
-
-Nmap scan report for 10.0.0.36
-Host is up (0.025s latency).
-All 1000 scanned ports on 10.0.0.36 are in ignored states.
-Not shown: 1000 closed tcp ports (reset)
-MAC Address: C6:2F:6F:20:C7:EB (Unknown)
-Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
-Device type: general purpose|media device|specialized
-Running: Microsoft Windows 10|11|2016, Microsoft Xbox 360, NTI embedded
-OS CPE: cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_11 cpe:/o:microsoft:windows_server_2016 cpe:/h:microsoft:xbox_360_kernel
-OS details: Microsoft Windows 10 - 11, Microsoft Windows Server 2016, Microsoft Xbox 360 Dashboard, NTI E-MICRO-TRHP temperature sensor
-Network Distance: 1 hop
-
-TRACEROUTE
-HOP RTT      ADDRESS
-1   25.14 ms 10.0.0.36
+1   26.89 ms 10.0.0.1
 
 Nmap scan report for 10.0.0.68
 Host is up (0.016s latency).
@@ -214,10 +198,10 @@ Network Distance: 1 hop
 
 TRACEROUTE
 HOP RTT      ADDRESS
-1   16.36 ms 10.0.0.68
+1   16.34 ms 10.0.0.68
 
 Nmap scan report for 10.0.0.77
-Host is up (0.018s latency).
+Host is up (0.035s latency).
 Not shown: 998 closed tcp ports (reset)
 PORT      STATE SERVICE    VERSION
 49152/tcp open  tcpwrapped
@@ -231,10 +215,10 @@ Network Distance: 1 hop
 
 TRACEROUTE
 HOP RTT      ADDRESS
-1   18.10 ms 10.0.0.77
+1   35.21 ms 10.0.0.77
 
 Nmap scan report for 10.0.0.129
-Host is up (0.017s latency).
+Host is up (0.029s latency).
 Not shown: 994 closed tcp ports (reset)
 PORT      STATE SERVICE  VERSION
 1081/tcp  open  upnp     LG WebOS upnpd (WebOS 4.1.0; UPnP 1.0)
@@ -244,10 +228,10 @@ PORT      STATE SERVICE  VERSION
 | ssl-cert: Subject: commonName=LG_TV_11e5c59461f4c44/organizationName=LG Electronics U.S.A, Inc./stateOrProvinceName=New Jersey/countryName=US
 | Not valid before: 2019-01-01T00:05:33
 |_Not valid after:  2038-12-27T00:05:33
+|_ssl-date: TLS randomness does not represent time
 | tls-nextprotoneg:
 |   http/1.1
 |_  http/1.0
-|_ssl-date: TLS randomness does not represent time
 |_http-title: Site doesn't have a title.
 7000/tcp  open  rtsp     AirTunes rtspd 377.25.06
 |_rtsp-methods: ERROR: Script execution failed (use -d to debug)
@@ -256,7 +240,7 @@ PORT      STATE SERVICE  VERSION
 | fingerprint-strings:
 |   FourOhFourRequest:
 |     HTTP/1.0 200 OK
-|     Date: Sat, 01 Mar 2025 19:11:04 EST
+|     Date: Sat, 01 Mar 2025 19:19:21 EST
 |     Server: NRDP/2020.1.7.0
 |     Connection: close
 |     Cache-Control: no-cache
@@ -264,7 +248,7 @@ PORT      STATE SERVICE  VERSION
 |     status=ok
 |   GetRequest:
 |     HTTP/1.0 200 OK
-|     Date: Sat, 01 Mar 2025 19:10:18 EST
+|     Date: Sat, 01 Mar 2025 19:18:35 EST
 |     Server: NRDP/2020.1.7.0
 |     Connection: close
 |     Cache-Control: no-cache
@@ -272,12 +256,12 @@ PORT      STATE SERVICE  VERSION
 |_    status=ok
 11111/tcp open  vce?
 1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
-SF-Port9080-TCP:V=7.95%I=7%D=3/1%Time=67C3A1EA%P=i686-pc-windows-windows%r
+SF-Port9080-TCP:V=7.95%I=7%D=3/1%Time=67C3A3DB%P=i686-pc-windows-windows%r
 SF:(GetRequest,99,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Sat,\x2001\x20Mar\x2
-SF:02025\x2019:10:18\x20EST\r\nServer:\x20NRDP/2020\.1\.7\.0\r\nConnection
+SF:02025\x2019:18:35\x20EST\r\nServer:\x20NRDP/2020\.1\.7\.0\r\nConnection
 SF::\x20close\r\nCache-Control:\x20no-cache\r\nContent-Length:\x209\r\n\r\
 SF:nstatus=ok")%r(FourOhFourRequest,99,"HTTP/1\.0\x20200\x20OK\r\nDate:\x2
-SF:0Sat,\x2001\x20Mar\x202025\x2019:11:04\x20EST\r\nServer:\x20NRDP/2020\.
+SF:0Sat,\x2001\x20Mar\x202025\x2019:19:21\x20EST\r\nServer:\x20NRDP/2020\.
 SF:1\.7\.0\r\nConnection:\x20close\r\nCache-Control:\x20no-cache\r\nConten
 SF:t-Length:\x209\r\n\r\nstatus=ok");
 MAC Address: F0:86:20:09:66:36 (Arcadyan)
@@ -290,10 +274,10 @@ Service Info: Device: media device
 
 TRACEROUTE
 HOP RTT      ADDRESS
-1   17.43 ms 10.0.0.129
+1   29.50 ms 10.0.0.129
 
 Nmap scan report for 10.0.0.172
-Host is up (0.016s latency).
+Host is up (0.015s latency).
 Not shown: 998 closed tcp ports (reset)
 PORT      STATE SERVICE    VERSION
 49152/tcp open  tcpwrapped
@@ -307,39 +291,28 @@ Network Distance: 1 hop
 
 TRACEROUTE
 HOP RTT      ADDRESS
-1   16.39 ms 10.0.0.172
+1   15.35 ms 10.0.0.172
 
 Nmap scan report for 10.0.0.175
 Host is up (0.012s latency).
 Not shown: 999 closed tcp ports (reset)
 PORT     STATE SERVICE VERSION
 7000/tcp open  rtsp    AirTunes rtspd 377.40.00
-|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
 |_irc-info: Unable to open connection
+|_rtsp-methods: ERROR: Script execution failed (use -d to debug)
 MAC Address: F8:A2:D6:1C:E3:68 (Liteon Technology)
-No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
-TCP/IP fingerprint:
-OS:SCAN(V=7.95%E=4%D=3/1%OT=7000%CT=1%CU=43361%PV=Y%DS=1%DC=D%G=Y%M=F8A2D6%
-OS:TM=67C3A2B2%P=i686-pc-windows-windows)SEQ(SP=105%GCD=1%ISR=107%TI=Z%CI=I
-OS:%II=I%TS=7)SEQ(SP=106%GCD=1%ISR=109%TI=Z%CI=I%II=I%TS=7)SEQ(SP=107%GCD=1
-OS:%ISR=108%TI=Z%CI=I%II=I%TS=7)SEQ(SP=107%GCD=1%ISR=10A%TI=Z%CI=I%II=I%TS=
-OS:7)SEQ(SP=F6%GCD=1%ISR=10C%TI=Z%CI=I%II=I%TS=7)OPS(O1=M5B4ST11NW8%O2=M5B4
-OS:ST11NW8%O3=M5B4NNT11NW8%O4=M5B4ST11NW8%O5=M5B4ST11NW8%O6=M5B4ST11)WIN(W1
-OS:=A9B0%W2=A9B0%W3=A9B0%W4=A9B0%W5=A9B0%W6=A9B0)ECN(R=Y%DF=Y%T=40%W=A564%O
-OS:=M5B4NNSNW8%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N
-OS:)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=
-OS:S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF
-OS:=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=
-OS:G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
-
+Device type: phone
+Running: Google Android 5.X
+OS CPE: cpe:/o:google:android:5.1.1
+OS details: Android 5.1.1
 Network Distance: 1 hop
 
 TRACEROUTE
 HOP RTT      ADDRESS
-1   11.58 ms 10.0.0.175
+1   12.19 ms 10.0.0.175
 
 Nmap scan report for 10.0.0.188
-Host is up (0.018s latency).
+Host is up (0.014s latency).
 Not shown: 998 closed tcp ports (reset)
 PORT      STATE SERVICE    VERSION
 49152/tcp open  tcpwrapped
@@ -353,12 +326,27 @@ Network Distance: 1 hop
 
 TRACEROUTE
 HOP RTT      ADDRESS
-1   17.83 ms 10.0.0.188
+1   14.08 ms 10.0.0.188
 
-Stats: 0:05:41 elapsed; 255 hosts completed (9 up), 1 undergoing Service Scan
-Service scan Timing: About 66.67% done; ETC: 19:16 (0:00:49 remaining)
+Nmap scan report for 10.0.0.240
+Host is up (0.020s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE    VERSION
+49152/tcp open  tcpwrapped
+62078/tcp open  tcpwrapped
+MAC Address: DA:4E:8F:28:7C:39 (Unknown)
+Device type: phone
+Running: Apple iOS 15.X
+OS CPE: cpe:/o:apple:iphone_os:15
+OS details: Apple iOS 15.0 - 15.6 (Darwin 21.1.0 - 21.6.0)
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT      ADDRESS
+1   19.84 ms 10.0.0.240
+
 Nmap scan report for 10.0.0.220
-Host is up (0.00017s latency).
+Host is up (0.00023s latency).
 Not shown: 994 closed tcp ports (reset)
 PORT     STATE SERVICE          VERSION
 135/tcp  open  msrpc            Microsoft Windows RPC
@@ -371,36 +359,38 @@ PORT     STATE SERVICE          VERSION
 |_Not valid after:  2123-04-11T09:26:41
 |_ssl-date: TLS randomness does not represent time
 4449/tcp open  ssl/privatewire?
+|_ssl-date: TLS randomness does not represent time
 | ssl-cert: Subject: commonName=localhost/organizationName=I3D/stateOrProvinceName=Taipei/countryName=TW
 | Not valid before: 2023-05-05T09:26:41
 |_Not valid after:  2123-04-11T09:26:41
 No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
 TCP/IP fingerprint:
-OS:SCAN(V=7.95%E=4%D=3/1%OT=135%CT=1%CU=33992%PV=Y%DS=0%DC=L%G=Y%TM=67C3A37
-OS:2%P=i686-pc-windows-windows)SEQ(SP=101%GCD=1%ISR=108%TI=I%CI=I%II=I%SS=S
-OS:%TS=A)SEQ(SP=101%GCD=1%ISR=10A%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=102%GCD=1
-OS:%ISR=101%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=103%GCD=1%ISR=109%TI=I%CI=I%II=
-OS:I%SS=S%TS=A)SEQ(SP=105%GCD=1%ISR=106%TI=I%CI=I%II=I%SS=S%TS=A)OPS(O1=MFF
-OS:D7NW8ST11%O2=MFFD7NW8ST11%O3=MFFD7NW8NNT11%O4=MFFD7NW8ST11%O5=MFFD7NW8ST
-OS:11%O6=MFFD7ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN(
-OS:R=Y%DF=Y%T=80%W=FFFF%O=MFFD7NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=A
-OS:S%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%
-OS:W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
-OS:T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A
-OS:=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%D
-OS:F=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=Z%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=8
-OS:0%CD=Z)
+OS:SCAN(V=7.95%E=4%D=3/1%OT=135%CT=1%CU=44040%PV=Y%DS=0%DC=L%G=Y%TM=67C3A55
+OS:7%P=i686-pc-windows-windows)SEQ(SP=101%GCD=1%ISR=103%TI=I%CI=I%II=I%SS=S
+OS:%TS=A)SEQ(SP=106%GCD=1%ISR=104%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=107%GCD=1
+OS:%ISR=10B%TI=I%CI=I%II=I%SS=S%TS=A)SEQ(SP=108%GCD=1%ISR=108%TI=I%CI=I%II=
+OS:I%SS=S%TS=A)SEQ(SP=FF%GCD=1%ISR=108%TI=I%CI=I%II=I%SS=S%TS=A)OPS(O1=MFFD
+OS:7NW8ST11%O2=MFFD7NW8ST11%O3=MFFD7NW8NNT11%O4=MFFD7NW8ST11%O5=MFFD7NW8ST1
+OS:1%O6=MFFD7ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN(R
+OS:=Y%DF=Y%T=80%W=FFFF%O=MFFD7NW8NNS%CC=N%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S+%F=AS
+OS:%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%T=80%W
+OS:=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T
+OS:5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%S=A%A=
+OS:O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF
+OS:=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=Z%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=80
+OS:%CD=Z)
 
 Network Distance: 0 hops
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 Host script results:
-| smb2-time:
-|   date: 2025-03-02T00:16:37
-|_  start_date: N/A
 | smb2-security-mode:
 |   3:1:1:
 |_    Message signing enabled but not required
+| smb2-time:
+|   date: 2025-03-02T00:24:43
+|_  start_date: N/A
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 256 IP addresses (9 hosts up) scanned in 435.20 seconds
+Nmap done: 256 IP addresses (9 hosts up) scanned in 435.77 seconds
+

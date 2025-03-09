@@ -1,0 +1,20 @@
+nmap -sn 10.0.0.0/24
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-01 19:02 Eastern Standard Time
+Nmap scan report for 10.0.0.1
+Host is up (0.0086s latency).
+MAC Address: AC:4C:A5:FB:C8:4A (Vantiva USA)
+Nmap scan report for 10.0.0.68
+Host is up (0.11s latency).
+MAC Address: 16:EF:98:03:CF:79 (Unknown)
+Nmap scan report for 10.0.0.129
+Host is up (0.023s latency).
+MAC Address: F0:86:20:09:66:36 (Arcadyan)
+Nmap scan report for 10.0.0.175
+Host is up (0.14s latency).
+MAC Address: F8:A2:D6:1C:E3:68 (Liteon Technology)
+Nmap scan report for 10.0.0.188
+Host is up (0.12s latency).
+MAC Address: 36:AA:2E:62:60:52 (Unknown)
+Nmap scan report for 10.0.0.220
+Host is up.
+Nmap done: 256 IP addresses (6 hosts up) scanned in 14.36 seconds

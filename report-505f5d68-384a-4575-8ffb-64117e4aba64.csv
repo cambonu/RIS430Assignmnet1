@@ -1,0 +1,2464 @@
+IP,Hostname,Port,Port Protocol,CVSS,Severity,QoD,Solution Type,NVT Name,Summary,Specific Result,NVT OID,CVEs,Task ID,Task Name,Timestamp,Result ID,Impact,Solution,Affected Software/OS,Vulnerability Insight,Vulnerability Detection Method,Product Detection Result,BIDs,CERTs,Other References
+      10.0.0.92,,80,tcp,10.0,High,30,"VendorFix","PHP End of Life (EOL) Detection - Linux","The PHP version on the remote host has reached the end of life
+  (EOL) and should not be used anymore.","The ""PHP"" version on the remote host has reached the end of life.
+
+CPE:               cpe:/a:php:php:7.2.34
+Installed version: 7.2.34
+EOL version:       7.2
+EOL date:          2020-11-30
+",1.3.6.1.4.1.25623.1.0.105889,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,b9f84b73-b56b-4bba-8397-a0af7b103cf3,"An EOL version of PHP is not receiving any security updates from
+  the vendor. Unfixed security vulnerabilities might be leveraged by an attacker to compromise the
+  security of this host.","Update the PHP version on the remote host to a still supported
+  version.","","Each release branch of PHP is fully supported for two years from
+  its initial stable release. During this period, bugs and security issues that have been reported
+  are fixed and are released in regular point releases.
+
+  After this two year period of active support, each branch is then supported for an additional year
+  for critical security issues only. Releases during this period are made on an as-needed basis:
+  there may be multiple point releases, or none, depending on the number of reports.
+
+  Once the three years of support are completed, the branch reaches its end of life and is no longer
+  supported.","Checks if an EOL version is present on the target host.
+Details:
+PHP End of Life (EOL) Detection - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.105889)
+Version used: 2024-02-28T14:37:42Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","",""
+10.0.0.245,,443,tcp,10.0,High,100,"Workaround","Greenbone Security Assistant (GSA) Default Credentials (HTTP)","The remote Greenbone Security Assistant (GSA) is installed /
+  configured in a way that it has account(s) with default passwords enabled.","It was possible to login using the following credentials (username:password):
+
+admin:admin
+",1.3.6.1.4.1.25623.1.0.105354,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:39:26Z,8a25321c-aa66-4722-965b-82f895515288,"This issue may be exploited by a remote attacker to gain access
+  to sensitive information or modify system configuration.","Change the password of the mentioned account(s).","","","Tries to login with known default credentials via the HTTP
+  protocol.
+Details:
+Greenbone Security Assistant (GSA) Default Credentials (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.105354)
+Version used: 2024-07-10T05:05:27Z
+","","","",""
+10.0.0.116,,443,tcp,10.0,High,100,"Workaround","Greenbone Security Assistant (GSA) Default Credentials (HTTP)","The remote Greenbone Security Assistant (GSA) is installed /
+  configured in a way that it has account(s) with default passwords enabled.","It was possible to login using the following credentials (username:password):
+
+admin:admin
+",1.3.6.1.4.1.25623.1.0.105354,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:56:36Z,87ae2111-b87a-49d7-9250-7e941f7f0d86,"This issue may be exploited by a remote attacker to gain access
+  to sensitive information or modify system configuration.","Change the password of the mentioned account(s).","","","Tries to login with known default credentials via the HTTP
+  protocol.
+Details:
+Greenbone Security Assistant (GSA) Default Credentials (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.105354)
+Version used: 2024-07-10T05:05:27Z
+","","","",""
+10.0.0.92,,22,tcp,9.8,High,30,"VendorFix","OpenBSD OpenSSH < 9.3p2 RCE Vulnerability","OpenBSD OpenSSH is prone to a remote code execution (RCE)
+  vulnerability in OpenSSH's forwarded ssh-agent.","Installed version: 8.9p1
+Fixed version:     9.3p2
+Installation
+path / port:       22/tcp
+
+",1.3.6.1.4.1.25623.1.0.104869,"CVE-2023-38408",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,b5905168-7f3f-4640-b25c-989298efbbf5,"","Update to version 9.3p2 or later.","OpenBSD OpenSSH prior to version 9.3p2.
+
+  The following conditions needs to be met:
+
+  - Exploitation requires the presence of specific libraries on the victim system.
+
+  - Remote exploitation requires that the agent was forwarded to an attacker-controlled system.","A condition where specific libraries loaded via ssh-agent(1)'s
+  PKCS#11 support could be abused to achieve remote code execution via a forwarded agent socket.","Checks if a vulnerable version is present on the target host.
+Details:
+OpenBSD OpenSSH < 9.3p2 RCE Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.104869)
+Version used: 2023-10-13T05:06:10Z
+","Product: cpe:/a:openbsd:openssh:8.9p1
+Method: OpenSSH Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.108577)
+","","DFN-CERT-2024-1260,DFN-CERT-2024-0491,DFN-CERT-2023-2792,DFN-CERT-2023-2179,DFN-CERT-2023-1961,DFN-CERT-2023-1920,DFN-CERT-2023-1845,DFN-CERT-2023-1773,DFN-CERT-2023-1665,WID-SEC-2024-3195,WID-SEC-2024-1248,WID-SEC-2024-1082,WID-SEC-2024-0064,WID-SEC-2023-2679,WID-SEC-2023-2625,WID-SEC-2023-2240,WID-SEC-2023-1843,WID-SEC-2023-1819",""
+10.0.0.92,,80,tcp,9.8,High,30,"VendorFix","PHP < 8.0.30, 8.1.x < 8.1.22, 8.2.x < 8.2.9 Security Update - Linux","PHP is prone to multiple vulnerabilities.","Installed version: 7.2.34
+Fixed version:     8.0.30
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.170529,"CVE-2023-3823,CVE-2023-3824",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,93de441f-e09c-4bcb-a69b-385be481c332,"","Update to version 8.0.30, 8.1.22, 8.2.9 or later.","PHP prior to version 8.0.30, 8.1.x prior to 8.1.22 and 8.2.x
+  prior to 8.2.9.","The following flaws exist:
+
+  - CVE-2023-3823: Fixed bug GHSA-3qrf-m4j2-pcrr (Security issue with external entity loading in XML
+  without enabling it)
+
+  - CVE-2023-3824: Fixed bug GHSA-jqcx-ccgc-xwhv (Buffer mismanagement in phar_dir_read())","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 8.0.30, 8.1.x < 8.1.22, 8.2.x < 8.2.9 Security Update - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.170529)
+Version used: 2023-10-13T05:06:10Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2024-3330,DFN-CERT-2024-2681,DFN-CERT-2024-0993,DFN-CERT-2023-2570,DFN-CERT-2023-2542,DFN-CERT-2023-1775,WID-SEC-2023-2917,WID-SEC-2023-2679,WID-SEC-2023-1970",""
+10.0.0.92,,80,tcp,9.8,High,30,"VendorFix","PHP < 7.4.33, 8.0.x < 8.0.25, 8.1.x < 8.1.12 Security Update - Linux","PHP is prone to multiple vulnerabilities.","Installed version: 7.2.34
+Fixed version:     7.4.33
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.148830,"CVE-2022-31630,CVE-2022-37454",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,06bc5ad5-4391-4d47-b2cf-a789b25e716f,"","Update to version 7.4.33, 8.0.25, 8.1.12 or later.","PHP prior to version 7.4.33, version 8.0.x through 8.0.24 and
+  8.1.x through 8.1.11.","The following vulnerabilities exist:
+
+  - CVE-2022-31630: OOB read due to insufficient input validation in imageloadfont()
+
+  - CVE-2022-37454: Buffer overflow in hash_update() on long parameter","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 7.4.33, 8.0.x < 8.0.25, 8.1.x < 8.1.12 Security Update - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.148830)
+Version used: 2023-10-19T05:05:21Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2023-0552,DFN-CERT-2023-0422,DFN-CERT-2023-0028,DFN-CERT-2022-2869,DFN-CERT-2022-2793,DFN-CERT-2022-2715,DFN-CERT-2022-2639,DFN-CERT-2022-2638,DFN-CERT-2022-2598,DFN-CERT-2022-2535,DFN-CERT-2022-2523,DFN-CERT-2022-2420,DFN-CERT-2022-2380,WID-SEC-2023-1021,WID-SEC-2023-0561,WID-SEC-2023-0138,WID-SEC-2022-1934,WID-SEC-2022-1816",""
+10.0.0.92,,80,tcp,9.8,High,30,"VendorFix","PHP < 8.1.29, 8.2.x < 8.2.20, 8.3.x < 8.3.8 Multiple Vulnerabilities - Linux","PHP is prone to multiple vulnerabilities.","Installed version: 7.2.34
+Fixed version:     8.1.29
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.152369,"CVE-2024-4577,CVE-2024-5458,CVE-2024-5585",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,93b4e68f-6fbf-4782-add6-2dd98e8df647,"","Update to version 8.1.29, 8.2.20, 8.3.8 or later.","PHP prior to version 8.1.29, version 8.2.x through 8.2.19 and
+  8.3.x through 8.3.7.","The following vulnerabilities exist:
+
+  - CVE-2024-4577: Argument injection in PHP-CGI (bypass of CVE-2012-1823)
+
+  - CVE-2024-5458: Filter bypass in filter_var FILTER_VALIDATE_URL
+
+  - CVE-2024-5585: Bypass of CVE-2024-1874
+
+  Note: As of 06/2024 the CVEs CVE-2024-4577 and CVE-2024-5585 are known to be exploitable on
+  Windows systems only.","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 8.1.29, 8.2.x < 8.2.20, 8.3.x < 8.3.8 Multiple Vulnerabilities - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.152369)
+Version used: 2024-08-09T05:05:42Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2024-3330,DFN-CERT-2024-3329,DFN-CERT-2024-2707,DFN-CERT-2024-1853,DFN-CERT-2024-1586,DFN-CERT-2024-1574,DFN-CERT-2024-1563,DFN-CERT-2024-1476,WID-SEC-2024-3196,WID-SEC-2024-3195,WID-SEC-2024-1320",""
+10.0.0.92,,80,tcp,9.8,High,30,"VendorFix","PHP < 8.1.31, 8.2.x < 8.2.26, 8.3.x < 8.3.14 Multiple Vulnerabilities - Linux","PHP is prone to multiple vulnerabilities.","Installed version: 7.2.34
+Fixed version:     8.1.31
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.153495,"CVE-2024-8929,CVE-2024-8932,CVE-2024-11233,CVE-2024-11234,CVE-2024-11236",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,9f257341-c74f-4e92-a4a4-3049351685f5,"","Update to version 8.1.31, 8.2.26, 8.3.14 or later.","PHP versions prior to 8.1.31, 8.2.x prior to 8.2.26 and 8.3.x
+  prior to 8.3.14.","The following vulnerabilities exist:
+
+  - CVE-2024-8929: Leak partial content of the heap through heap buffer over-read
+
+  - CVE-2024-8932: OOB access in ldap_escape
+
+  - CVE-2024-11233: Single byte overread with convert.quoted-printable-decode filter
+
+  - CVE-2024-11234: Configuring a proxy in a stream context might allow for CRLF injection in URIs
+
+  - CVE-2024-11236: Integer overflow in the firebird/dblib quoter causing OOB writes
+
+  - No CVE: Heap-Use-After-Free in sapi_read_post_data Processing in CLI SAPI Interface","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 8.1.31, 8.2.x < 8.2.26, 8.3.x < 8.3.14 Multiple Vulnerabilities - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.153495)
+Version used: 2025-01-13T08:32:03Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2025-0179,DFN-CERT-2024-3200,DFN-CERT-2024-3172,DFN-CERT-2024-3108,WID-SEC-2024-3519",""
+10.0.0.92,,80,tcp,9.8,High,30,"VendorFix","Apache HTTP Server < 2.4.60 Multiple Vulnerabilities - Linux","Apache HTTP Server is prone to multiple vulnerabilities.","Installed version: 2.4.52
+Fixed version:     2.4.60
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.114682,"CVE-2024-36387,CVE-2024-38473,CVE-2024-38474,CVE-2024-38475,CVE-2024-38476,CVE-2024-38477,CVE-2024-39573",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,9ec64288-d4cd-4824-9273-92a5212659df,"","Update to version 2.4.60 or later.","Apache HTTP Server version 2.4.59 and prior.","The following flaws exist:
+
+  - CVE-2024-36387: Denial of Service (DoS) by Null pointer in websocket over HTTP/2
+
+  - CVE-2024-38473: Proxy encoding problem
+
+  - CVE-2024-38474: Weakness with encoded question marks in backreferences
+
+  - CVE-2024-38475: Weakness in mod_rewrite when first segment of substitution matches filesystem
+  path
+
+  - CVE-2024-38476: May use exploitable/malicious backend application output to run local handlers
+  via internal redirect
+
+  - CVE-2024-38477: Crash resulting in DoS in mod_proxy via a malicious request
+
+  - CVE-2024-39573: mod_rewrite proxy handler substitution","Checks if a vulnerable version is present on the target host.
+Details:
+Apache HTTP Server < 2.4.60 Multiple Vulnerabilities - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.114682)
+Version used: 2024-08-22T05:05:50Z
+","Product: cpe:/a:apache:http_server:2.4.52
+Method: Apache HTTP Server Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117232)
+","","DFN-CERT-2025-0170,DFN-CERT-2024-2841,DFN-CERT-2024-2787,DFN-CERT-2024-2736,DFN-CERT-2024-2342,DFN-CERT-2024-2214,DFN-CERT-2024-2201,DFN-CERT-2024-2180,DFN-CERT-2024-2110,DFN-CERT-2024-2017,DFN-CERT-2024-1963,DFN-CERT-2024-1920,DFN-CERT-2024-1919,DFN-CERT-2024-1911,DFN-CERT-2024-1907,DFN-CERT-2024-1893,DFN-CERT-2024-1816,DFN-CERT-2024-1811,DFN-CERT-2024-1784,DFN-CERT-2024-1741,DFN-CERT-2024-1699,WID-SEC-2025-0148,WID-SEC-2025-0143,WID-SEC-2024-3291,WID-SEC-2024-3199,WID-SEC-2024-1913,WID-SEC-2024-1504",""
+10.0.0.1,,53,tcp,9.8,High,30,"VendorFix","Dnsmasq <= 2.86 Multiple Vulnerabilities","Dnsmasq is prone to multiple vulnerabilities.","Installed version: 2.83
+Fixed version:     2.87
+Installation
+path / port:       53/tcp
+
+",1.3.6.1.4.1.25623.1.0.147385,"CVE-2021-45951,CVE-2021-45952,CVE-2021-45953,CVE-2021-45954,CVE-2021-45955,CVE-2021-45956,CVE-2021-45957,CVE-2022-0934",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,4bbb3ac9-5553-40c7-9225-1812bedc7928,"","Update to version 2.87 or later.","Dnsmasq version 2.86 and prior.","The following flaws exist:
+
+  - CVE-2021-45951: Heap-based buffer overflow in check_bad_address
+
+  - CVE-2021-45952: Heap-based buffer overflow in dhcp_reply
+
+  - CVE-2021-45953: Heap-based buffer overflow in extract_name
+
+  - CVE-2021-45954: Heap-based buffer overflow in extract_name
+
+  - CVE-2021-45955: Heap-based buffer overflow in resize_packet
+
+  - CVE-2021-45956: Heap-based buffer overflow in print_mac
+
+  - CVE-2021-45957: Heap-based buffer overflow in answer_request
+
+  Note: The CVEs above have been changed to status 'DISPUTED'
+
+  - CVE-2022-0934: Heap use after free in dhcp6_no_relay","Checks if a vulnerable version is present on the target host.
+Details:
+Dnsmasq <= 2.86 Multiple Vulnerabilities
+(OID: 1.3.6.1.4.1.25623.1.0.147385)
+Version used: 2023-01-12T10:12:15Z
+","Product: cpe:/a:thekelleys:dnsmasq:2.83
+Method: Dnsmasq Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117275)
+","","DFN-CERT-2024-0829,DFN-CERT-2022-0916,DFN-CERT-2022-0906,WID-SEC-2024-0064,WID-SEC-2023-0137,WID-SEC-2022-1988",""
+10.0.0.92,,22,tcp,9.8,High,30,"VendorFix","OpenBSD OpenSSH 8.9 - 9.2 Unspecified Vulnerability","OpenBSD OpenSSH is prone to an unspecified vulnerability.","Installed version: 8.9p1
+Fixed version:     9.3
+Installation
+path / port:       22/tcp
+
+",1.3.6.1.4.1.25623.1.0.104634,"CVE-2023-28531",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,0f248b24-acd0-46f5-a1b4-13180309f309,"","Update to version 9.3 or later.","OpenBSD OpenSSH versions starting from 8.9 and prior to 9.3.","ssh-add(1): when adding smartcard keys to ssh-agent(1) with the
+  per-hop destination constraints (ssh-add -h ...) added in OpenSSH 8.9, a logic error prevented the
+  constraints from being communicated to the agent. This resulted in the keys being added without
+  constraints. The common cases of non-smartcard keys and keys without destination constraints are
+  unaffected. This problem was reported by Luci Stanescu.","Checks if a vulnerable version is present on the target host.
+Details:
+OpenBSD OpenSSH 8.9 - 9.2 Unspecified Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.104634)
+Version used: 2025-01-21T05:37:33Z
+","Product: cpe:/a:openbsd:openssh:8.9p1
+Method: OpenSSH Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.108577)
+","","DFN-CERT-2024-1260,DFN-CERT-2024-0341,DFN-CERT-2023-3218,DFN-CERT-2023-3182,DFN-CERT-2023-1424,WID-SEC-2024-1082,WID-SEC-2023-0670",""
+10.0.0.92,,80,tcp,9.8,High,30,"VendorFix","Apache HTTP Server 2.4.0 - 2.4.55 HTTP Request Smuggling Vulnerability - Linux","Apache HTTP Server is prone to a HTTP request smuggling
+  vulnerability.","Installed version: 2.4.52
+Fixed version:     2.4.56
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.104597,"CVE-2023-25690",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,bf659ca3-b18a-40fd-b362-3baf5919563e,"Request splitting/smuggling could result in bypass of access
+  controls in the proxy server, proxying unintended URLs to existing origin servers, and cache
+  poisoning.","Update to version 2.4.56 or later.","Apache HTTP Server versions 2.4.0 through 2.4.55.","Some mod_proxy configurations allow a HTTP Request Smuggling
+  attack.
+
+  Configurations are affected when mod_proxy is enabled along with some form of RewriteRule or
+  ProxyPassMatch in which a non-specific pattern matches some portion of the user-supplied
+  request-target (URL) data and is then re-inserted into the proxied request-target using variable
+  substitution.","Checks if a vulnerable version is present on the target host.
+Details:
+Apache HTTP Server 2.4.0 - 2.4.55 HTTP Request Smuggling Vulnerability - Lin...
+(OID: 1.3.6.1.4.1.25623.1.0.104597)
+Version used: 2024-02-15T05:05:40Z
+","Product: cpe:/a:apache:http_server:2.4.52
+Method: Apache HTTP Server Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117232)
+","","DFN-CERT-2023-1648,DFN-CERT-2023-1297,DFN-CERT-2023-1232,DFN-CERT-2023-0884,DFN-CERT-2023-0788,DFN-CERT-2023-0658,DFN-CERT-2023-0546,WID-SEC-2024-1591,WID-SEC-2024-0794,WID-SEC-2023-3129,WID-SEC-2023-2694,WID-SEC-2023-2031,WID-SEC-2023-1809,WID-SEC-2023-1807,WID-SEC-2023-1424,WID-SEC-2023-1021,WID-SEC-2023-0657,WID-SEC-2023-0583",""
+10.0.0.92,,80,tcp,9.8,High,30,"VendorFix","Apache HTTP Server < 2.4.54 Multiple Vulnerabilities - Linux","Apache HTTP Server is prone to multiple vulnerabilities.","Installed version: 2.4.52
+Fixed version:     2.4.54
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.148252,"CVE-2022-26377,CVE-2022-28614,CVE-2022-28615,CVE-2022-29404,CVE-2022-30556,CVE-2022-31813",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,6ae1a4d0-9e34-419e-9ccc-6bd165126fa1,"","Update to version 2.4.54 or later.","Apache HTTP Server version 2.4.53 and prior.","The following vulnerabilities exist:
+
+  - CVE-2022-26377: mod_proxy_ajp: Possible request smuggling
+
+  - CVE-2022-28614: Read beyond bounds via ap_rwrite()
+
+  - CVE-2022-28615: Read beyond bounds in ap_strcmp_match()
+
+  - CVE-2022-29404: Denial of service in mod_lua r:parsebody
+
+  - CVE-2022-30556: Information disclosure in mod_lua with websockets
+
+  - CVE-2022-31813: mod_proxy X-Forwarded-For dropped by hop-by-hop mechanism","Checks if a vulnerable version is present on the target host.
+Details:
+Apache HTTP Server < 2.4.54 Multiple Vulnerabilities - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.148252)
+Version used: 2022-06-20T03:04:15Z
+","Product: cpe:/a:apache:http_server:2.4.52
+Method: Apache HTTP Server Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117232)
+","","DFN-CERT-2023-0119,DFN-CERT-2022-2799,DFN-CERT-2022-2789,DFN-CERT-2022-2652,DFN-CERT-2022-2509,DFN-CERT-2022-2310,DFN-CERT-2022-2167,DFN-CERT-2022-1837,DFN-CERT-2022-1833,DFN-CERT-2022-1720,DFN-CERT-2022-1353,DFN-CERT-2022-1296,WID-SEC-2024-1591,WID-SEC-2023-1969,WID-SEC-2023-0134,WID-SEC-2023-0132,WID-SEC-2022-1767,WID-SEC-2022-1766,WID-SEC-2022-1764,WID-SEC-2022-0858,WID-SEC-2022-0192,CB-K22/0692",""
+10.0.0.92,,80,tcp,9.8,High,30,"VendorFix","PHP < 7.4.28, 8.0.x < 8.0.16, 8.1.x < 8.1.3 Security Update (Feb 2022) - Linux","PHP released new versions which include a security fix.","Installed version: 7.2.34
+Fixed version:     7.4.28
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.147657,"CVE-2021-21708",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,83a9e41f-57cf-4594-969b-5011b888d56b,"","Update to version 7.4.28, 8.0.16, 8.1.3 or later.","PHP prior to version 7.4.28, 8.0.x through 8.0.15 and 8.1.x
+  through 8.1.2.","Fix #81708: UAF due to php_filter_float() failing for ints.","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 7.4.28, 8.0.x < 8.0.16, 8.1.x < 8.1.3 Security Update (Feb 2022) - Lin...
+(OID: 1.3.6.1.4.1.25623.1.0.147657)
+Version used: 2022-03-09T03:03:43Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2024-1062,DFN-CERT-2023-1600,DFN-CERT-2022-2639,DFN-CERT-2022-2598,DFN-CERT-2022-2500,DFN-CERT-2022-2499,DFN-CERT-2022-1605,DFN-CERT-2022-0557,DFN-CERT-2022-0407,DFN-CERT-2022-0365,WID-SEC-2023-1737,WID-SEC-2022-1767,WID-SEC-2022-1335,WID-SEC-2022-1228,WID-SEC-2022-0280,CB-K22/0201",""
+10.0.0.92,,80,tcp,9.8,High,30,"VendorFix","Apache HTTP Server <= 2.4.52 Multiple Vulnerabilities - Linux","Apache HTTP Server is prone to multiple vulnerabilities.","Installed version: 2.4.52
+Fixed version:     2.4.53
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.113837,"CVE-2022-22719,CVE-2022-22720,CVE-2022-22721,CVE-2022-23943",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,39cb9efe-509b-4e78-bda7-e1f6f099f53a,"","Update to version 2.4.53 or later.","Apache HTTP Server version 2.4.52 and prior.","The following vulnerabilities exist:
+
+  - CVE-2022-22719: mod_lua Use of uninitialized value of in r:parsebody
+
+  - CVE-2022-22720: HTTP request smuggling vulnerability
+
+  - CVE-2022-22721: Possible buffer overflow with very large or unlimited LimitXMLRequestBody
+
+  - CVE-2022-23943: mod_sed: Read/write beyond bounds","Checks if a vulnerable version is present on the target host.
+Details:
+Apache HTTP Server <= 2.4.52 Multiple Vulnerabilities - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.113837)
+Version used: 2022-03-21T03:03:41Z
+","Product: cpe:/a:apache:http_server:2.4.52
+Method: Apache HTTP Server Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117232)
+","","DFN-CERT-2022-2799,DFN-CERT-2022-2509,DFN-CERT-2022-2305,DFN-CERT-2022-2167,DFN-CERT-2022-1116,DFN-CERT-2022-1115,DFN-CERT-2022-1114,DFN-CERT-2022-0899,DFN-CERT-2022-0898,DFN-CERT-2022-0865,DFN-CERT-2022-0747,DFN-CERT-2022-0678,DFN-CERT-2022-0582,WID-SEC-2024-1591,WID-SEC-2022-1772,WID-SEC-2022-1335,WID-SEC-2022-1228,WID-SEC-2022-1161,WID-SEC-2022-1057,WID-SEC-2022-0898,WID-SEC-2022-0799,WID-SEC-2022-0755,WID-SEC-2022-0646,WID-SEC-2022-0432,WID-SEC-2022-0302,WID-SEC-2022-0290,CB-K22/0619,CB-K22/0306",""
+10.0.0.92,,80,tcp,9.0,High,30,"VendorFix","Apache HTTP Server < 2.4.55 Multiple Vulnerabilities - Linux","Apache HTTP Server is prone to multiple vulnerabilities.","Installed version: 2.4.52
+Fixed version:     2.4.55
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.149152,"CVE-2006-20001,CVE-2022-36760,CVE-2022-37436",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,fb8df89c-70c0-4a8b-b5d6-fe24aa3eeaa4,"","Update to version 2.4.55 or later.","Apache HTTP Server version 2.4.54 and prior.","The following vulnerabilities exist:
+
+  - CVE-2006-20001: mod_dav out of bounds read, or write of zero byte
+
+  - CVE-2022-36760: Possible request smuggling in mod_proxy_ajp
+
+  - CVE-2022-37436: mod_proxy allows a backend to trigger HTTP response splitting","Checks if a vulnerable version is present on the target host.
+Details:
+Apache HTTP Server < 2.4.55 Multiple Vulnerabilities - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.149152)
+Version used: 2024-02-15T05:05:40Z
+","Product: cpe:/a:apache:http_server:2.4.52
+Method: Apache HTTP Server Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117232)
+","","DFN-CERT-2023-2545,DFN-CERT-2023-1895,DFN-CERT-2023-1297,DFN-CERT-2023-0658,DFN-CERT-2023-0548,DFN-CERT-2023-0497,DFN-CERT-2023-0118,WID-SEC-2024-3195,WID-SEC-2024-1591,WID-SEC-2024-0794,WID-SEC-2023-2674,WID-SEC-2023-1424,WID-SEC-2023-1022,WID-SEC-2023-0561,WID-SEC-2023-0110",""
+10.0.0.92,,80,tcp,8.8,High,30,"VendorFix","PHP < 8.1.30, 8.2.x < 8.2.24, 8.3.x < 8.3.12 Multiple Vulnerabilities - Linux","PHP is prone to multiple vulnerabilities.","Installed version: 7.2.34
+Fixed version:     8.1.30
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.114787,"CVE-2024-8925,CVE-2024-8926,CVE-2024-8927,CVE-2024-8928,CVE-2024-9026",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,73493029-49e4-4102-8211-547528555033,"","Update to version 8.1.30, 8.2.24, 8.3.12 or later.","PHP versions prior to 8.1.30, 8.2.x prior to 8.2.24 and 8.3.x
+  prior to 8.3.12.","The following vulnerabilities exist:
+
+  - CVE-2024-8925, CVE-2024-8928: Erroneous parsing of multipart form data
+
+  - CVE-2024-8926: Bypass of CVE-2024-4577, Parameter Injection Vulnerability
+
+  - CVE-2024-8927: cgi.force_redirect configuration is bypassable due to the environment variable
+  collision
+
+  - CVE-2024-9026: Logs from children may be altered","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 8.1.30, 8.2.x < 8.2.24, 8.3.x < 8.3.12 Multiple Vulnerabilities - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.114787)
+Version used: 2024-10-17T08:02:35Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2025-0168,DFN-CERT-2024-3330,DFN-CERT-2024-3329,DFN-CERT-2024-2707,DFN-CERT-2024-2591,DFN-CERT-2024-2550,WID-SEC-2025-0137,WID-SEC-2024-3116,WID-SEC-2024-2230",""
+10.0.0.92,,80,tcp,8.8,High,30,"VendorFix","PHP < 7.4.30, 8.0.x < 8.0.20, 8.1.x < 8.1.7 Security Update (Jun 2022) - Linux","PHP released new versions which include a security fix.","Installed version: 7.2.34
+Fixed version:     7.4.30
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.148249,"CVE-2022-31625,CVE-2022-31626",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,955936a4-3c12-454b-97ae-1f249121d20d,"","Update to version 7.4.30, 8.0.20, 8.1.7 or later.","PHP prior to version 7.4.30, 8.0.x through 8.0.19 and 8.1.x
+  through 8.1.6.","The following vulnerabilities exist:
+
+  - CVE-2022-31625: Uninitialized array in pg_query_params()
+
+  - CVE-2022-31626: mysqlnd/pdo password buffer overflow","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 7.4.30, 8.0.x < 8.0.20, 8.1.x < 8.1.7 Security Update (Jun 2022) - Lin...
+(OID: 1.3.6.1.4.1.25623.1.0.148249)
+Version used: 2023-10-19T05:05:21Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2023-1600,DFN-CERT-2022-2869,DFN-CERT-2022-2639,DFN-CERT-2022-2638,DFN-CERT-2022-2598,DFN-CERT-2022-2500,DFN-CERT-2022-2323,DFN-CERT-2022-1881,DFN-CERT-2022-1552,DFN-CERT-2022-1516,DFN-CERT-2022-1493,DFN-CERT-2022-1473,DFN-CERT-2022-1288,WID-SEC-2023-1737,WID-SEC-2022-0255,CB-K22/0700",""
+10.0.0.92,,80,tcp,8.1,High,30,"VendorFix","PHP < 8.0.28, 8.1.x < 8.1.16, 8.2.x < 8.2.3 Security Update - Linux","PHP is prone to multiple vulnerabilities.","Installed version: 7.2.34
+Fixed version:     8.0.28
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.104541,"CVE-2023-0567,CVE-2023-0568,CVE-2023-0662",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,eef00603-3088-41fe-812f-2e9892037515,"","Update to version 8.0.28, 8.1.16, 8.2.3 or later.","PHP versions prior to 8.0.28, 8.1.x prior to 8.1.16 and
+  8.2.x prior to 8.2.3.","The following flaws exist:
+
+  - CVE-2023-0567: Fixed bug #81744 (Password_verify() always return true with some hash)
+
+  - CVE-2023-0568: Fixed bug #81746 (1-byte array overrun in common path resolve code)
+
+  - CVE-2023-0662: Fixed bug GHSA-54hq-v5wp-fqgv (DOS vulnerability when parsing multipart request
+  body)","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 8.0.28, 8.1.x < 8.1.16, 8.2.x < 8.2.3 Security Update - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.104541)
+Version used: 2023-10-13T05:06:10Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2024-3330,DFN-CERT-2024-2681,DFN-CERT-2023-2570,DFN-CERT-2023-2538,DFN-CERT-2023-0994,DFN-CERT-2023-0884,DFN-CERT-2023-0462,DFN-CERT-2023-0435,DFN-CERT-2023-0336,WID-SEC-2023-2671,WID-SEC-2023-1424,WID-SEC-2023-1022,WID-SEC-2023-0383",""
+10.0.0.92,,22,tcp,8.1,High,30,"VendorFix","OpenBSD OpenSSH < 4.4p1, 8.5p1 - 9.7p1 RCE Vulnerability (regreSSHion)","OpenBSD OpenSSH is prone to a remote code execution (RCE)
+  vulnerability dubbed 'regreSSHion'.","Installed version: 8.9p1
+Fixed version:     9.8
+Installation
+path / port:       22/tcp
+
+",1.3.6.1.4.1.25623.1.0.114680,"CVE-2024-6387",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,909cf14d-def8-4ad1-af12-82e3adba1048,"","Update to version 9.8 or later.","OpenBSD OpenSSH versions prior to 4.4p1 (unless patched for
+  CVE-2006-5051 and CVE-2008-4109) and 8.5p1 through 9.7p1.","Vendor insights:
+
+  1) Race condition in sshd(8)
+
+  A critical vulnerability in sshd(8) was present that may allow arbitrary code execution with root
+  privileges.
+
+  Successful exploitation has been demonstrated on 32-bit Linux/glibc systems with ASLR. Under lab
+  conditions, the attack requires on average 6-8 hours of continuous connections up to the maximum
+  the server will accept. Exploitation on 64-bit systems is believed to be possible but has not been
+  demonstrated at this time. It's likely that these attacks will be improved upon.
+
+  Exploitation on non-glibc systems is conceivable but has not been examined. Systems that lack ASLR
+  or users of downstream Linux distributions that have modified OpenSSH to disable per-connection
+  ASLR re-randomisation (yes - this is a thing, no - we don't understand why) may potentially have
+  an easier path to exploitation.
+
+  OpenBSD is not vulnerable.","Checks if a vulnerable version is present on the target host.
+Details:
+OpenBSD OpenSSH < 4.4p1, 8.5p1 - 9.7p1 RCE Vulnerability (regreSSHion)
+(OID: 1.3.6.1.4.1.25623.1.0.114680)
+Version used: 2024-07-09T05:05:54Z
+","Product: cpe:/a:openbsd:openssh:8.9p1
+Method: OpenSSH Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.108577)
+","","DFN-CERT-2025-0042,DFN-CERT-2024-1960,DFN-CERT-2024-1959,DFN-CERT-2024-1958,DFN-CERT-2024-1904,DFN-CERT-2024-1869,DFN-CERT-2024-1868,DFN-CERT-2024-1844,DFN-CERT-2024-1759,DFN-CERT-2024-1740,DFN-CERT-2024-1694,DFN-CERT-2024-1693,WID-SEC-2024-3195,WID-SEC-2024-1725,WID-SEC-2024-1486",""
+10.0.0.92,,3128,tcp,7.8,High,70,"WillNotFix","Squid Multiple 0-Day Vulnerabilities (Oct 2023)","Squid is prone to multiple zero-day (0-day) vulnerabilities.","Installed version: 5.9
+Fixed version:     None
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.100439,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,6573e35d-a9ad-4c6e-a833-3bb0fc10b14c,"","No known solution was made available for at least one year
+  since the disclosure of this vulnerability. Likely none will be provided anymore. General solution
+  options are to upgrade to a newer release, disable respective features, remove the product or
+  replace the product by another one.
+
+  Notes:
+
+  - It seems that some of the flaws could be mitigated by workarounds (listed in the referenced
+  GitHub Gist) via either configuration changes and/or by disabling some features / functionality
+  of Squid during build time
+
+  - If only these workarounds have been applied and the risk is accepted that these workarounds
+  might not fully mitigate the relevant flaw(s) please create an override for this result","As of 10/2024 the situation about the versions affected by the
+  previous listed vulnerabilities is largely unclear (The security researcher only stated that all
+  vulnerabilities were discovered in squid-5.0.5 and the vendor only published a few advisories so
+  far).
+
+  Due to this unclear situation all Squid versions are currently assumed to be vulnerable by the not
+  yet fixed flaws.","The following flaws have been reported in 2021 to the vendor and
+  seems to be not fixed yet:
+
+  - One-Byte Buffer OverRead in HTTP Request Header Parsing
+
+  - strlen(NULL) Crash Using Digest Authentication GHSA-254c-93q9-cp53
+
+  - Gopher Assertion Crash
+
+  - Whois Assertion Crash
+
+  - RFC 2141 / 2169 (URN) Assertion Crash
+
+  - Assertion in Negotiate/NTLM Authentication Using Pipeline Prefetching
+
+  - Assertion on IPv6 Host Requests with --disable-ipv6
+
+  - Assertion Crash on Unexpected 'HTTP/1.1 100 Continue' Response Header
+
+  - Pipeline Prefetch Assertion With Double 'Expect:100-continue' Request Headers
+
+  - Pipeline Prefetch Assertion With Invalid Headers
+
+  - Assertion Crash in Deferred Requests
+
+  - Assertion in Digest Authentication
+
+  - FTP Authentication Crash
+
+  - Assertion Crash In HTTP Response Headers Handling
+
+  - Implicit Assertion in Stream Handling
+
+  Note: One GHSA advisory has been provided by the security researcher but is not published /
+  available yet.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid Multiple 0-Day Vulnerabilities (Oct 2023)
+(OID: 1.3.6.1.4.1.25623.1.0.100439)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","",""
+10.0.0.92,,3128,tcp,7.8,High,30,"VendorFix","Squid DoS Vulnerability (GHSA-72c2-c3wm-8qxc, SQUID-2024:1)","Squid is prone to a denial of service (DoS) vulnerability in the
+  HTTP Chunked Decoding.","Installed version: 5.9
+Fixed version:     6.8
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.114405,"CVE-2024-25111",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,0375b49b-1682-4f8a-93b5-a2144b288c74,"","Update to version 6.8 or later.","Squid version 3.5.27 through 6.7.","Due to an Uncontrolled Recursion bug, Squid may be vulnerable to
+  a Denial of Service attack against HTTP Chunked decoder.
+
+  This flaw was part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'Chunked Encoding Stack Overflow'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-72c2-c3wm-8qxc, SQUID-2024:1)
+(OID: 1.3.6.1.4.1.25623.1.0.114405)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-2191,DFN-CERT-2024-1017,DFN-CERT-2024-0956,DFN-CERT-2024-0894,DFN-CERT-2024-0797,DFN-CERT-2024-0742,DFN-CERT-2024-0642,WID-SEC-2024-0544",""
+10.0.0.92,,3128,tcp,7.8,High,30,"VendorFix","Squid DoS Vulnerability (GHSA-jm7h-w5q5-jpq9, SQUID-2020:13)","Squid is prone to a denial of service (DoS) vulnerability.","Installed version: 5.9
+Fixed version:     6.0.1
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.150942,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,78fb6372-21ae-48f9-aa49-cf252ac90977,"","Update to version 6.0.1 or later.
+
+  As a workaround reject all gopher URL requests. Please see the referenced vendor advisory for more
+  information.","Squid prior to version 6.0.1.","This problem allows a remote gopher: server to trigger a buffer
+  overflow by delivering large gopher protocol responses. On most operating systems with memory
+  protection this will halt Squid service immediately, causing a denial of service to all Squid
+  clients.
+
+  The gopher protocol is always available and enabled in Squid prior to Squid 6.0.1.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-jm7h-w5q5-jpq9, SQUID-2020:13)
+(OID: 1.3.6.1.4.1.25623.1.0.150942)
+Version used: 2023-09-08T05:06:21Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","",""
+10.0.0.92,,80,tcp,7.8,High,30,"VendorFix","PHP < 8.0.27, 8.1.x < 8.1.14, 8.2.x < 8.2.1 Security Update - Linux","PHP is prone to an integer overflow vulnerability.","Installed version: 7.2.34
+Fixed version:     8.0.27
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.149069,"CVE-2022-31631",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,45a087e7-87fd-436b-82ad-9f2f9a09a675,"","Update to version 8.0.27, 8.1.14, 8.2.1 or later.","PHP prior to version 8.0.27, version 8.1.x through 8.1.13 and
+  8.2.0.","Due to an uncaught integer overflow, PDO::quote() of PDO_SQLite
+  may return a not properly quoted string.","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 8.0.27, 8.1.x < 8.1.14, 8.2.x < 8.2.1 Security Update - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.149069)
+Version used: 2023-01-09T10:12:48Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2023-0435,DFN-CERT-2023-0422,DFN-CERT-2023-0071,DFN-CERT-2023-0034,WID-SEC-2023-0035",""
+10.0.0.92,,80,tcp,7.5,High,30,"VendorFix","Apache HTTP Server < 2.4.58 mod_macro Out-of-bounds Read Vulnerability - Linux","Apache HTTP Server is prone to an out-of-bounds read
+  vulnerability in mod_macro.","Installed version: 2.4.52
+Fixed version:     2.4.58
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.100272,"CVE-2023-31122",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,f7524334-b58e-4e33-a025-701631ac69c8,"","Update to version 2.4.58 or later.","Apache HTTP Server version 2.4.57 and prior.","","Checks if a vulnerable version is present on the target host.
+Details:
+Apache HTTP Server < 2.4.58 'mod_macro' Out-of-bounds Read Vulnerability - L...
+(OID: 1.3.6.1.4.1.25623.1.0.100272)
+Version used: 2024-02-15T05:05:40Z
+","Product: cpe:/a:apache:http_server:2.4.52
+Method: Apache HTTP Server Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117232)
+","","DFN-CERT-2024-1411,DFN-CERT-2024-1010,DFN-CERT-2024-1000,DFN-CERT-2024-0732,DFN-CERT-2023-2640,DFN-CERT-2023-2583,WID-SEC-2024-1226,WID-SEC-2024-0899,WID-SEC-2024-0869,WID-SEC-2024-0769,WID-SEC-2024-0107,WID-SEC-2023-2917,WID-SEC-2023-2712",""
+10.0.0.92,,3128,tcp,7.5,High,30,"VendorFix","Squid DoS Vulnerability (GHSA-8w9r-p88v-mmx9, SQUID-2023:7)","Squid is prone to a denial of service (DoS) vulnerability.","Installed version: 5.9
+Fixed version:     6.5
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.114206,"CVE-2023-49285",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,048c13f7-d12e-4e8f-ad3e-6507650f5041,"","Update to version 6.5 or later.","Squid versions 2.2 through 5.9 and 6.0 through 6.4.","Due to a Buffer Overread bug Squid is vulnerable to a Denial of
+  Service attack against Squid HTTP Message processing.
+
+  This flaw was part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as '1-Byte Buffer OverRead in RFC 1123 date/time
+  Handling'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-8w9r-p88v-mmx9, SQUID-2023:7)
+(OID: 1.3.6.1.4.1.25623.1.0.114206)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-1684,DFN-CERT-2024-0970,DFN-CERT-2024-0642,DFN-CERT-2024-0214,DFN-CERT-2024-0172,DFN-CERT-2024-0039,DFN-CERT-2024-0038,DFN-CERT-2024-0026,DFN-CERT-2023-3192,DFN-CERT-2023-3036,WID-SEC-2024-1248,WID-SEC-2023-3049",""
+10.0.0.92,,3128,tcp,7.5,High,30,"VendorFix","Squid DoS Vulnerability (GHSA-cg5h-v6vc-w33f, SQUID-2021:8)","Squid is prone to a denial of service (DoS) vulnerability in
+  the Gopher gateway.","Installed version: 5.9
+Fixed version:     6.0.1
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.151071,"CVE-2023-46728",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,dd473dd7-422c-4755-9fe3-dd7830cc88a5,"","Update to version 6.0.1 or later.
+
+  As a workaround reject all gopher URL requests. Please see the referenced vendor advisory for more
+  information.
+
+  Note: Removing the gopher port 70 from the Safe_ports ACL is not sufficient to avoid this
+  vulnerability.","Squid version 2.x and later prior to version 6.0.1.","Due to a NULL pointer dereference bug Squid is vulnerable to a
+  Denial of Service attack against Squid's Gopher gateway.
+
+  The gopher protocol is always available and enabled in Squid prior to Squid 6.0.1.
+
+  Responses triggering this bug are possible to be received from any gopher server, even those
+  without malicious intent.
+
+  This flaw was part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'Null Pointer Dereference in Gopher Response
+  Handling'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-cg5h-v6vc-w33f, SQUID-2021:8)
+(OID: 1.3.6.1.4.1.25623.1.0.151071)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-0970,DFN-CERT-2024-0214,DFN-CERT-2024-0039,DFN-CERT-2024-0038,DFN-CERT-2024-0026,DFN-CERT-2023-3192,DFN-CERT-2023-2956,DFN-CERT-2023-2934,WID-SEC-2024-1248,WID-SEC-2023-2837",""
+10.0.0.92,,3128,tcp,7.5,High,30,"VendorFix","Squid DoS Vulnerability (GHSA-h5x6-w8mv-xfpr, SQUID-2024:2)","Squid is prone to a denial of service (DoS) vulnerability.","Installed version: 5.9
+Fixed version:     6.5
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.151739,"CVE-2024-25617",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,aec57457-ef81-42ab-bf7b-0f5c679486ce,"","Update to version 6.5 or later.","Squid versions prior to 6.5.","Due to a Collapse of Data into Unsafe Value bug, Squid may be
+  vulnerable to a Denial of Service attack against HTTP header parsing.
+
+  This flaw was part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'Memory Leak in HTTP Response Parsing'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-h5x6-w8mv-xfpr, SQUID-2024:2)
+(OID: 1.3.6.1.4.1.25623.1.0.151739)
+Version used: 2025-01-13T08:32:03Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-1684,DFN-CERT-2024-0970,DFN-CERT-2024-0956,DFN-CERT-2024-0894,DFN-CERT-2024-0742,DFN-CERT-2024-0642,DFN-CERT-2024-0554,DFN-CERT-2024-0491,WID-SEC-2024-1248,WID-SEC-2024-0396",""
+10.0.0.92,,80,tcp,7.5,High,30,"WillNotFix","PHP CVE-2017-7189 Improper Input Validation Vulnerability - Linux","PHP is improperly validating input from untrusted input.","Installed version: 7.2.34
+Fixed version:     None
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.108874,"CVE-2017-7189",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,229e995f-6522-452d-aa1f-575744ba5852,"","No solution was made available by the vendor. General solution options
+  are to upgrade to a newer release, disable respective features, remove the product or replace the product
+  by another one.
+
+  Note: PHP versions 7.0.18 and 7.1.4 introduced a fix which was reverted again in version 7.0.19 / 7.1.5 respectively
+  and the fix wasn't introduced again as of today (08-2020).","All PHP versions since 4.3.0 up to the latest 7.x versions.
+
+  Note: PHP versions 7.0.18 and 7.1.4 introduced a fix which was reverted again in version 7.0.19 / 7.1.5 respectively.","main/streams/xp_socket.c in PHP misparses fsockopen calls, such as by
+  interpreting fsockopen('127.0.0.1:80', 443) as if the address/port were 127.0.0.1:80:443, which is later
+  truncated to 127.0.0.1:80. This behavior has a security risk if the explicitly provided port number
+  (i.e., 443 in this example) is hardcoded into an application as a security policy, but the hostname
+  argument (i.e., 127.0.0.1:80 in this example) is obtained from untrusted input.","Checks if a vulnerable version is present on the target host.
+Details:
+PHP 'CVE-2017-7189' Improper Input Validation Vulnerability - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.108874)
+Version used: 2024-02-15T05:05:40Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","",""
+10.0.0.92,,80,tcp,7.5,High,30,"VendorFix","PHP < 7.3.27, 7.4.x < 7.4.15, 8.0.x < 8.0.2 NULL Deference Vulnerability (Feb 2021) - Linux","PHP is prone to a NULL dereference vulnerability in the
+  SoapClient.","Installed version: 7.2.34
+Fixed version:     7.3.27
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.145323,"CVE-2021-21702",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,752d28c6-b3d1-4f01-a3f4-f075c7e70e9c,"","Update to version 7.3.27, 7.4.15, 8.0.2 or later.","PHP versions prior to 7.3.27, 7.4.x prior to 7.4.15 and 8.0.x
+  prior to 8.0.2.","","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 7.3.27, 7.4.x < 7.4.15, 8.0.x < 8.0.2 NULL Deference Vulnerability (Fe...
+(OID: 1.3.6.1.4.1.25623.1.0.145323)
+Version used: 2021-11-29T15:00:35Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2023-1600,DFN-CERT-2022-2639,DFN-CERT-2022-2638,DFN-CERT-2022-0904,DFN-CERT-2021-2373,DFN-CERT-2021-1645,DFN-CERT-2021-1509,DFN-CERT-2021-1453,DFN-CERT-2021-0556,DFN-CERT-2021-0380,DFN-CERT-2021-0246,WID-SEC-2023-1737,WID-SEC-2022-2113,CB-K21/0124",""
+10.0.0.1,,443,tcp,7.5,High,30,"Mitigation","Diffie-Hellman Ephemeral Key Exchange DoS Vulnerability (SSL/TLS, D(HE)ater)","The remote SSL/TLS server is supporting Diffie-Hellman ephemeral
+  (DHE) Key Exchange algorithms and thus could be prone to a denial of service (DoS)
+  vulnerability.","'DHE' cipher suites accepted by this service via the TLSv1.2 protocol:
+
+TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+
+
+",1.3.6.1.4.1.25623.1.0.117840,"CVE-2002-20001,CVE-2022-40735,CVE-2024-41996",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,98476a9c-34b5-488d-a0cd-7081fb3797f8,"This vulnerability allows remote attackers (from the client side)
+  to send arbitrary numbers that are actually not public keys, and trigger expensive server-side DHE
+  modular-exponentiation calculations, also known as a D(HE)ater attack.
+
+  There could be an increase in CPU usage in the affected component. For OpenSSH, users may observe
+  issues such as a slowdown in SSH connections.","'- DHE key exchange should be disabled if no other mitigation
+  mechanism can be used and either elliptic-curve variant of Diffie-Hellman (ECDHE) or RSA key
+  exchange is supported by the clients. The fact that RSA key exchange is not forward secret should
+  be considered.
+
+  - Limit the maximum number of concurrent connections in e.g. the configuration of the remote
+  server. For Postfix this limit can be configured via 'smtpd_client_new_tls_session_rate_limit'
+  option, for other products please refer to the manual of the product in question on configuration
+  possibilities.","","'- CVE-2002-20001: The Diffie-Hellman Key Agreement Protocol
+  allows remote attackers (from the client side) to send arbitrary numbers that are actually not
+  public keys, and trigger expensive server-side DHE modular-exponentiation calculations, aka a
+  D(HE)ater attack. The client needs very little CPU resources and network bandwidth. The attack may
+  be more disruptive in cases where a client can require a server to select its largest supported
+  key size. The basic attack scenario is that the client must claim that it can only communicate
+  with DHE, and the server must be configured to allow DHE.
+
+  - CVE-2022-40735: The Diffie-Hellman Key Agreement Protocol allows use of long exponents that
+  arguably make certain calculations unnecessarily expensive, because the 1996 van Oorschot and
+  Wiener paper found that '(appropriately) short exponents' can be used when there are adequate
+  subgroup constraints, and these short exponents can lead to less expensive calculations than for
+  long exponents. This issue is different from CVE-2002-20001 because it is based on an observation
+  about exponent size, rather than an observation about numbers that are not public keys. The
+  specific situations in which calculation expense would constitute a server-side vulnerability
+  depend on the protocol (e.g., TLS, SSH, or IKE) and the DHE implementation details. In general,
+  there might be an availability concern because of server-side resource consumption from DHE
+  modular-exponentiation calculations. Finally, it is possible for an attacker to exploit this
+  vulnerability and CVE-2002-20001 together.
+
+  - CVE-2024-41996: Validating the order of the public keys in the Diffie-Hellman Key Agreement
+  Protocol, when an approved safe prime is used, allows remote attackers (from the client side) to
+  trigger unnecessarily expensive server-side DHE modular-exponentiation calculations. The client
+  may cause asymmetric resource consumption. The basic attack scenario is that the client must claim
+  that it can only communicate with DHE, and the server must be configured to allow DHE and validate
+  the order of the public key.","Checks the supported cipher suites of the remote SSL/TLS
+  server.
+Details:
+Diffie-Hellman Ephemeral Key Exchange DoS Vulnerability (SSL/TLS, D(HE)ater)
+(OID: 1.3.6.1.4.1.25623.1.0.117840)
+Version used: 2024-10-03T05:05:33Z
+","Product: cpe:/a:ietf:transport_layer_security
+Method: SSL/TLS: Report Supported Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.802067)
+","","DFN-CERT-2024-2847,DFN-CERT-2024-2578,DFN-CERT-2024-1671,DFN-CERT-2023-1697,DFN-CERT-2023-1332,DFN-CERT-2022-2147,DFN-CERT-2022-0437,DFN-CERT-2021-2622,WID-SEC-2024-3056,WID-SEC-2023-1886,WID-SEC-2023-1352,WID-SEC-2022-2251,WID-SEC-2022-2000,CB-K22/0224,CB-K21/1276",""
+10.0.0.1,,53,tcp,7.5,High,30,"VendorFix","Dnsmasq <= 2.89 UDP Fragmentation DoS Vulnerability","Dnsmasq is prone to a denial of service (DoS) vulnerability via
+  an UDP Fragmentation attack.","Installed version: 2.83
+Fixed version:     2.90
+Installation
+path / port:       53/tcp
+
+",1.3.6.1.4.1.25623.1.0.104641,"CVE-2023-28450",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,b7ccb540-dad4-4278-8c06-0d9b19a03f77,"","Update to version 2.90 or later.","Dnsmasq version 2.89 and prior.","The default maximum EDNS.0 UDP packet size was set to 4096 but
+  should be 1232 because of DNS Flag Day 2020.","Checks if a vulnerable version is present on the target host.
+Details:
+Dnsmasq <= 2.89 UDP Fragmentation DoS Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.104641)
+Version used: 2024-03-13T05:05:57Z
+","Product: cpe:/a:thekelleys:dnsmasq:2.83
+Method: Dnsmasq Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117275)
+","","DFN-CERT-2024-0829,DFN-CERT-2024-0498,DFN-CERT-2023-1947,DFN-CERT-2023-0927,WID-SEC-2023-2917,WID-SEC-2023-0668",""
+10.0.0.92,,3128,tcp,7.5,High,30,"VendorFix","Squid Multiple DoS Vulnerabilities (GHSA-f975-v7qw-q7hj, SQUID-2024:4)","Squid is prone to multiple denial of service (DoS)
+  vulnerabilities due to multiple issues in ESI.","Installed version: 5.9
+Fixed version:     7.0
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.114851,"CVE-2024-45802",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,2cfba15f-e1f8-4d1e-977c-b29e96a23b50,"","Update to version 7.0 or later.","Squid version 3.0 through 6.x.","Due to Input Validation, Premature Release of Resource During
+  Expected Lifetime, and Missing Release of Resource after Effective Lifetime bugs, Squid is
+  vulnerable to Denial of Service attacks by a trusted server against all clients using the proxy.
+
+  These flaws were part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as:
+
+  - Memory Leak in ESI Error Processing
+
+  - Assertion in ESI Header Handling
+
+  - Use-After-Free in ESI 'Try' (and 'Choose') Processing
+
+  - Use-After-Free in ESI Expression Evaluation
+
+  - Assertion Due to 0 ESI 'when' Checking
+
+  - Assertion Using ESI's When Directive
+
+  - Assertion in ESI Variable Assignment (String)
+
+  - Assertion in ESI Variable Assignment
+
+  - Null Pointer Dereference In ESI's esi:include and esi:when","Checks if a vulnerable version is present on the target host.
+Details:
+Squid Multiple DoS Vulnerabilities (GHSA-f975-v7qw-q7hj, SQUID-2024:4)
+(OID: 1.3.6.1.4.1.25623.1.0.114851)
+Version used: 2024-11-07T05:05:35Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-3050,DFN-CERT-2024-2909,WID-SEC-2024-3280",""
+10.0.0.1,,53,tcp,7.5,High,30,"VendorFix","Dnsmasq < 2.90 Multiple DoS Vulnerabilities (KeyTrap)","Dnsmasq is prone to multiple denial of service (DoS)
+  vulenrabilities.","Installed version: 2.83
+Fixed version:     2.90
+Installation
+path / port:       53/tcp
+
+",1.3.6.1.4.1.25623.1.0.151740,"CVE-2023-50387,CVE-2023-50868",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,a45c9f99-70b0-484e-87b5-7782448eac32,"","Update to version 2.90 or later.","Dnsmasq version 2.89 and prior.","Certain DNSSEC aspects of the DNS protocol (in RFC 4035 and
+  related RFCs) allow remote attackers to cause a denial of service (CPU consumption) via one or
+  more DNSSEC responses when there is a zone with many DNSKEY and RRSIG records, aka the 'KeyTrap'
+  issue. The protocol specification implies that an algorithm must evaluate all combinations of
+  DNSKEY and RRSIG records.","Checks if a vulnerable version is present on the target host.
+Details:
+Dnsmasq < 2.90 Multiple DoS Vulnerabilities (KeyTrap)
+(OID: 1.3.6.1.4.1.25623.1.0.151740)
+Version used: 2024-02-21T05:06:27Z
+","Product: cpe:/a:thekelleys:dnsmasq:2.83
+Method: Dnsmasq Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117275)
+","","DFN-CERT-2025-0041,DFN-CERT-2025-0010,DFN-CERT-2024-2264,DFN-CERT-2024-1904,DFN-CERT-2024-1523,DFN-CERT-2024-1516,DFN-CERT-2024-1474,DFN-CERT-2024-1413,DFN-CERT-2024-1223,DFN-CERT-2024-1011,DFN-CERT-2024-0984,DFN-CERT-2024-0977,DFN-CERT-2024-0921,DFN-CERT-2024-0829,DFN-CERT-2024-0529,DFN-CERT-2024-0498,DFN-CERT-2024-0404,DFN-CERT-2024-0399,DFN-CERT-2024-0387,DFN-CERT-2024-0379,DFN-CERT-2024-0375,WID-SEC-2025-0148,WID-SEC-2024-1347,WID-SEC-2024-1313,WID-SEC-2024-1307,WID-SEC-2024-1248,WID-SEC-2024-1226,WID-SEC-2024-1086,WID-SEC-2024-0387,WID-SEC-2024-0386",""
+10.0.0.92,,3128,tcp,7.5,High,30,"VendorFix","Squid Multiple DoS Vulnerabilities (GHSA-543m-w2m2-g255, SQUID-2023:2)","Squid is prone to multiple denial of service (DoS)
+  vulnerabilities.","Installed version: 5.9
+Fixed version:     6.4
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.100705,"CVE-2023-5824",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,5880f79c-1abd-4b32-bddc-68cdb10f4e78,"","Update to version 6.4 or later.","Squid versions prior to 6.4.","The following flaws exist:
+
+  - Due to an Improper Handling of Structural Elements bug Squid is vulnerable to a Denial of
+  Service attack against HTTP and HTTPS clients.
+
+  - Due to an Incomplete Filtering of Special Elements bug Squid is vulnerable to a Denial of
+  Service attack against HTTP and HTTPS clients.
+
+  These flaws were part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'Cache Poisoning by Large Stored Response Headers (With
+  Bonus XSS)'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid Multiple DoS Vulnerabilities (GHSA-543m-w2m2-g255, SQUID-2023:2)
+(OID: 1.3.6.1.4.1.25623.1.0.100705)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-0956,DFN-CERT-2024-0214,DFN-CERT-2024-0038,DFN-CERT-2023-2949,WID-SEC-2024-1248,WID-SEC-2023-2725",""
+10.0.0.92,,3128,tcp,7.5,High,30,"VendorFix","Squid Multiple DoS Vulnerabilities (GHSA-2g3c-pg7q-g59w, SQUID-2023:5)","Squid is prone to multiple denial of service (DoS)
+  vulnerabilities.","Installed version: 5.9
+Fixed version:     6.4
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.100664,"CVE-2023-46848",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,e2c8e7a7-f132-4b76-b0f7-c649bf11aaa5,"","Update to version 6.4 or later.","Squid versions 5.0.3 through 5.9 and 6.0 through 6.3.","The following flaws exist:
+
+  - Due to an Incorrect Conversion between Numeric Types bug Squid is vulnerable to a Denial of
+  Service attack against FTP Native Relay input validation.
+
+  - Due to an Incorrect Conversion between Numeric Types bug Squid is vulnerable to a Denial of
+  Service attack against ftp:// URL validation and access control.
+
+  These flaws were part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'FTP URI Assertion'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid Multiple DoS Vulnerabilities (GHSA-2g3c-pg7q-g59w, SQUID-2023:5)
+(OID: 1.3.6.1.4.1.25623.1.0.100664)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-0642,DFN-CERT-2023-2934,DFN-CERT-2023-2746,DFN-CERT-2023-2712,WID-SEC-2024-1248,WID-SEC-2023-2725",""
+10.0.0.92,,22,tcp,7.5,High,30,"Mitigation","Diffie-Hellman Ephemeral Key Exchange DoS Vulnerability (SSH, D(HE)ater)","The remote SSH server is supporting Diffie-Hellman ephemeral
+  (DHE) Key Exchange (KEX) algorithms and thus could be prone to a denial of service (DoS)
+  vulnerability.","The remote SSH server supports the following DHE KEX algorithm(s):
+
+diffie-hellman-group14-sha256
+diffie-hellman-group16-sha512
+diffie-hellman-group18-sha512
+diffie-hellman-group-exchange-sha256
+",1.3.6.1.4.1.25623.1.0.117839,"CVE-2002-20001,CVE-2022-40735,CVE-2024-41996",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,53bfa7ca-e828-4d04-be89-2c8450c68a28,"This vulnerability allows remote attackers (from the client side)
+  to send arbitrary numbers that are actually not public keys, and trigger expensive server-side DHE
+  modular-exponentiation calculations, also known as a D(HE)ater attack.
+
+  There could be an increase in CPU usage in the affected component. For OpenSSH, users may observe
+  issues such as a slowdown in SSH connections.","'- DHE key exchange should be disabled if no other mitigation
+  mechanism can be used and either elliptic-curve variant of Diffie-Hellman (ECDHE) or RSA key
+  exchange is supported by the clients. The fact that RSA key exchange is not forward secret should
+  be considered.
+
+  - Limit the maximum number of concurrent connections in e.g. the configuration of the remote
+  server. For OpenSSH this limit can be configured via the 'MaxStartups' option, for other products
+  please refer to the manual of the product in question on configuration possibilities.","","'- CVE-2002-20001: The Diffie-Hellman Key Agreement Protocol
+  allows remote attackers (from the client side) to send arbitrary numbers that are actually not
+  public keys, and trigger expensive server-side DHE modular-exponentiation calculations, aka a
+  D(HE)ater attack. The client needs very little CPU resources and network bandwidth. The attack may
+  be more disruptive in cases where a client can require a server to select its largest supported
+  key size. The basic attack scenario is that the client must claim that it can only communicate
+  with DHE, and the server must be configured to allow DHE.
+
+  - CVE-2022-40735: The Diffie-Hellman Key Agreement Protocol allows use of long exponents that
+  arguably make certain calculations unnecessarily expensive, because the 1996 van Oorschot and
+  Wiener paper found that '(appropriately) short exponents' can be used when there are adequate
+  subgroup constraints, and these short exponents can lead to less expensive calculations than for
+  long exponents. This issue is different from CVE-2002-20001 because it is based on an observation
+  about exponent size, rather than an observation about numbers that are not public keys. The
+  specific situations in which calculation expense would constitute a server-side vulnerability
+  depend on the protocol (e.g., TLS, SSH, or IKE) and the DHE implementation details. In general,
+  there might be an availability concern because of server-side resource consumption from DHE
+  modular-exponentiation calculations. Finally, it is possible for an attacker to exploit this
+  vulnerability and CVE-2002-20001 together.
+
+  - CVE-2024-41996: Validating the order of the public keys in the Diffie-Hellman Key Agreement
+  Protocol, when an approved safe prime is used, allows remote attackers (from the client side) to
+  trigger unnecessarily expensive server-side DHE modular-exponentiation calculations. The client
+  may cause asymmetric resource consumption. The basic attack scenario is that the client must claim
+  that it can only communicate with DHE, and the server must be configured to allow DHE and validate
+  the order of the public key.","Checks the supported KEX algorithms of the remote SSH
+  server.
+Details:
+Diffie-Hellman Ephemeral Key Exchange DoS Vulnerability (SSH, D(HE)ater)
+(OID: 1.3.6.1.4.1.25623.1.0.117839)
+Version used: 2024-10-03T05:05:33Z
+","Product: cpe:/a:ietf:secure_shell_protocol
+Method: SSH Protocol Algorithms Supported
+(OID: 1.3.6.1.4.1.25623.1.0.105565)
+","","DFN-CERT-2024-2847,DFN-CERT-2024-2578,DFN-CERT-2024-1671,DFN-CERT-2023-1697,DFN-CERT-2023-1332,DFN-CERT-2022-2147,DFN-CERT-2022-0437,DFN-CERT-2021-2622,WID-SEC-2024-3056,WID-SEC-2023-1886,WID-SEC-2023-1352,WID-SEC-2022-2251,WID-SEC-2022-2000,CB-K22/0224,CB-K21/1276",""
+10.0.0.92,,53,tcp,7.5,High,30,"VendorFix","ISC BIND DoS Vulnerability (CVE-2024-12705) - Linux","ISC BIND is prone to a denial of service (DoS)
+  vulnerability in the DNS-over-HTTPS implementation.","Installed version: 9.18.30
+Fixed version:     9.18.33
+Installation
+path / port:       53/tcp
+
+",1.3.6.1.4.1.25623.1.0.153893,"CVE-2024-12705",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,4f8d427c-9797-4833-82d1-c5d3f108fa56,"By flooding a target resolver with HTTP/2 traffic and exploiting
+  this flaw, an attacker could overwhelm the server, causing high CPU and/or memory usage and
+  preventing other clients from establishing DoH connections. This would significantly impair the
+  resolver's performance and effectively deny legitimate clients access to the DNS resolution
+  service.
+
+  - Authoritative servers are affected by this vulnerability.
+
+  - Resolvers are affected by this vulnerability.","Update to version 9.18.33, 9.20.5, 9.21.4, 9.18.33-S1 or
+  later.","ISC BIND version 9.18.0 through 9.18.32, 9.20.0 through
+  9.20.4, 9.21.0 through 9.21.3 and 9.18.11-S1 through 9.18.32-S1.","Clients using DNS-over-HTTPS (DoH) can exhaust a DNS resolver's
+  CPU and/or memory by flooding it with crafted valid or invalid HTTP/2 traffic.","Checks if a vulnerable version is present on the target host.
+Details:
+ISC BIND DoS Vulnerability (CVE-2024-12705) - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.153893)
+Version used: 2025-01-31T05:37:27Z
+","Product: cpe:/a:isc:bind:9.18.30
+Method: ISC BIND Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.145294)
+","","DFN-CERT-2025-0269,WID-SEC-2025-0217",""
+10.0.0.92,,53,tcp,7.5,High,30,"VendorFix","ISC BIND DoS Vulnerability (CVE-2024-11187) - Linux","ISC BIND is prone to a denial of service (DoS)
+  vulnerability.","Installed version: 9.18.30
+Fixed version:     9.18.33
+Installation
+path / port:       53/tcp
+
+",1.3.6.1.4.1.25623.1.0.153891,"CVE-2024-11187",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,0ce4e421-70ff-4db2-b6ab-72e24dfb7cb7,"A named instance vulnerable to this issue can be compelled to
+  consume excessive CPU resources up to the point where exhaustion of resources effectively
+  prevents the server from responding to other client queries. This issue is most likely to affect
+  resolvers but could also degrade authoritative server performance.
+
+  - Authoritative servers are affected by this vulnerability.
+
+  - Resolvers are affected by this vulnerability.","Update to version 9.18.33, 9.20.5, 9.21.4, 9.18.33-S1 or
+  later.","ISC BIND version 9.11.37 and prior, 9.16.0 through 9.16.50,
+  9.18.0 through 9.18.32, 9.20.0 through 9.20.4, 9.21.0 through 9.21.3, 9.11.3-S1 through
+  9.11.37-S1, 9.16.8-S1 through 9.16.50-S1 and 9.18.11-S1 through 9.18.32-S1.","It is possible to construct a zone such that some queries to it
+  will generate responses containing numerous records in the Additional section. An attacker
+  sending many such queries can cause either the authoritative server itself or an independent
+  resolver to use disproportionate resources processing the queries. Zones will usually need to
+  have been deliberately crafted to attack this exposure.","Checks if a vulnerable version is present on the target host.
+Details:
+ISC BIND DoS Vulnerability (CVE-2024-11187) - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.153891)
+Version used: 2025-01-31T05:37:27Z
+","Product: cpe:/a:isc:bind:9.18.30
+Method: ISC BIND Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.145294)
+","","DFN-CERT-2025-0300,DFN-CERT-2025-0269,WID-SEC-2025-0217",""
+10.0.0.92,,25,tcp,7.5,High,30,"Mitigation","Diffie-Hellman Ephemeral Key Exchange DoS Vulnerability (SSL/TLS, D(HE)ater)","The remote SSL/TLS server is supporting Diffie-Hellman ephemeral
+  (DHE) Key Exchange algorithms and thus could be prone to a denial of service (DoS)
+  vulnerability.","'DHE' cipher suites accepted by this service via the TLSv1.0 protocol:
+
+TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA
+TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA
+
+'DHE' cipher suites accepted by this service via the TLSv1.1 protocol:
+
+TLS_DHE_RSA_WITH_AES_128_CBC_SHA
+TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA
+TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA
+
+'DHE' cipher suites accepted by this service via the TLSv1.2 protocol:
+
+TLS_DHE_RSA_WITH_AES_128_CBC_SHA256
+TLS_DHE_RSA_WITH_AES_128_CCM
+TLS_DHE_RSA_WITH_AES_128_GCM_SHA256
+TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+TLS_DHE_RSA_WITH_AES_256_CCM
+TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256
+TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256
+TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256
+TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+
+
+",1.3.6.1.4.1.25623.1.0.117840,"CVE-2002-20001,CVE-2022-40735,CVE-2024-41996",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,e6f98cff-8984-44b8-b3d5-64dfc53eef34,"This vulnerability allows remote attackers (from the client side)
+  to send arbitrary numbers that are actually not public keys, and trigger expensive server-side DHE
+  modular-exponentiation calculations, also known as a D(HE)ater attack.
+
+  There could be an increase in CPU usage in the affected component. For OpenSSH, users may observe
+  issues such as a slowdown in SSH connections.","'- DHE key exchange should be disabled if no other mitigation
+  mechanism can be used and either elliptic-curve variant of Diffie-Hellman (ECDHE) or RSA key
+  exchange is supported by the clients. The fact that RSA key exchange is not forward secret should
+  be considered.
+
+  - Limit the maximum number of concurrent connections in e.g. the configuration of the remote
+  server. For Postfix this limit can be configured via 'smtpd_client_new_tls_session_rate_limit'
+  option, for other products please refer to the manual of the product in question on configuration
+  possibilities.","","'- CVE-2002-20001: The Diffie-Hellman Key Agreement Protocol
+  allows remote attackers (from the client side) to send arbitrary numbers that are actually not
+  public keys, and trigger expensive server-side DHE modular-exponentiation calculations, aka a
+  D(HE)ater attack. The client needs very little CPU resources and network bandwidth. The attack may
+  be more disruptive in cases where a client can require a server to select its largest supported
+  key size. The basic attack scenario is that the client must claim that it can only communicate
+  with DHE, and the server must be configured to allow DHE.
+
+  - CVE-2022-40735: The Diffie-Hellman Key Agreement Protocol allows use of long exponents that
+  arguably make certain calculations unnecessarily expensive, because the 1996 van Oorschot and
+  Wiener paper found that '(appropriately) short exponents' can be used when there are adequate
+  subgroup constraints, and these short exponents can lead to less expensive calculations than for
+  long exponents. This issue is different from CVE-2002-20001 because it is based on an observation
+  about exponent size, rather than an observation about numbers that are not public keys. The
+  specific situations in which calculation expense would constitute a server-side vulnerability
+  depend on the protocol (e.g., TLS, SSH, or IKE) and the DHE implementation details. In general,
+  there might be an availability concern because of server-side resource consumption from DHE
+  modular-exponentiation calculations. Finally, it is possible for an attacker to exploit this
+  vulnerability and CVE-2002-20001 together.
+
+  - CVE-2024-41996: Validating the order of the public keys in the Diffie-Hellman Key Agreement
+  Protocol, when an approved safe prime is used, allows remote attackers (from the client side) to
+  trigger unnecessarily expensive server-side DHE modular-exponentiation calculations. The client
+  may cause asymmetric resource consumption. The basic attack scenario is that the client must claim
+  that it can only communicate with DHE, and the server must be configured to allow DHE and validate
+  the order of the public key.","Checks the supported cipher suites of the remote SSL/TLS
+  server.
+Details:
+Diffie-Hellman Ephemeral Key Exchange DoS Vulnerability (SSL/TLS, D(HE)ater)
+(OID: 1.3.6.1.4.1.25623.1.0.117840)
+Version used: 2024-10-03T05:05:33Z
+","Product: cpe:/a:ietf:transport_layer_security
+Method: SSL/TLS: Report Supported Cipher Suites
+(OID: 1.3.6.1.4.1.25623.1.0.802067)
+","","DFN-CERT-2024-2847,DFN-CERT-2024-2578,DFN-CERT-2024-1671,DFN-CERT-2023-1697,DFN-CERT-2023-1332,DFN-CERT-2022-2147,DFN-CERT-2022-0437,DFN-CERT-2021-2622,WID-SEC-2024-3056,WID-SEC-2023-1886,WID-SEC-2023-1352,WID-SEC-2022-2251,WID-SEC-2022-2000,CB-K22/0224,CB-K21/1276",""
+10.0.0.92,,3128,tcp,7.5,High,30,"VendorFix","Squid DoS Vulnerability (GHSA-xggx-9329-3c27, SQUID-2023:8)","Squid is prone to a denial of service (DoS) vulnerability.","Installed version: 5.9
+Fixed version:     6.5
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.114208,"CVE-2023-49286",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,419672ba-5764-40a5-99a4-99fd2d0aaf33,"","Update to version 6.5 or later.","Squid versions prior to 6.5.","Due to an Incorrect Check of Function Return Value bug Squid is
+  vulnerable to a Denial of Service attack against its Helper process management.
+
+  This flaw was part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'Assertion in Squid Helper Process Creator'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-xggx-9329-3c27, SQUID-2023:8)
+(OID: 1.3.6.1.4.1.25623.1.0.114208)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-1684,DFN-CERT-2024-0970,DFN-CERT-2024-0642,DFN-CERT-2024-0214,DFN-CERT-2024-0172,DFN-CERT-2024-0039,DFN-CERT-2024-0038,DFN-CERT-2024-0026,DFN-CERT-2023-3192,DFN-CERT-2023-3036,WID-SEC-2024-1248,WID-SEC-2023-3049",""
+10.0.0.92,,3128,tcp,7.5,High,30,"VendorFix","Squid DoS Vulnerability (GHSA-wgq4-4cfg-c4x3, SQUID-2023:10)","Squid is prone to a denial of service (DoS) vulnerability.","Installed version: 5.9
+Fixed version:     6.6
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.151403,"CVE-2023-50269",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,12a1348d-bf21-4ff8-96a0-c589cf35668d,"","Update to version 6.6 or later.","Squid version 2.6 through 6.5.","Due to an uncontrolled recursion bug, Squid may be vulnerable
+  to denial of service attack against HTTP request parsing.
+
+  This flaw was part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'X-Forwarded-For Stack Overflow'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-wgq4-4cfg-c4x3, SQUID-2023:10)
+(OID: 1.3.6.1.4.1.25623.1.0.151403)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-1684,DFN-CERT-2024-1413,DFN-CERT-2024-0970,DFN-CERT-2024-0742,DFN-CERT-2024-0642,DFN-CERT-2024-0290,DFN-CERT-2024-0214,DFN-CERT-2024-0172,DFN-CERT-2024-0039,DFN-CERT-2023-3192,DFN-CERT-2023-3162,WID-SEC-2023-3150",""
+10.0.0.92,,3128,tcp,7.5,High,30,"VendorFix","Squid DoS Vulnerability (GHSA-rj5h-46j6-q2g5, SQUID-2023:9)","Squid is prone to a denial of service (DoS) vulnerability.","Installed version: 5.9
+Fixed version:     6.0.1
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.114207,"CVE-2023-49288",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,88d42b8e-a844-4ae1-b53e-520c45831b14,"","Update to version 6.0.1 or later.","Squid versions 3.5 through 5.9.","Due to a Use-After-Free bug Squid is vulnerable to a Denial of
+  Service attack against collapsed forwarding.
+
+  This flaw was part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'Use-After-Free in TRACE Requests'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-rj5h-46j6-q2g5, SQUID-2023:9)
+(OID: 1.3.6.1.4.1.25623.1.0.114207)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-0956,DFN-CERT-2023-3192,WID-SEC-2024-1248,WID-SEC-2023-3049",""
+10.0.0.92,,80,tcp,7.5,High,30,"VendorFix","Apache HTTP Server 2.4.30 - 2.4.55 HTTP Request Smuggling Vulnerability - Linux","Apache HTTP Server is prone to a HTTP request smuggling
+  vulnerability.","Installed version: 2.4.52
+Fixed version:     2.4.56
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.104599,"CVE-2023-27522",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,110fd1f1-6193-4e9e-88d6-e183913b2eac,"","Update to version 2.4.56 or later.","Apache HTTP Server versions 2.4.30 through 2.4.55.","HTTP Response Smuggling vulnerability via mod_proxy_uwsgi.
+
+  Special characters in the origin response header can truncate/split the response forwarded to the
+  client.","Checks if a vulnerable version is present on the target host.
+Details:
+Apache HTTP Server 2.4.30 - 2.4.55 HTTP Request Smuggling Vulnerability - Li...
+(OID: 1.3.6.1.4.1.25623.1.0.104599)
+Version used: 2024-02-15T05:05:40Z
+","Product: cpe:/a:apache:http_server:2.4.52
+Method: Apache HTTP Server Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117232)
+","","DFN-CERT-2024-1808,DFN-CERT-2023-1895,DFN-CERT-2023-0658,DFN-CERT-2023-0546,WID-SEC-2024-1591,WID-SEC-2023-2031,WID-SEC-2023-1424,WID-SEC-2023-0583",""
+10.0.0.92,,3128,tcp,7.5,High,30,"VendorFix","Squid DoS Vulnerability (GHSA-73m6-jm96-c6r3, SQUID-2023:4)","Squid is prone to a denial of service (DoS) vulnerability in
+  the SSL Certificate validation.","Installed version: 5.9
+Fixed version:     6.4
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.151251,"CVE-2023-46724",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,f6aeccb6-43de-46c4-b517-c0c36fe26eff,"","Update to version 6.4 or later.","Squid version 3.3.0.1 through 6.3.","Due to an Improper Validation of Specified Index bug Squid is
+  vulnerable to a Denial of Service attack against SSL Certificate validation.
+
+  This flaw was part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'Buffer UnderRead in SSL CN Parsing'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-73m6-jm96-c6r3, SQUID-2023:4)
+(OID: 1.3.6.1.4.1.25623.1.0.151251)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-0970,DFN-CERT-2024-0642,DFN-CERT-2024-0214,DFN-CERT-2024-0038,DFN-CERT-2024-0026,DFN-CERT-2023-3192,DFN-CERT-2023-2934,DFN-CERT-2023-2746,WID-SEC-2023-2801",""
+10.0.0.92,,80,tcp,7.5,High,30,"VendorFix","Apache HTTP Server < 2.4.59 Multiple Vulnerabilities - Linux","Apache HTTP Server is prone to multiple vulnerabilities.","Installed version: 2.4.52
+Fixed version:     2.4.59
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.152039,"CVE-2023-38709,CVE-2024-24795,CVE-2024-27316",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,f8d6566d-2299-4000-b9b7-f28391de1382,"","Update to version 2.4.59 or later.","Apache HTTP Server version 2.4.58 and prior.","The following vulnerabilities exist:
+
+  - CVE-2023-38709: HTTP response splitting
+
+  - CVE-2024-24795: HTTP response splitting in multiple modules
+
+  - CVE-2024-27316: HTTP/2 DoS by memory exhaustion on endless continuation frames","Checks if a vulnerable version is present on the target host.
+Details:
+Apache HTTP Server < 2.4.59 Multiple Vulnerabilities - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.152039)
+Version used: 2024-06-07T05:05:42Z
+","Product: cpe:/a:apache:http_server:2.4.52
+Method: Apache HTTP Server Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117232)
+","","DFN-CERT-2024-2900,DFN-CERT-2024-2534,DFN-CERT-2024-2076,DFN-CERT-2024-1958,DFN-CERT-2024-1853,DFN-CERT-2024-1749,DFN-CERT-2024-1697,DFN-CERT-2024-1411,DFN-CERT-2024-1335,DFN-CERT-2024-1238,DFN-CERT-2024-1031,DFN-CERT-2024-1010,DFN-CERT-2024-0964,DFN-CERT-2024-0901,DFN-CERT-2024-0890,WID-SEC-2024-1725,WID-SEC-2024-1643,WID-SEC-2024-1642,WID-SEC-2024-1504,WID-SEC-2024-1248,WID-SEC-2024-1226,WID-SEC-2024-0801,WID-SEC-2024-0789",""
+10.0.0.92,,3128,tcp,7.5,High,30,"VendorFix","Squid DoS Vulnerability (GHSA-phqj-m8gv-cq4g, SQUID-2023:3)","Squid is prone to a denial of service (DoS) vulnerability.","Installed version: 5.9
+Fixed version:     6.4
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.100832,"CVE-2023-46847",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,c0eb7b69-abc4-4c4b-8aa5-b89aef14b07c,"","Update to version 6.4 or later.","Squid versions 3.2.0.1 through 5.9 and 6.0 through 6.3.","Due to a buffer overflow bug Squid is vulnerable to a Denial of
+  Service attack against HTTP Digest Authentication.
+
+  This flaw was part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'Buffer Overflow in Digest Authentication'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-phqj-m8gv-cq4g, SQUID-2023:3)
+(OID: 1.3.6.1.4.1.25623.1.0.100832)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-0642,DFN-CERT-2024-0039,DFN-CERT-2023-2934,DFN-CERT-2023-2782,DFN-CERT-2023-2781,DFN-CERT-2023-2746,DFN-CERT-2023-2712,WID-SEC-2024-1248,WID-SEC-2023-2725",""
+10.0.0.92,,80,tcp,7.0,High,30,"VendorFix","PHP 5.3.7 - 7.3.31, 7.4.x < 7.4.25, 8.0.x < 8.0.12 Security Update (Oct 2021) - Linux","PHP released new versions which includes a security fix.","Installed version: 7.2.34
+Fixed version:     7.3.32 (not released yet)
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.117752,"CVE-2021-21703",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,ed019554-f80c-4087-af3c-97608f39b763,"","Update to version 7.3.32 (not released yet), 7.4.25, 8.0.12 or
+  later.","PHP versions 5.3.7 through 7.3.31, 7.4.x through 7.4.24 and
+  8.0.x through 8.0.11.
+
+  Note: While the referenced CVE is only listing PHP 7.3.x, 7.4.x and 8.0.x as affected the security
+  research team is stating in the linked blog post that all versions down to 5.3.7 are affected.","Fixed bug #81026 (PHP-FPM oob R/W in root process leading to
+  privilege escalation).","Checks if a vulnerable version is present on the target host.
+Details:
+PHP 5.3.7 - 7.3.31, 7.4.x < 7.4.25, 8.0.x < 8.0.12 Security Update (Oct 2021...
+(OID: 1.3.6.1.4.1.25623.1.0.117752)
+Version used: 2021-11-05T03:03:34Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2023-1600,DFN-CERT-2022-2639,DFN-CERT-2022-2638,DFN-CERT-2022-2337,DFN-CERT-2022-1493,DFN-CERT-2022-1046,DFN-CERT-2022-0485,DFN-CERT-2021-2586,DFN-CERT-2021-2474,DFN-CERT-2021-2200,WID-SEC-2023-1737,WID-SEC-2022-0624,WID-SEC-2022-0586,CB-K21/1106",""
+10.0.0.92,,80,tcp,6.5,Medium,30,"VendorFix","PHP < 7.4.31, 8.0.x < 8.0.24, 8.1.x < 8.1.11 Security Update - Linux","PHP is prone to multiple vulnerabilities.","Installed version: 7.2.34
+Fixed version:     7.4.31
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.104331,"CVE-2022-31628,CVE-2022-31629",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,6be202fa-2bf4-4211-b4a9-ecf3b620d417,"","Update to version 7.4.31, 8.0.24, 8.1.11 or later.","PHP versions prior to 7.4.31, 8.0.x prior to 8.0.24 and 8.1.x
+  prior to 8.1.11.","The following vulnerabilities exist:
+
+  - CVE-2022-31628: The phar uncompressor code would recursively uncompress 'quines' gzip files,
+  resulting in an infinite loop.
+
+  - CVE-2022-31629: The vulnerability enables network and same-site attackers to set a standard
+  insecure cookie in the victim's browser which is treated as a '__Host-' or '__Secure-' cookie by
+  PHP applications.","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 7.4.31, 8.0.x < 8.0.24, 8.1.x < 8.1.11 Security Update - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.104331)
+Version used: 2023-10-19T05:05:21Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2024-1192,DFN-CERT-2023-1600,DFN-CERT-2023-0422,DFN-CERT-2022-2869,DFN-CERT-2022-2639,DFN-CERT-2022-2638,DFN-CERT-2022-2598,DFN-CERT-2022-2523,DFN-CERT-2022-2337,DFN-CERT-2022-2157,WID-SEC-2023-1737,WID-SEC-2023-0561,WID-SEC-2023-0137,WID-SEC-2022-1567",""
+10.0.0.92,,22,tcp,6.5,Medium,30,"VendorFix","OpenBSD OpenSSH < 9.6 Multiple Vulnerabilities (Terrapin Attack)","OpenBSD OpenSSH is prone to multiple vulnerabilities.","Installed version: 8.9p1
+Fixed version:     9.6
+Installation
+path / port:       22/tcp
+
+",1.3.6.1.4.1.25623.1.0.118572,"CVE-2023-48795,CVE-2023-51384,CVE-2023-51385",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,0c360517-77db-406a-9a93-96eaba7b1842,"","Update to version 9.6 or later.
+
+  Note: Client and Server implementations need to run a fixed version to mitigate the Terrapin
+  flaw.","OpenBSD OpenSSH prior to version 9.6.","The following vulnerabilities exist:
+
+  - CVE-2023-48795: The SSH transport protocol with certain OpenSSH extensions allows remote
+  attackers to bypass integrity checks such that some packets are omitted (from the extension
+  negotiation message), and a client and server may consequently end up with a connection for which
+  some security features have been downgraded or disabled, aka a 'Terrapin attack'.
+
+  - CVE-2023-51384: In ssh-agent certain destination constraints can be incompletely applied. When
+  destination constraints are specified during addition of PKCS#11-hosted private keys, these
+  constraints are only applied to the first key, even if a PKCS#11 token returns multiple keys.
+
+  - CVE-2023-51385: OS command injection might occur if a user name or host name has shell
+  metacharacters, and this name is referenced by an expansion token in certain situations. For
+  example, an untrusted Git repository can have a submodule with shell metacharacters in a user
+  name or host name.","Checks if a vulnerable version is present on the target host.
+Details:
+OpenBSD OpenSSH < 9.6 Multiple Vulnerabilities (Terrapin Attack)
+(OID: 1.3.6.1.4.1.25623.1.0.118572)
+Version used: 2024-03-15T05:06:15Z
+","Product: cpe:/a:openbsd:openssh:8.9p1
+Method: OpenSSH Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.108577)
+","","DFN-CERT-2025-0294,DFN-CERT-2025-0173,DFN-CERT-2025-0165,DFN-CERT-2025-0024,DFN-CERT-2024-3171,DFN-CERT-2024-2818,DFN-CERT-2024-2759,DFN-CERT-2024-2741,DFN-CERT-2024-2682,DFN-CERT-2024-2602,DFN-CERT-2024-2573,DFN-CERT-2024-2392,DFN-CERT-2024-2210,DFN-CERT-2024-2209,DFN-CERT-2024-2194,DFN-CERT-2024-2169,DFN-CERT-2024-2048,DFN-CERT-2024-2030,DFN-CERT-2024-2028,DFN-CERT-2024-1930,DFN-CERT-2024-1895,DFN-CERT-2024-1869,DFN-CERT-2024-1868,DFN-CERT-2024-1865,DFN-CERT-2024-1862,DFN-CERT-2024-1854,DFN-CERT-2024-1846,DFN-CERT-2024-1817,DFN-CERT-2024-1794,DFN-CERT-2024-1715,DFN-CERT-2024-1698,DFN-CERT-2024-1688,DFN-CERT-2024-1655,DFN-CERT-2024-1600,DFN-CERT-2024-1443,DFN-CERT-2024-1442,DFN-CERT-2024-1413,DFN-CERT-2024-1382,DFN-CERT-2024-1380,DFN-CERT-2024-1373,DFN-CERT-2024-1260,DFN-CERT-2024-1259,DFN-CERT-2024-1108,DFN-CERT-2024-1061,DFN-CERT-2024-1029,DFN-CERT-2024-1003,DFN-CERT-2024-1000,DFN-CERT-2024-0896,DFN-CERT-2024-0779,DFN-CERT-2024-0762,DFN-CERT-2024-0744,DFN-CERT-2024-0698,DFN-CERT-2024-0633,DFN-CERT-2024-0619,DFN-CERT-2024-0618,DFN-CERT-2024-0616,DFN-CERT-2024-0597,DFN-CERT-2024-0545,DFN-CERT-2024-0526,DFN-CERT-2024-0491,DFN-CERT-2024-0480,DFN-CERT-2024-0451,DFN-CERT-2024-0440,DFN-CERT-2024-0420,DFN-CERT-2024-0388,DFN-CERT-2024-0343,DFN-CERT-2024-0306,DFN-CERT-2024-0299,DFN-CERT-2024-0285,DFN-CERT-2024-0267,DFN-CERT-2024-0251,DFN-CERT-2024-0215,DFN-CERT-2024-0211,DFN-CERT-2024-0164,DFN-CERT-2024-0154,DFN-CERT-2024-0101,DFN-CERT-2024-0092,DFN-CERT-2024-0088,DFN-CERT-2024-0067,DFN-CERT-2024-0063,DFN-CERT-2024-0062,DFN-CERT-2024-0024,DFN-CERT-2024-0022,DFN-CERT-2024-0013,DFN-CERT-2023-3219,DFN-CERT-2023-3218,DFN-CERT-2023-3210,DFN-CERT-2023-3201,DFN-CERT-2023-3200,DFN-CERT-2023-3195,DFN-CERT-2023-3193,DFN-CERT-2023-3191,DFN-CERT-2023-3185,DFN-CERT-2023-3184,DFN-CERT-2023-3183,DFN-CERT-2023-3182,DFN-CERT-2023-3175,WID-SEC-2025-0168,WID-SEC-2025-0144,WID-SEC-2025-0139,WID-SEC-2024-3377,WID-SEC-2024-3320,WID-SEC-2024-3198,WID-SEC-2024-3195,WID-SEC-2024-3140,WID-SEC-2024-1913,WID-SEC-2024-1781,WID-SEC-2024-1701,WID-SEC-2024-1656,WID-SEC-2024-1655,WID-SEC-2024-1643,WID-SEC-2024-1642,WID-SEC-2024-1639,WID-SEC-2024-1637,WID-SEC-2024-1630,WID-SEC-2024-1474,WID-SEC-2024-1248,WID-SEC-2024-1228,WID-SEC-2024-1186,WID-SEC-2024-1082,WID-SEC-2024-0899,WID-SEC-2024-0892,WID-SEC-2024-0889,WID-SEC-2024-0885,WID-SEC-2024-0874,WID-SEC-2024-0869,WID-SEC-2024-0578,WID-SEC-2024-0564,WID-SEC-2024-0523,WID-SEC-2023-3182,WID-SEC-2023-3174",""
+10.0.0.92,,3128,tcp,6.5,Medium,30,"VendorFix","Squid DoS Vulnerability (GHSA-j49p-553x-48rx, SQUID-2023:11)","Squid is prone to a denial of service (DoS) vulnerability.","Installed version: 5.9
+Fixed version:     6.6
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.151598,"CVE-2024-23638",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,5fbfdf53-1542-44a7-9a67-2e9b430a25cd,"","Update to version 6.6 or later.","Squid versions prior to 6.6.","Due to an expired pointer reference bug Squid is vulnerable to
+  a denial of service attack against Cache Manager error responses.
+
+  This flaw was part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'Use-After-Free in Cache Manager Errors'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-j49p-553x-48rx, SQUID-2023:11)
+(OID: 1.3.6.1.4.1.25623.1.0.151598)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-3050,DFN-CERT-2024-1935,DFN-CERT-2024-1413,DFN-CERT-2024-1017,DFN-CERT-2024-0956,DFN-CERT-2024-0642,DFN-CERT-2024-0290,WID-SEC-2024-0180",""
+10.0.0.92,,80,tcp,6.5,Medium,30,"VendorFix","PHP < 7.3.31, 7.4.x < 7.4.24, 8.0.x < 8.0.11 Security Update (Sep 2021) - Linux","PHP released new versions which includes a security fix.","Installed version: 7.2.34
+Fixed version:     7.3.31
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.117694,"CVE-2021-21706",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,c690748c-26d9-41f4-b3b0-9c5745254eb4,"","Update to version 7.3.31, 7.4.24, 8.0.11 or later.","PHP versions prior to 7.3.31, 7.4.x through 7.4.23 and 8.0.x
+  through 8.0.10.","Fixed bug #81420 (ZipArchive::extractTo extracts outside of
+  destination).","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 7.3.31, 7.4.x < 7.4.24, 8.0.x < 8.0.11 Security Update (Sep 2021) - Li...
+(OID: 1.3.6.1.4.1.25623.1.0.117694)
+Version used: 2021-10-11T08:01:31Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2022-2639,DFN-CERT-2021-2474,DFN-CERT-2021-1994,WID-SEC-2022-2112,CB-K21/1008",""
+10.0.0.1,,443,tcp,6.1,Medium,30,"VendorFix","jQuery 2.2.0 < 3.5.0 XSS Vulnerability","jQuery is prone to a cross-site scripting (XSS)
+  vulnerability.","Installed version: 3.4.1
+Fixed version:     3.5.0
+Installation
+path / port:       /cmn/js/lib/jquery-3.4.1.js
+
+Detection info (see OID: 1.3.6.1.4.1.25623.1.0.150658 for more info):
+- Identified file: https://10.0.0.1/cmn/js/lib/jquery-3.4.1.js
+- Referenced at:   https://10.0.0.1/
+",1.3.6.1.4.1.25623.1.0.104819,"CVE-2020-23064",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,620bdbdc-739d-4fc0-916a-6c7c8a9a07c6,"The flaw allows a remote attacker to execute arbitrary code via
+  the <options> element.","Update to version 3.5.0 or later.","jQuery versions starting from 2.2.0 and prior to version
+  3.5.0.","","Checks if a vulnerable version is present on the target host.
+Details:
+jQuery 2.2.0 < 3.5.0 XSS Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.104819)
+Version used: 2023-10-13T05:06:10Z
+","","","WID-SEC-2023-1572",""
+10.0.0.1,,80,tcp,6.1,Medium,30,"VendorFix","jQuery 1.0.3 < 3.5.0 XSS Vulnerability","jQuery is prone to a cross-site scripting (XSS) vulnerability
+  when appending HTML containing option elements.","Installed version: 3.4.1
+Fixed version:     3.5.0
+Installation
+path / port:       /cmn/js/lib/jquery-3.4.1.js
+
+Detection info (see OID: 1.3.6.1.4.1.25623.1.0.150658 for more info):
+- Identified file: http://10.0.0.1/cmn/js/lib/jquery-3.4.1.js
+- Referenced at:   http://10.0.0.1/
+",1.3.6.1.4.1.25623.1.0.143813,"CVE-2020-11023",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,bd51eeb3-1513-4b3c-8378-90ae2f25ef29,"","Update to version 3.5.0 or later.","jQuery versions starting from 1.0.3 and prior to version
+  3.5.0.","Passing HTML containing <option> elements from untrusted
+  sources - even after sanitizing them - to one of jQuery's DOM manipulation methods (i.e. .html(),
+  .append(), and others) may execute untrusted code.","Checks if a vulnerable version is present on the target host.
+Details:
+jQuery 1.0.3 < 3.5.0 XSS Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.143813)
+Version used: 2025-01-31T15:39:24Z
+","","","DFN-CERT-2024-2743,DFN-CERT-2023-2027,DFN-CERT-2023-1197,DFN-CERT-2023-0481,DFN-CERT-2023-0245,DFN-CERT-2022-1988,DFN-CERT-2022-1610,DFN-CERT-2022-0119,DFN-CERT-2022-0074,DFN-CERT-2021-2348,DFN-CERT-2021-1687,DFN-CERT-2021-1111,DFN-CERT-2021-0820,DFN-CERT-2021-0633,DFN-CERT-2021-0563,DFN-CERT-2021-0545,DFN-CERT-2020-2776,DFN-CERT-2020-2423,DFN-CERT-2020-2335,DFN-CERT-2020-2287,DFN-CERT-2020-2227,DFN-CERT-2020-2209,DFN-CERT-2020-2074,DFN-CERT-2020-1743,DFN-CERT-2020-1712,DFN-CERT-2020-1509,DFN-CERT-2020-1506,DFN-CERT-2020-1433,DFN-CERT-2020-1163,DFN-CERT-2020-1099,WID-SEC-2024-3191,WID-SEC-2024-1872,WID-SEC-2023-0239,WID-SEC-2023-0063,WID-SEC-2022-1347,WID-SEC-2022-1189,WID-SEC-2022-0757,WID-SEC-2022-0732,CB-K21/1085,CB-K21/1067,CB-K21/0418,CB-K20/1049,CB-K20/1027,CB-K20/1025,CB-K20/1024,CB-K20/1021,CB-K20/1008,CB-K20/0870,CB-K20/0800,CB-K20/0705,CB-K20/0521",""
+10.0.0.1,,443,tcp,6.1,Medium,30,"VendorFix","jQuery 1.2 < 3.5.0 XSS Vulnerability","jQuery is prone to a cross-site scripting (XSS) vulnerability in
+  jQuery.htmlPrefilter and related methods.","Installed version: 3.4.1
+Fixed version:     3.5.0
+Installation
+path / port:       /cmn/js/lib/jquery-3.4.1.js
+
+Detection info (see OID: 1.3.6.1.4.1.25623.1.0.150658 for more info):
+- Identified file: https://10.0.0.1/cmn/js/lib/jquery-3.4.1.js
+- Referenced at:   https://10.0.0.1/
+",1.3.6.1.4.1.25623.1.0.143812,"CVE-2020-11022",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,26fdfdb3-d028-4eb4-9dc9-d86d29b3e390,"","Update to version 3.5.0 or later.","jQuery versions starting from 1.2 and prior to version
+  3.5.0.","Passing HTML from untrusted sources - even after sanitizing it -
+  to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute
+  untrusted code.","Checks if a vulnerable version is present on the target host.
+Details:
+jQuery 1.2 < 3.5.0 XSS Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.143812)
+Version used: 2023-07-14T05:06:08Z
+","","","DFN-CERT-2025-0041,DFN-CERT-2023-2027,DFN-CERT-2023-1197,DFN-CERT-2023-0481,DFN-CERT-2023-0245,DFN-CERT-2022-1988,DFN-CERT-2022-1670,DFN-CERT-2022-0869,DFN-CERT-2022-0074,DFN-CERT-2021-2190,DFN-CERT-2021-1111,DFN-CERT-2021-0828,DFN-CERT-2021-0826,DFN-CERT-2021-0819,DFN-CERT-2021-0633,DFN-CERT-2021-0545,DFN-CERT-2021-0140,DFN-CERT-2021-0138,DFN-CERT-2021-0135,DFN-CERT-2021-0132,DFN-CERT-2020-2423,DFN-CERT-2020-2335,DFN-CERT-2020-2305,DFN-CERT-2020-2286,DFN-CERT-2020-2227,DFN-CERT-2020-2209,DFN-CERT-2020-2130,DFN-CERT-2020-2074,DFN-CERT-2020-2015,DFN-CERT-2020-2001,DFN-CERT-2020-1838,DFN-CERT-2020-1812,DFN-CERT-2020-1712,DFN-CERT-2020-1509,DFN-CERT-2020-1506,DFN-CERT-2020-1433,DFN-CERT-2020-1163,DFN-CERT-2020-1161,DFN-CERT-2020-1138,DFN-CERT-2020-1099,WID-SEC-2024-3217,WID-SEC-2024-1872,WID-SEC-2023-0239,WID-SEC-2023-0063,WID-SEC-2022-1767,WID-SEC-2022-1347,WID-SEC-2022-0740,WID-SEC-2022-0732,WID-SEC-2022-0624,CB-K22/0463,CB-K21/1085,CB-K21/0071,CB-K21/0070,CB-K21/0069,CB-K21/0067,CB-K21/0061,CB-K21/0059,CB-K20/1049,CB-K20/1030,CB-K20/1027,CB-K20/1025,CB-K20/1023,CB-K20/1008,CB-K20/0870,CB-K20/0800,CB-K20/0705,CB-K20/0521",""
+10.0.0.1,,443,tcp,6.1,Medium,30,"VendorFix","jQuery 1.0.3 < 3.5.0 XSS Vulnerability","jQuery is prone to a cross-site scripting (XSS) vulnerability
+  when appending HTML containing option elements.","Installed version: 3.4.1
+Fixed version:     3.5.0
+Installation
+path / port:       /cmn/js/lib/jquery-3.4.1.js
+
+Detection info (see OID: 1.3.6.1.4.1.25623.1.0.150658 for more info):
+- Identified file: https://10.0.0.1/cmn/js/lib/jquery-3.4.1.js
+- Referenced at:   https://10.0.0.1/
+",1.3.6.1.4.1.25623.1.0.143813,"CVE-2020-11023",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,fc699c8f-dd7b-46f3-a402-a42b5b6049fa,"","Update to version 3.5.0 or later.","jQuery versions starting from 1.0.3 and prior to version
+  3.5.0.","Passing HTML containing <option> elements from untrusted
+  sources - even after sanitizing them - to one of jQuery's DOM manipulation methods (i.e. .html(),
+  .append(), and others) may execute untrusted code.","Checks if a vulnerable version is present on the target host.
+Details:
+jQuery 1.0.3 < 3.5.0 XSS Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.143813)
+Version used: 2025-01-31T15:39:24Z
+","","","DFN-CERT-2024-2743,DFN-CERT-2023-2027,DFN-CERT-2023-1197,DFN-CERT-2023-0481,DFN-CERT-2023-0245,DFN-CERT-2022-1988,DFN-CERT-2022-1610,DFN-CERT-2022-0119,DFN-CERT-2022-0074,DFN-CERT-2021-2348,DFN-CERT-2021-1687,DFN-CERT-2021-1111,DFN-CERT-2021-0820,DFN-CERT-2021-0633,DFN-CERT-2021-0563,DFN-CERT-2021-0545,DFN-CERT-2020-2776,DFN-CERT-2020-2423,DFN-CERT-2020-2335,DFN-CERT-2020-2287,DFN-CERT-2020-2227,DFN-CERT-2020-2209,DFN-CERT-2020-2074,DFN-CERT-2020-1743,DFN-CERT-2020-1712,DFN-CERT-2020-1509,DFN-CERT-2020-1506,DFN-CERT-2020-1433,DFN-CERT-2020-1163,DFN-CERT-2020-1099,WID-SEC-2024-3191,WID-SEC-2024-1872,WID-SEC-2023-0239,WID-SEC-2023-0063,WID-SEC-2022-1347,WID-SEC-2022-1189,WID-SEC-2022-0757,WID-SEC-2022-0732,CB-K21/1085,CB-K21/1067,CB-K21/0418,CB-K20/1049,CB-K20/1027,CB-K20/1025,CB-K20/1024,CB-K20/1021,CB-K20/1008,CB-K20/0870,CB-K20/0800,CB-K20/0705,CB-K20/0521",""
+10.0.0.1,,80,tcp,6.1,Medium,30,"VendorFix","jQuery 1.2 < 3.5.0 XSS Vulnerability","jQuery is prone to a cross-site scripting (XSS) vulnerability in
+  jQuery.htmlPrefilter and related methods.","Installed version: 3.4.1
+Fixed version:     3.5.0
+Installation
+path / port:       /cmn/js/lib/jquery-3.4.1.js
+
+Detection info (see OID: 1.3.6.1.4.1.25623.1.0.150658 for more info):
+- Identified file: http://10.0.0.1/cmn/js/lib/jquery-3.4.1.js
+- Referenced at:   http://10.0.0.1/
+",1.3.6.1.4.1.25623.1.0.143812,"CVE-2020-11022",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,34940179-8c69-4b07-aae2-955a93c73ec4,"","Update to version 3.5.0 or later.","jQuery versions starting from 1.2 and prior to version
+  3.5.0.","Passing HTML from untrusted sources - even after sanitizing it -
+  to one of jQuery's DOM manipulation methods (i.e. .html(), .append(), and others) may execute
+  untrusted code.","Checks if a vulnerable version is present on the target host.
+Details:
+jQuery 1.2 < 3.5.0 XSS Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.143812)
+Version used: 2023-07-14T05:06:08Z
+","","","DFN-CERT-2025-0041,DFN-CERT-2023-2027,DFN-CERT-2023-1197,DFN-CERT-2023-0481,DFN-CERT-2023-0245,DFN-CERT-2022-1988,DFN-CERT-2022-1670,DFN-CERT-2022-0869,DFN-CERT-2022-0074,DFN-CERT-2021-2190,DFN-CERT-2021-1111,DFN-CERT-2021-0828,DFN-CERT-2021-0826,DFN-CERT-2021-0819,DFN-CERT-2021-0633,DFN-CERT-2021-0545,DFN-CERT-2021-0140,DFN-CERT-2021-0138,DFN-CERT-2021-0135,DFN-CERT-2021-0132,DFN-CERT-2020-2423,DFN-CERT-2020-2335,DFN-CERT-2020-2305,DFN-CERT-2020-2286,DFN-CERT-2020-2227,DFN-CERT-2020-2209,DFN-CERT-2020-2130,DFN-CERT-2020-2074,DFN-CERT-2020-2015,DFN-CERT-2020-2001,DFN-CERT-2020-1838,DFN-CERT-2020-1812,DFN-CERT-2020-1712,DFN-CERT-2020-1509,DFN-CERT-2020-1506,DFN-CERT-2020-1433,DFN-CERT-2020-1163,DFN-CERT-2020-1161,DFN-CERT-2020-1138,DFN-CERT-2020-1099,WID-SEC-2024-3217,WID-SEC-2024-1872,WID-SEC-2023-0239,WID-SEC-2023-0063,WID-SEC-2022-1767,WID-SEC-2022-1347,WID-SEC-2022-0740,WID-SEC-2022-0732,WID-SEC-2022-0624,CB-K22/0463,CB-K21/1085,CB-K21/0071,CB-K21/0070,CB-K21/0069,CB-K21/0067,CB-K21/0061,CB-K21/0059,CB-K20/1049,CB-K20/1030,CB-K20/1027,CB-K20/1025,CB-K20/1023,CB-K20/1008,CB-K20/0870,CB-K20/0800,CB-K20/0705,CB-K20/0521",""
+10.0.0.1,,80,tcp,6.1,Medium,30,"VendorFix","jQuery 2.2.0 < 3.5.0 XSS Vulnerability","jQuery is prone to a cross-site scripting (XSS)
+  vulnerability.","Installed version: 3.4.1
+Fixed version:     3.5.0
+Installation
+path / port:       /cmn/js/lib/jquery-3.4.1.js
+
+Detection info (see OID: 1.3.6.1.4.1.25623.1.0.150658 for more info):
+- Identified file: http://10.0.0.1/cmn/js/lib/jquery-3.4.1.js
+- Referenced at:   http://10.0.0.1/
+",1.3.6.1.4.1.25623.1.0.104819,"CVE-2020-23064",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,2423b6f3-d6d4-4d44-a37d-677aad28893b,"The flaw allows a remote attacker to execute arbitrary code via
+  the <options> element.","Update to version 3.5.0 or later.","jQuery versions starting from 2.2.0 and prior to version
+  3.5.0.","","Checks if a vulnerable version is present on the target host.
+Details:
+jQuery 2.2.0 < 3.5.0 XSS Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.104819)
+Version used: 2023-10-13T05:06:10Z
+","","","WID-SEC-2023-1572",""
+10.0.0.92,,80,tcp,5.9,Medium,30,"VendorFix","PHP < 7.3.29 Multiple Vulnerabilities (Jul 2021) - Linux","PHP is prone to multiple vulnerabilities.","Installed version: 7.2.34
+Fixed version:     7.3.29
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.117524,"CVE-2021-21704,CVE-2021-21705",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,21e2665c-a4db-46b2-8502-2b8cb4fb30fe,"","Update to version 7.3.29 or later.","PHP versions prior to 7.3.29.","The following flaws exist:
+
+  - CVE-2021-21705: SSRF bypass in FILTER_VALIDATE_URL.
+
+  - CVE-2021-21704: Stack buffer overflow in firebird_info_cb.
+
+  - CVE-2021-21704: SIGSEGV in firebird_handle_doer.
+
+  - CVE-2021-21704: SIGSEGV in firebird_stmt_execute.
+
+  - CVE-2021-21704: Crash while parsing blob data in firebird_fetch_blob.","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 7.3.29 Multiple Vulnerabilities (Jul 2021) - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.117524)
+Version used: 2023-10-20T16:09:12Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2023-1600,DFN-CERT-2022-2639,DFN-CERT-2022-2638,DFN-CERT-2022-1046,DFN-CERT-2021-2185,DFN-CERT-2021-1676,DFN-CERT-2021-1645,DFN-CERT-2021-1627,DFN-CERT-2021-1509,DFN-CERT-2021-1453,DFN-CERT-2021-1419,WID-SEC-2023-1737,WID-SEC-2022-1577,WID-SEC-2022-0624,CB-K21/0705",""
+10.0.0.92,,80,tcp,5.9,Medium,30,"VendorFix","Apache HTTP Server 2.4.17 - 2.4.57 DoS Vulnerability - Linux","Apache HTTP Server is prone to a denial of service (DoS)
+  vulnerability.","Installed version: 2.4.52
+Fixed version:     2.4.58
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.100310,"CVE-2023-45802",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,e81becdd-a282-4747-b1ce-5bc2311d17c2,"","Update to version 2.4.58 or later.","Apache HTTP Server version 2.4.17 through 2.4.57.","When a HTTP/2 stream was reset (RST frame) by a client, there
+  was a time window were the request's memory resources were not reclaimed immediately. Instead,
+  de-allocation was deferred to connection close. A client could send new requests and resets,
+  keeping the connection busy and open and causing the memory footprint to keep on growing. On
+  connection close, all resources were reclaimed, but the process might run out of memory before
+  that.
+
+  This was found by the reporter during testing of CVE-2023-44487 (HTTP/2 Rapid Reset Exploit) with
+  their own test client. During 'normal' HTTP/2 use, the probability to hit this bug is very low.
+  The kept memory would not become noticeable before the connection closes or times out.","Checks if a vulnerable version is present on the target host.
+Details:
+Apache HTTP Server 2.4.17 - 2.4.57 DoS Vulnerability - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.100310)
+Version used: 2024-08-02T05:05:39Z
+","Product: cpe:/a:apache:http_server:2.4.52
+Method: Apache HTTP Server Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117232)
+","","DFN-CERT-2024-2968,DFN-CERT-2024-1411,DFN-CERT-2024-1335,DFN-CERT-2024-1152,DFN-CERT-2024-1010,DFN-CERT-2023-3071,DFN-CERT-2023-2596,DFN-CERT-2023-2583,WID-SEC-2024-0769,WID-SEC-2023-2917,WID-SEC-2023-2712",""
+10.0.0.92,,22,tcp,5.9,Medium,30,"VendorFix","Prefix Truncation Attacks in SSH Specification (Terrapin Attack)","The remote SSH server is supporting an specific encryption
+  algorithm or MAC. Parts of their SSH specification are vulnerable to a novel prefix truncation
+  attack (a.k.a. Terrapin attack).","The remote SSH server supports the following possible affected client-to-server encryption algorithm(s):
+
+chacha20-poly1305@openssh.com
+
+The remote SSH server supports the following possible affected server-to-client encryption algorithm(s):
+
+chacha20-poly1305@openssh.com
+
+The remote SSH server supports the following ""strict kex"" algorithm as a possible mitigation:
+
+kex-strict-s-v00@openssh.com
+",1.3.6.1.4.1.25623.1.0.114238,"CVE-2023-48795",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,0bd59978-d5b6-45e1-9a27-b100458f9723,"","'- Update OpenSSH to version 9.6 or later
+
+  - For other products please contact the vendor for possible fixes / updates
+
+  Mitigation:
+
+  - To mitigate this protocol vulnerability, OpenSSH suggested a so-called 'strict kex' which alters
+  the SSH handshake to ensure a Man-in-the-Middle attacker cannot introduce unauthenticated messages
+  as well as convey sequence number manipulation across handshakes. Support for strict key exchange
+  has been added to a variety of SSH implementations, including OpenSSH itself, PuTTY, libssh, and
+  more.
+
+  Warning: To take effect, both the client and server must support this countermeasure.
+
+  As a stop-gap measure, peers may also (temporarily) disable the affected algorithms and use
+  unaffected alternatives like AES-GCM instead until patches are available.","Systems supporting the following encryption algorithm and/or
+  MACs:
+
+  - ChaCha20-Poly1305 (chacha20-poly1305@openssh.com) encryption algorithm
+
+  - CBC encryption algorithm and Encrypt-then-MAC (*-etm@openssh.com) MAC","Parts of the SSH specification are vulnerable to a novel prefix
+  truncation attack (a.k.a. Terrapin attack), which allows a man-in-the-middle attacker to strip an
+  arbitrary number of messages right after the initial key exchange, breaking SSH extension
+  negotiation (RFC8308) in the process and thus downgrading connection security.","Checks the supported algorithms and MACs of the remote SSH
+  server.
+
+  Note: This VT has a low QoD because mitigation is possible / available via software updates.
+Details:
+Prefix Truncation Attacks in SSH Specification (Terrapin Attack)
+(OID: 1.3.6.1.4.1.25623.1.0.114238)
+Version used: 2024-06-14T05:05:48Z
+","Product: cpe:/a:ietf:secure_shell_protocol
+Method: SSH Protocol Algorithms Supported
+(OID: 1.3.6.1.4.1.25623.1.0.105565)
+","","DFN-CERT-2025-0294,DFN-CERT-2025-0173,DFN-CERT-2025-0165,DFN-CERT-2025-0024,DFN-CERT-2024-3171,DFN-CERT-2024-2818,DFN-CERT-2024-2759,DFN-CERT-2024-2741,DFN-CERT-2024-2602,DFN-CERT-2024-2573,DFN-CERT-2024-2392,DFN-CERT-2024-2210,DFN-CERT-2024-2209,DFN-CERT-2024-2194,DFN-CERT-2024-2169,DFN-CERT-2024-2048,DFN-CERT-2024-2030,DFN-CERT-2024-2028,DFN-CERT-2024-1930,DFN-CERT-2024-1895,DFN-CERT-2024-1869,DFN-CERT-2024-1868,DFN-CERT-2024-1865,DFN-CERT-2024-1862,DFN-CERT-2024-1854,DFN-CERT-2024-1846,DFN-CERT-2024-1817,DFN-CERT-2024-1715,DFN-CERT-2024-1698,DFN-CERT-2024-1688,DFN-CERT-2024-1655,DFN-CERT-2024-1600,DFN-CERT-2024-1443,DFN-CERT-2024-1442,DFN-CERT-2024-1413,DFN-CERT-2024-1382,DFN-CERT-2024-1380,DFN-CERT-2024-1373,DFN-CERT-2024-1260,DFN-CERT-2024-1259,DFN-CERT-2024-1108,DFN-CERT-2024-1061,DFN-CERT-2024-1029,DFN-CERT-2024-1003,DFN-CERT-2024-1000,DFN-CERT-2024-0896,DFN-CERT-2024-0779,DFN-CERT-2024-0762,DFN-CERT-2024-0744,DFN-CERT-2024-0698,DFN-CERT-2024-0633,DFN-CERT-2024-0619,DFN-CERT-2024-0618,DFN-CERT-2024-0616,DFN-CERT-2024-0597,DFN-CERT-2024-0545,DFN-CERT-2024-0526,DFN-CERT-2024-0491,DFN-CERT-2024-0451,DFN-CERT-2024-0440,DFN-CERT-2024-0420,DFN-CERT-2024-0388,DFN-CERT-2024-0343,DFN-CERT-2024-0306,DFN-CERT-2024-0299,DFN-CERT-2024-0285,DFN-CERT-2024-0267,DFN-CERT-2024-0251,DFN-CERT-2024-0215,DFN-CERT-2024-0211,DFN-CERT-2024-0164,DFN-CERT-2024-0154,DFN-CERT-2024-0101,DFN-CERT-2024-0092,DFN-CERT-2024-0088,DFN-CERT-2024-0067,DFN-CERT-2024-0063,DFN-CERT-2024-0062,DFN-CERT-2024-0024,DFN-CERT-2024-0013,DFN-CERT-2023-3219,DFN-CERT-2023-3218,DFN-CERT-2023-3210,DFN-CERT-2023-3201,DFN-CERT-2023-3200,DFN-CERT-2023-3195,DFN-CERT-2023-3193,DFN-CERT-2023-3191,DFN-CERT-2023-3185,DFN-CERT-2023-3184,DFN-CERT-2023-3183,DFN-CERT-2023-3182,DFN-CERT-2023-3175,WID-SEC-2025-0168,WID-SEC-2025-0144,WID-SEC-2025-0139,WID-SEC-2024-3377,WID-SEC-2024-3320,WID-SEC-2024-3198,WID-SEC-2024-3195,WID-SEC-2024-1913,WID-SEC-2024-1781,WID-SEC-2024-1701,WID-SEC-2024-1656,WID-SEC-2024-1655,WID-SEC-2024-1643,WID-SEC-2024-1642,WID-SEC-2024-1639,WID-SEC-2024-1637,WID-SEC-2024-1630,WID-SEC-2024-1474,WID-SEC-2024-1248,WID-SEC-2024-1228,WID-SEC-2024-1186,WID-SEC-2024-1082,WID-SEC-2024-0899,WID-SEC-2024-0892,WID-SEC-2024-0889,WID-SEC-2024-0885,WID-SEC-2024-0874,WID-SEC-2024-0869,WID-SEC-2024-0578,WID-SEC-2024-0564,WID-SEC-2024-0523,WID-SEC-2023-3174",""
+10.0.0.92,,80,tcp,5.8,Medium,30,"VendorFix","PHP < 8.1.28, 8.2.x < 8.2.18, 8.3.x < 8.3.6 Security Update (GHSA-h746-cjrr-wfmr) - Linux","PHP is prone to a vulnerability in password_verify.","Installed version: 7.2.34
+Fixed version:     8.1.28
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.152118,"CVE-2024-3096",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,c7ff129f-85d2-435c-a36f-4ff6704b487e,"","Update to version 8.1.28, 8.2.18, 8.3.6 or later.","PHP prior to version 8.1.28, version 8.2.x through 8.2.17 and
+  8.3.x through 8.3.5.","If a password stored with password_hash starts with a null byte
+  (\x00), testing a blank string as the password via password_verify will incorrectly return true.
+
+  If a user were able to create a password with a leading null byte (unlikely, but syntactically
+  valid), an attacker could trivially compromise the victim's account by attempting to sign in with
+  a blank string.","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 8.1.28, 8.2.x < 8.2.18, 8.3.x < 8.3.6 Security Update (GHSA-h746-cjrr-...
+(OID: 1.3.6.1.4.1.25623.1.0.152118)
+Version used: 2024-04-16T05:05:31Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2024-3330,DFN-CERT-2024-3329,DFN-CERT-2024-1574,DFN-CERT-2024-1192,DFN-CERT-2024-1132,DFN-CERT-2024-1115,DFN-CERT-2024-0993,DFN-CERT-2024-0962,WID-SEC-2024-0867",""
+10.0.0.92,,80,tcp,5.5,Medium,30,"VendorFix","PHP < 8.0.22, 8.1.x < 8.1.9 Security Update - Linux","PHP is prone to a buffer overflow vulnerability.","Installed version: 7.2.34
+Fixed version:     8.0.22/8.1.9/8.2.0
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.104644,"CVE-2022-4900",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,27af7b82-dc73-473f-977e-2011a68a9c09,"","Update to version 8.0.22, 8.1.9, 8.2.0 or later.","PHP versions prior to 8.0.22 and 8.1.x prior to 8.1.9.","Fixed potential overflow for the builtin server via the
+  PHP_CLI_SERVER_WORKERS environment variable.","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 8.0.22, 8.1.x < 8.1.9 Security Update - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.104644)
+Version used: 2025-01-21T05:37:33Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2024-2707,DFN-CERT-2024-1132,DFN-CERT-2023-0681,WID-SEC-2023-0695",""
+10.0.0.92,,80,tcp,5.3,Medium,30,"VendorFix","PHP < 7.3.33, 7.4.x < 7.4.26, 8.0.x < 8.0.13 Security Update (Nov 2021) - Linux","PHP released new versions which include a security fix.","Installed version: 7.2.34
+Fixed version:     7.3.33
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.147187,"CVE-2021-21707",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,ab46a591-6c20-46ec-9c82-e3e6e447003e,"","Update to version 7.3.33, 7.4.26, 8.0.13 or later.","PHP prior to version 7.3.33 and version 7.4.x through 7.4.25
+  and 8.0.x through 8.0.12.","Fixed bug #79971 (special character is breaking the path in xml
+  function).","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 7.3.33, 7.4.x < 7.4.26, 8.0.x < 8.0.13 Security Update (Nov 2021) - Li...
+(OID: 1.3.6.1.4.1.25623.1.0.147187)
+Version used: 2021-12-02T03:03:37Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2023-1600,DFN-CERT-2022-2869,DFN-CERT-2022-2639,DFN-CERT-2022-2638,DFN-CERT-2022-2598,DFN-CERT-2022-2499,DFN-CERT-2022-1516,DFN-CERT-2022-1493,DFN-CERT-2022-0557,DFN-CERT-2022-0485,DFN-CERT-2022-0455,DFN-CERT-2022-0431,DFN-CERT-2022-0407,DFN-CERT-2022-0110,DFN-CERT-2021-2474,DFN-CERT-2021-2436,WID-SEC-2023-1737,WID-SEC-2022-1767,WID-SEC-2022-0587,WID-SEC-2022-0432,WID-SEC-2022-0302,CB-K21/1213",""
+10.0.0.92,,80,tcp,5.3,Medium,30,"VendorFix","PHP < 7.3.26, 7.4.x < 7.4.14, 8.0.x < 8.0.1 Filter Vulnerability (Jan 2021) - Linux","PHP is prone to a vulnerability where FILTER_VALIDATE_URL
+  accepts URLs with invalid userinfo.","Installed version: 7.2.34
+Fixed version:     7.3.26
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.145114,"CVE-2020-7071",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,1c725f9c-8e95-4053-8f26-12de03fa803e,"","Update to version 7.3.26, 7.4.14, 8.0.1 or later.","PHP versions prior to 7.3.26, 7.4.x prior to 7.4.14 and 8.0.x
+  prior to 8.0.1.","","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 7.3.26, 7.4.x < 7.4.14, 8.0.x < 8.0.1 Filter Vulnerability (Jan 2021) ...
+(OID: 1.3.6.1.4.1.25623.1.0.145114)
+Version used: 2021-11-29T15:00:35Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2024-2707,DFN-CERT-2024-1586,DFN-CERT-2023-1600,DFN-CERT-2022-2639,DFN-CERT-2022-2638,DFN-CERT-2021-2373,DFN-CERT-2021-1645,DFN-CERT-2021-1509,DFN-CERT-2021-1453,DFN-CERT-2021-0380,DFN-CERT-2021-0013,WID-SEC-2023-1737,WID-SEC-2022-2114,CB-K21/0009",""
+10.0.0.92,,22,tcp,5.3,Medium,50,"WillNotFix","OpenSSH Information Disclosure Vulnerability (CVE-2016-20012)","OpenBSD OpenSSH is prone to an information disclosure
+  vulnerability.","Installed version: 8.9p1
+Fixed version:     None
+Installation
+path / port:       22/tcp
+
+",1.3.6.1.4.1.25623.1.0.117777,"CVE-2016-20012",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,0fc98b8c-1c99-419e-a13a-f80d3bfc757b,"","No known solution was made available for at least one year since
+  the disclosure of this vulnerability. Likely none will be provided anymore. General solution options
+  are to upgrade to a newer release, disable respective features, remove the product or replace the
+  product by another one.","All currently OpenSSH versions are known to be affected.","OpenSSH allows remote attackers, who have a suspicion that a
+  certain combination of username and public key is known to an SSH server, to test whether this
+  suspicion is correct. This occurs because a challenge is sent only when that combination could be
+  valid for a login session.","Checks if a vulnerable version is present on the target host.
+Details:
+OpenSSH Information Disclosure Vulnerability (CVE-2016-20012)
+(OID: 1.3.6.1.4.1.25623.1.0.117777)
+Version used: 2022-11-24T10:18:54Z
+","Product: cpe:/a:openbsd:openssh:8.9p1
+Method: OpenSSH Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.108577)
+","","DFN-CERT-2024-1260,WID-SEC-2024-1082,WID-SEC-2024-0229,CB-K21/0979",""
+10.0.0.92,,80,tcp,5.3,Medium,80,"Workaround","phpinfo() Output Reporting (HTTP)","Reporting of files containing the output of the phpinfo() PHP
+  function previously detected via HTTP.","The following files are calling the function phpinfo() which disclose potentially sensitive information:
+
+http://10.0.0.92/mutillidae/src/phpinfo.php
+Concluded from:
+  <title>phpinfo()</title><meta name=""ROBOTS"" content=""NOINDEX,NOFOLLOW,NOARCHIVE"" /></head>
+  <tr><td class=""e"">Configuration File (php.ini) Path </td><td class=""v"">/etc/php/7.2/apache2 </td></tr>
+  <h2>PHP Variables</h2>
+",1.3.6.1.4.1.25623.1.0.11229,"CVE-2008-0149,CVE-2023-49282,CVE-2023-49283",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,0676d796-57fc-4cdf-beb7-8abecaf0adb3,"Some of the information that can be gathered from this file
+  includes:
+
+  The username of the user running the PHP process, if it is a sudo user, the IP address of the
+  host, the web server version, the system version (Unix, Linux, Windows, ...), and the root
+  directory of the web server.","Delete the listed files or restrict access to them.","All systems exposing a file containing the output of the
+  phpinfo() PHP function.
+
+  This VT is also reporting if an affected endpoint for the following products have been identified:
+
+  - CVE-2008-0149: TUTOS
+
+  - CVE-2023-49282, CVE-2023-49283: Microsoft Graph PHP SDK","Many PHP installation tutorials instruct the user to create a
+  file called phpinfo.php or similar containing the phpinfo() statement. Such a file is often left
+  back in the webserver directory.","This script reports files identified by the following separate
+  VT: 'phpinfo() Output Detection (HTTP)' (OID: 1.3.6.1.4.1.25623.1.0.108474).
+Details:
+phpinfo() Output Reporting (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.11229)
+Version used: 2024-12-17T05:05:41Z
+","","","",""
+10.0.0.92,,3128,tcp,5.3,Medium,30,"VendorFix","Squid Request/Response Smuggling Vulnerability (GHSA-j83v-w3p4-5cqh, SQUID-2023:1)","Squid is prone to a request/response smuggling vulnerability.","Installed version: 5.9
+Fixed version:     6.4
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.100765,"CVE-2023-46846",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,be6bd112-2897-497c-a54a-85d856c97430,"","Update to version 6.4 or later.","Squid versions 2.6 through 6.3.","Due to chunked decoder lenience Squid is vulnerable to
+  Request/Response smuggling attacks when parsing HTTP/1.1 and ICAP messages.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid Request/Response Smuggling Vulnerability (GHSA-j83v-w3p4-5cqh, SQUID-2...
+(OID: 1.3.6.1.4.1.25623.1.0.100765)
+Version used: 2023-11-16T05:05:14Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-3343,DFN-CERT-2024-0642,DFN-CERT-2024-0039,DFN-CERT-2023-2934,DFN-CERT-2023-2781,DFN-CERT-2023-2746,DFN-CERT-2023-2712,WID-SEC-2024-1248,WID-SEC-2023-2725",""
+10.0.0.92,,22,tcp,5.0,Medium,30,"VendorFix","OpenBSD OpenSSH < 9.2 Unspecified Vulnerability","OpenBSD OpenSSH is prone to an unspecified vulnerability.","Installed version: 8.9p1
+Fixed version:     9.2
+Installation
+path / port:       22/tcp
+
+",1.3.6.1.4.1.25623.1.0.104512,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,49f071bd-3964-4967-8e4d-1c0cfdf95d34,"","Update to version 9.2 or later.","OpenBSD OpenSSH prior to version 9.2.","If the CanonicalizeHostname and CanonicalizePermittedCNAMEs
+  options were enabled, and the system/libc resolver did not check that names in DNS responses were
+  valid, then use of these options could allow an attacker with control of DNS to include invalid
+  characters (possibly including wildcards) in names added to known_hosts files when they were
+  updated. These names would still have to match the CanonicalizePermittedCNAMEs allow-list, so
+  practical exploitation appears unlikely.","Checks if a vulnerable version is present on the target host.
+Details:
+OpenBSD OpenSSH < 9.2 Unspecified Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.104512)
+Version used: 2025-01-21T05:37:33Z
+","Product: cpe:/a:openbsd:openssh:8.9p1
+Method: OpenSSH Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.108577)
+","","",""
+10.0.0.92,,80,tcp,5.0,Medium,70,"Mitigation","Source Control Management (SCM) Files/Folders Accessible (HTTP)","The script attempts to identify files/folders of a SCM
+  accessible at the webserver.","The following SCM files/folders were identified:
+
+Match:      0000000000000000000000000000000000000000 cede8a534190bb52e7407197e53d424a7e0cbaf7 root <root@RIS430-Target.(none)> 1741032675 -0500	clone: from https://github.com/digininja/DVWA.git
+Used regex: ^[a-f0-9]{40} [a-f0-9]{40} 
+URL:        http://10.0.0.92/dvwa/.git/logs/HEAD
+
+Match:      [core]
+[remote ""origin""]
+[branch ""master""]
+Used regex: ^\[(core|receive|(remote|branch) .+)\]$
+URL:        http://10.0.0.92/dvwa/.git/config
+
+Match:      # git ls-files --others --exclude-from=.git/info/exclude
+Used regex: ^# git ls-files
+URL:        http://10.0.0.92/dvwa/.git/info/exclude
+
+Match:      DIRC
+Used regex: ^DIRC
+URL:        http://10.0.0.92/dvwa/.git/index
+
+Match:      Unnamed repository; edit this file 'description' to name the repository.
+Used regex: ^Unnamed repository
+URL:        http://10.0.0.92/dvwa/.git/description
+
+Match:      ref: refs/heads/master
+Used regex: ^ref: refs/
+URL:        http://10.0.0.92/dvwa/.git/HEAD
+
+Match:      0000000000000000000000000000000000000000 73d6a092a1cc74580775b2ee510926fa81d0b46d root <root@RIS430-Target.(none)> 1741032759 -0500	clone: from https://github.com/webpwnized/mutillidae.git
+Used regex: ^[a-f0-9]{40} [a-f0-9]{40} 
+URL:        http://10.0.0.92/mutillidae/.git/logs/HEAD
+
+Match:      [core]
+[remote ""origin""]
+[branch ""main""]
+Used regex: ^\[(core|receive|(remote|branch) .+)\]$
+URL:        http://10.0.0.92/mutillidae/.git/config
+
+Match:      # git ls-files --others --exclude-from=.git/info/exclude
+Used regex: ^# git ls-files
+URL:        http://10.0.0.92/mutillidae/.git/info/exclude
+
+Match:      DIRC
+Used regex: ^DIRC
+URL:        http://10.0.0.92/mutillidae/.git/index
+
+Match:      Unnamed repository; edit this file 'description' to name the repository.
+Used regex: ^Unnamed repository
+URL:        http://10.0.0.92/mutillidae/.git/description
+
+Match:      ref: refs/heads/main
+Used regex: ^ref: refs/
+URL:        http://10.0.0.92/mutillidae/.git/HEAD
+",1.3.6.1.4.1.25623.1.0.111084,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,9787b991-227b-4027-b6b2-fc7621759bc8,"Based on the information provided in these files/folders an
+  attacker might be able to gather additional info about the structure of the system and its
+  applications.","Restrict access to the SCM files/folders for authorized systems
+  only.","","Currently the script is checking for files/folders of the
+  following SCM software:
+
+  - Git (.git)
+
+  - Mercurial (.hg)
+
+  - Bazaar (.bzr)
+
+  - CVS (CVS/Root, CVS/Entries)
+
+  - Subversion (.svn)","Check the response if SCM files/folders are accessible.
+Details:
+Source Control Management (SCM) Files/Folders Accessible (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.111084)
+Version used: 2023-08-01T13:29:10Z
+","","","",""
+10.0.0.1,,12865,tcp,5.0,Medium,70,"Mitigation","Check for Writesrv Service","writesrv is running on this port, it is used to send messages
+  to users.","Vulnerability was detected according to the Vulnerability Detection Method.",1.3.6.1.4.1.25623.1.0.11222,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,559f8508-b862-4086-b2e5-1080e72b7cf1,"This service gives potential attackers information about who
+  is connected and who isn't, easing social engineering attacks for example.","Disable this service if you don't use it.","","","
+Details:
+Check for Writesrv Service
+(OID: 1.3.6.1.4.1.25623.1.0.11222)
+Version used: 2023-08-01T13:29:10Z
+","","","",""
+10.0.0.92,,25,tcp,5.0,Medium,99,"Workaround","Check if Mailserver answer to VRFY and EXPN requests","The Mailserver on this host answers to VRFY and/or EXPN requests.","'VRFY root' produces the following answer: 252 2.0.0 root
+
+
+",1.3.6.1.4.1.25623.1.0.100072,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,2492406e-6c73-43bc-b7e3-408bb4a7c671,"","Disable VRFY and/or EXPN on your Mailserver.
+
+  For postfix add 'disable_vrfy_command=yes' in 'main.cf'.
+
+  For Sendmail add the option 'O PrivacyOptions=goaway'.
+
+  It is suggested that, if you really want to publish this type of information, you use a mechanism
+  that legitimate users actually know about, such as Finger or HTTP.","","VRFY and EXPN ask the server for information about an address. They are
+  inherently unusable through firewalls, gateways, mail exchangers for part-time hosts, etc.","
+Details:
+Check if Mailserver answer to VRFY and EXPN requests
+(OID: 1.3.6.1.4.1.25623.1.0.100072)
+Version used: 2023-10-31T05:06:37Z
+","","","",""
+10.0.0.92,,80,tcp,5.0,Medium,30,"VendorFix","PHP < 7.3.30, 7.4.x < 7.4.23, 8.0.x < 8.0.10 Security Update (Aug 2021) - Linux","PHP released new versions which include security fixes.","Installed version: 7.2.34
+Fixed version:     7.3.30
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.146584,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,ba4b96f0-1658-4051-ac72-b4551314f494,"","Update to version 7.3.30, 7.4.23, 8.0.10 or later.","PHP versions prior to 7.3.30, 7.4.x through 7.4.22 and 8.0.x
+  through 8.0.9.","","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 7.3.30, 7.4.x < 7.4.23, 8.0.x < 8.0.10 Security Update (Aug 2021) - Li...
+(OID: 1.3.6.1.4.1.25623.1.0.146584)
+Version used: 2021-08-27T08:15:01Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","",""
+10.0.0.1,,443,tcp,5.0,Medium,30,"Mitigation","Backup File Scanner (HTTP) - Unreliable Detection Reporting","The script reports backup files left on the web server.","The following backup files were identified (<URL>:<Matching pattern>):
+
+https://10.0.0.1/cmn/css/.common-min.css.backup:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.common-min.css.bak:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.common-min.css.bkp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.common-min.css.copy:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.common-min.css.old:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.common-min.css.orig:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.common-min.css.save:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.common-min.css.swp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.common-min.css.temp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.common-min.css.tmp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.print.css.backup:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.print.css.bak:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.print.css.bkp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.print.css.copy:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.print.css.old:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.print.css.orig:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.print.css.save:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.print.css.swp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.print.css.temp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/.print.css.tmp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/common-min.css.backup:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/common-min.css.bak:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/common-min.css.bkp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/common-min.css.copy:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/common-min.css.old:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/common-min.css.orig:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/common-min.css.save:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/common-min.css.swp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/common-min.css.temp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/common-min.css.tmp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.backup:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.bak:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.bkp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.copy:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.old:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.orig:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.save:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.swp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.temp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.tmp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.progressBar.css.backup:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.progressBar.css.bak:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.progressBar.css.bkp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.progressBar.css.copy:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.progressBar.css.old:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.progressBar.css.orig:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.progressBar.css.save:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.progressBar.css.swp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.progressBar.css.temp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/.progressBar.css.tmp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.backup:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.bak:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.bkp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.copy:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.old:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.orig:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.save:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.swp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.temp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.tmp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/progressBar.css.backup:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/progressBar.css.bak:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/progressBar.css.bkp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/progressBar.css.copy:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/progressBar.css.old:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/progressBar.css.orig:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/progressBar.css.save:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/progressBar.css.swp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/progressBar.css.temp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/lib/progressBar.css.tmp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/print.css.backup:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/print.css.bak:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/print.css.bkp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/print.css.copy:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/print.css.old:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/print.css.orig:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/print.css.save:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/print.css.swp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/print.css.temp:^HTTP/1\.[01] 200
+https://10.0.0.1/cmn/css/print.css.tmp:^HTTP/1\.[01] 200
+",1.3.6.1.4.1.25623.1.0.108975,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,c08f159c-2a13-480b-ae4d-17a48e1e4628,"Based on the information provided in these files an attacker might
+  be able to gather sensitive information stored in these files.","Delete the backup files.","","Notes:
+
+  - 'Unreliable Detection' means that a file was detected only based on a HTTP 200 (Found) status
+  code reported by the remote web server when a file was requested.
+
+  - As the VT 'Backup File Scanner (HTTP)' (OID: 1.3.6.1.4.1.25623.1.0.140853) might run into a
+  timeout the actual reporting of this vulnerability takes place in this VT instead.","Reports previous enumerated backup files accessible on the
+  remote web server.
+Details:
+Backup File Scanner (HTTP) - Unreliable Detection Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.108975)
+Version used: 2022-09-13T10:15:09Z
+","","","",""
+10.0.0.92,,80,tcp,5.0,Medium,30,"Mitigation","Enabled Directory Listing/Indexing Detection (HTTP)","The script attempts to identify directories with an enabled
+  directory listing/indexing on a remote web server.","The following directories with an enabled directory listing/indexing were identified:
+
+http://10.0.0.92/mutillidae
+
+Please review the content manually.
+",1.3.6.1.4.1.25623.1.0.111074,"CVE-2023-37599,CVE-2024-1076",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,59f824d4-afcb-4e7f-b02b-d98849b77ce6,"Based on the information shown an attacker might be able to
+  gather additional info about the structure of this application.","If not needed disable the directory listing/indexing within the
+  web servers config.","Web servers with an enabled directory listing/indexing.","","Checks previously detected directories on a remote web server
+  if a directory listing/indexing is enabled.
+
+  Note: This check has a low QoD (Quality of Detection) value as it is not possible to automatically
+  determine if the directory listing/indexing has been enabled on purpose (which is also a valid use
+  case for some software products).
+Details:
+Enabled Directory Listing/Indexing Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.111074)
+Version used: 2024-12-17T05:05:41Z
+","","","",""
+10.0.0.1,,80,tcp,5.0,Medium,30,"Mitigation","Backup File Scanner (HTTP) - Unreliable Detection Reporting","The script reports backup files left on the web server.","The following backup files were identified (<URL>:<Matching pattern>):
+
+http://10.0.0.1/cmn/css/.common-min.css.backup:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.common-min.css.bak:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.common-min.css.bkp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.common-min.css.copy:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.common-min.css.old:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.common-min.css.orig:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.common-min.css.save:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.common-min.css.swp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.common-min.css.temp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.common-min.css.tmp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.print.css.backup:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.print.css.bak:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.print.css.bkp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.print.css.copy:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.print.css.old:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.print.css.orig:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.print.css.save:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.print.css.swp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.print.css.temp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/.print.css.tmp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/common-min.css.backup:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/common-min.css.bak:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/common-min.css.bkp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/common-min.css.copy:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/common-min.css.old:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/common-min.css.orig:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/common-min.css.save:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/common-min.css.swp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/common-min.css.temp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/common-min.css.tmp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.backup:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.bak:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.bkp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.copy:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.old:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.orig:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.save:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.swp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.temp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.jquery.radioswitch.css.tmp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.progressBar.css.backup:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.progressBar.css.bak:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.progressBar.css.bkp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.progressBar.css.copy:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.progressBar.css.old:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.progressBar.css.orig:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.progressBar.css.save:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.progressBar.css.swp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.progressBar.css.temp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/.progressBar.css.tmp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.backup:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.bak:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.bkp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.copy:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.old:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.orig:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.save:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.swp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.temp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/jquery.radioswitch.css.tmp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/progressBar.css.backup:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/progressBar.css.bak:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/progressBar.css.bkp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/progressBar.css.copy:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/progressBar.css.old:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/progressBar.css.orig:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/progressBar.css.save:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/progressBar.css.swp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/progressBar.css.temp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/lib/progressBar.css.tmp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/print.css.backup:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/print.css.bak:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/print.css.bkp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/print.css.copy:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/print.css.old:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/print.css.orig:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/print.css.save:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/print.css.swp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/print.css.temp:^HTTP/1\.[01] 200
+http://10.0.0.1/cmn/css/print.css.tmp:^HTTP/1\.[01] 200
+",1.3.6.1.4.1.25623.1.0.108975,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,3ba7c770-6cdc-4c50-84f8-489e00676ca9,"Based on the information provided in these files an attacker might
+  be able to gather sensitive information stored in these files.","Delete the backup files.","","Notes:
+
+  - 'Unreliable Detection' means that a file was detected only based on a HTTP 200 (Found) status
+  code reported by the remote web server when a file was requested.
+
+  - As the VT 'Backup File Scanner (HTTP)' (OID: 1.3.6.1.4.1.25623.1.0.140853) might run into a
+  timeout the actual reporting of this vulnerability takes place in this VT instead.","Reports previous enumerated backup files accessible on the
+  remote web server.
+Details:
+Backup File Scanner (HTTP) - Unreliable Detection Reporting
+(OID: 1.3.6.1.4.1.25623.1.0.108975)
+Version used: 2022-09-13T10:15:09Z
+","","","",""
+10.0.0.92,,22,tcp,5.0,Medium,30,"VendorFix","OpenBSD OpenSSH < 9.3 Unspecified Vulnerability","OpenBSD OpenSSH is prone to an unspecified vulnerability.","Installed version: 8.9p1
+Fixed version:     9.3
+Installation
+path / port:       22/tcp
+
+",1.3.6.1.4.1.25623.1.0.104635,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,eb6d8766-65a8-446f-9faa-a8435a3a2f99,"","Update to version 9.3 or later.","OpenBSD OpenSSH prior to version 9.3.","ssh(1): Portable OpenSSH provides an implementation of the
+  getrrsetbyname(3) function if the standard library does not provide it, for use by the
+  VerifyHostKeyDNS feature. A specifically crafted DNS response could cause this function to perform
+  an out-of-bounds read of adjacent stack data, but this condition does not appear to be exploitable
+  beyond denial-of-service to the ssh(1) client.
+
+  The getrrsetbyname(3) replacement is only included if the system's standard library lacks this
+  function and portable OpenSSH was not compiled with the ldns library (--with-ldns).
+  getrrsetbyname(3) is only invoked if using VerifyHostKeyDNS to fetch SSHFP records.This problem
+  was found by the Coverity static analyzer.","Checks if a vulnerable version is present on the target host.
+Details:
+OpenBSD OpenSSH < 9.3 Unspecified Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.104635)
+Version used: 2025-01-21T05:37:33Z
+","Product: cpe:/a:openbsd:openssh:8.9p1
+Method: OpenSSH Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.108577)
+","","",""
+10.0.0.1,,443,tcp,5.0,Medium,99,"Mitigation","SSL/TLS: Certificate Expired","The remote server's SSL/TLS certificate has already expired.","The certificate of the remote service expired on 2025-01-07 23:59:59.
+
+Certificate details:
+fingerprint (SHA-1)             | BD8A1468752F2538F276866682062627085AAC99
+fingerprint (SHA-256)           | 39F851C178CE325EF84773FB6777B8A64A2D165A5FE619B7F58E05A9FCE2DFC4
+issued by                       | CN=COMODO RSA Organization Validation Secure Server CA,O=COMODO CA Limited,L=Salford,ST=Greater Manchester,C=GB
+public key algorithm            | RSA
+public key size (bits)          | 2048
+serial                          | 5812E9A4279A45F95DD1FB8E896B6F12
+signature algorithm             | sha256WithRSAEncryption
+subject                         | CN=myrouter.io,O=Comcast Corporation,ST=Pennsylvania,C=US
+subject alternative names (SAN) | myrouter.io
+valid from                      | 2024-01-08 00:00:00 UTC
+valid until                     | 2025-01-07 23:59:59 UTC
+",1.3.6.1.4.1.25623.1.0.103955,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,aa29e965-b481-41b1-a8e5-15d14408217b,"","Replace the SSL/TLS certificate by a new one.","","This script checks expiry dates of certificates associated with
+  SSL/TLS-enabled services on the target and reports whether any have already expired.","
+Details:
+SSL/TLS: Certificate Expired
+(OID: 1.3.6.1.4.1.25623.1.0.103955)
+Version used: 2024-06-14T05:05:48Z
+","Product: cpe:/a:ietf:transport_layer_security
+Method: SSL/TLS: Collect and Report Certificate Details
+(OID: 1.3.6.1.4.1.25623.1.0.103692)
+","","",""
+10.0.0.92,,22,tcp,5.0,Medium,30,"VendorFix","OpenBSD OpenSSH 8.7 - 9.1 Unspecified Vulnerability","OpenBSD OpenSSH is prone to an unspecified vulnerability.","Installed version: 8.9p1
+Fixed version:     9.2
+Installation
+path / port:       22/tcp
+
+",1.3.6.1.4.1.25623.1.0.104511,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,6a87de81-fc23-4ffd-a910-168a8a4d1744,"","Update to version 9.2 or later.","OpenBSD OpenSSH versions starting from 8.7 and prior to 9.2.","The PermitRemoteOpen option would ignore its first argument
+  unless it was one of the special keywords 'any' or 'none', causing the permission list to fail
+  open if only one permission was specified.","Checks if a vulnerable version is present on the target host.
+Details:
+OpenBSD OpenSSH 8.7 - 9.1 Unspecified Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.104511)
+Version used: 2025-01-21T05:37:33Z
+","Product: cpe:/a:openbsd:openssh:8.9p1
+Method: OpenSSH Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.108577)
+","","",""
+10.0.0.92,,80,tcp,5.0,Medium,30,"VendorFix","PHP < 7.3.28, 7.4.x < 7.4.18 IMAP Header Injection Vulnerability (Apr 2021) - Linux","PHP is prone to an IMAP header injection vulnerability.","Installed version: 7.2.34
+Fixed version:     7.3.28
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.145869,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,575602d4-e176-46dd-8fdc-f825c5b2d73b,"","Update to version 7.3.28, 7.4.18 or later.","PHP versions prior to 7.3.28 and 7.4.x through 7.4.17.","","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 7.3.28, 7.4.x < 7.4.18 IMAP Header Injection Vulnerability (Apr 2021) ...
+(OID: 1.3.6.1.4.1.25623.1.0.145869)
+Version used: 2021-05-03T08:21:47Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","",""
+10.0.0.92,,3128,tcp,4.9,Medium,30,"VendorFix","Squid DoS Vulnerability (GHSA-wgvf-q977-9xjg, SQUID-2024:3)","Squid is prone to a denial of service (DoS) vulnerability in ESI
+  processing.","Installed version: 5.9
+Fixed version:     6.10
+Installation
+path / port:       3128/tcp
+
+",1.3.6.1.4.1.25623.1.0.114674,"CVE-2024-37894",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,ded4c2c4-5631-4e80-a00d-4c38adba92ad,"","Update to version 6.10 or later.","Squid version 3.0 through 6.9.","Due to an Out-of-bounds Write error when assigning ESI
+  variables, Squid is susceptible to a Memory Corruption error, which can result in a Denial of
+  Service.
+
+  This flaw was part of the 'Squid Caching Proxy Security Audit: 55 vulnerabilities and 35 0days'
+  publication in October 2023 and filed as 'Buffer Underflow in ESI'.","Checks if a vulnerable version is present on the target host.
+Details:
+Squid DoS Vulnerability (GHSA-wgvf-q977-9xjg, SQUID-2024:3)
+(OID: 1.3.6.1.4.1.25623.1.0.114674)
+Version used: 2024-11-01T05:05:36Z
+","Product: cpe:/a:squid-cache:squid:5.9
+Method: Squid Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.900611)
+","","DFN-CERT-2024-1935,DFN-CERT-2024-1706,WID-SEC-2024-1447",""
+10.0.0.92,,21,tcp,4.8,Medium,70,"Mitigation","FTP Unencrypted Cleartext Login","The remote host is running a FTP service that allows cleartext logins over
+  unencrypted connections.","The remote FTP service accepts logins without a previous sent 'AUTH TLS' command. Response(s):
+
+Non-anonymous sessions: 331 Please specify the password.
+Anonymous sessions:     331 Please specify the password.
+",1.3.6.1.4.1.25623.1.0.108528,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,739b1b9c-603a-4b37-b68c-3ec0d9e0eec4,"An attacker can uncover login names and passwords by sniffing traffic to the
+  FTP service.","Enable FTPS or enforce the connection via the 'AUTH TLS' command. Please see
+  the manual of the FTP service for more information.","","","Tries to login to a non FTPS enabled FTP service without sending a
+  'AUTH TLS' command first and checks if the service is accepting the login without enforcing the use of
+  the 'AUTH TLS' command.
+Details:
+FTP Unencrypted Cleartext Login
+(OID: 1.3.6.1.4.1.25623.1.0.108528)
+Version used: 2023-12-20T05:05:58Z
+","","","",""
+10.0.0.1,,80,tcp,4.8,Medium,80,"Workaround","Cleartext Transmission of Sensitive Information via HTTP","The host / application transmits sensitive information (username, passwords) in
+  cleartext via HTTP.","The following input fields were identified (URL:input name):
+
+http://10.0.0.1/:password
+",1.3.6.1.4.1.25623.1.0.108440,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,58571770-5adb-476f-8a77-3136046d85fe,"An attacker could use this situation to compromise or eavesdrop on the
+  HTTP communication between the client and the server using a man-in-the-middle attack to get access to
+  sensitive data like usernames or passwords.","Enforce the transmission of sensitive data via an encrypted SSL/TLS connection.
+  Additionally make sure the host / application is redirecting all users to the secured SSL/TLS connection before
+  allowing to input sensitive data into the mentioned functions.","Hosts / applications which doesn't enforce the transmission of sensitive data via an
+  encrypted SSL/TLS connection.","","Evaluate previous collected information and check if the host / application is not
+  enforcing the transmission of sensitive data via an encrypted SSL/TLS connection.
+
+  The script is currently checking the following:
+
+  - HTTP Basic Authentication (Basic Auth)
+
+  - HTTP Forms (e.g. Login) with input field of type 'password'
+Details:
+Cleartext Transmission of Sensitive Information via HTTP
+(OID: 1.3.6.1.4.1.25623.1.0.108440)
+Version used: 2023-09-07T05:05:21Z
+","","","",""
+10.0.0.92,,80,tcp,4.3,Medium,30,"VendorFix","PHP < 8.0.29, 8.1.x < 8.1.20, 8.2.x < 8.2.7 Security Update - Linux","PHP is prone to a missing error check and insufficient random
+  bytes in HTTP Digest authentication for SOAP vulnerability.","Installed version: 7.2.34
+Fixed version:     8.0.29
+Installation
+path / port:       80/tcp
+
+",1.3.6.1.4.1.25623.1.0.149760,"CVE-2023-3247",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,73bea397-fdce-447c-800c-c29a75773fa5,"","Update to version 8.0.29, 8.1.10, 8.2.7 or later.","PHP prior to version 8.0.29, 8.1.x prior to 8.1.20 and 8.2.x
+  prior to 8.2.7.","","Checks if a vulnerable version is present on the target host.
+Details:
+PHP < 8.0.29, 8.1.x < 8.1.20, 8.2.x < 8.2.7 Security Update - Linux
+(OID: 1.3.6.1.4.1.25623.1.0.149760)
+Version used: 2023-10-13T05:06:10Z
+","Product: cpe:/a:php:php:7.2.34
+Method: PHP Detection (HTTP)
+(OID: 1.3.6.1.4.1.25623.1.0.800109)
+","","DFN-CERT-2024-3330,DFN-CERT-2023-2570,DFN-CERT-2023-2542,DFN-CERT-2023-1328,WID-SEC-2023-2917,WID-SEC-2023-2680,WID-SEC-2023-1506",""
+10.0.0.92,,25,tcp,4.3,Medium,98,"Mitigation","SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection","It was possible to detect the usage of the deprecated TLSv1.0
+  and/or TLSv1.1 protocol on this system.","In addition to TLSv1.2+ the service is also providing the deprecated TLSv1.0 and TLSv1.1 protocols and supports one or more ciphers. Those supported ciphers can be found in the 'SSL/TLS: Report Supported Cipher Suites' (OID: 1.3.6.1.4.1.25623.1.0.802067) VT.
+",1.3.6.1.4.1.25623.1.0.117274,"CVE-2011-3389,CVE-2015-0204",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,cb43efa5-7c61-4010-8a77-b930f70728de,"An attacker might be able to use the known cryptographic flaws
+  to eavesdrop the connection between clients and the service to get access to sensitive data
+  transferred within the secured connection.
+
+  Furthermore newly uncovered vulnerabilities in this protocols won't receive security updates
+  anymore.","It is recommended to disable the deprecated TLSv1.0 and/or
+  TLSv1.1 protocols in favor of the TLSv1.2+ protocols. Please see the references for more
+  information.","All services providing an encrypted communication using the
+  TLSv1.0 and/or TLSv1.1 protocols.","The TLSv1.0 and TLSv1.1 protocols contain known cryptographic
+  flaws like:
+
+  - CVE-2011-3389: Browser Exploit Against SSL/TLS (BEAST)
+
+  - CVE-2015-0204: Factoring Attack on RSA-EXPORT Keys Padding Oracle On Downgraded Legacy
+  Encryption (FREAK)","Check the used TLS protocols of the services provided by this
+  system.
+Details:
+SSL/TLS: Deprecated TLSv1.0 and TLSv1.1 Protocol Detection
+(OID: 1.3.6.1.4.1.25623.1.0.117274)
+Version used: 2024-09-27T05:05:23Z
+","Product: cpe:/a:ietf:transport_layer_security:1.0
+Method: SSL/TLS: Version Detection
+(OID: 1.3.6.1.4.1.25623.1.0.105782)
+","","DFN-CERT-2020-0177,DFN-CERT-2020-0111,DFN-CERT-2019-0068,DFN-CERT-2018-1441,DFN-CERT-2018-1408,DFN-CERT-2016-1372,DFN-CERT-2016-1164,DFN-CERT-2016-0388,DFN-CERT-2015-1853,DFN-CERT-2015-1332,DFN-CERT-2015-0884,DFN-CERT-2015-0800,DFN-CERT-2015-0758,DFN-CERT-2015-0567,DFN-CERT-2015-0544,DFN-CERT-2015-0530,DFN-CERT-2015-0396,DFN-CERT-2015-0375,DFN-CERT-2015-0374,DFN-CERT-2015-0305,DFN-CERT-2015-0199,DFN-CERT-2015-0079,DFN-CERT-2015-0021,DFN-CERT-2014-1414,DFN-CERT-2013-1847,DFN-CERT-2013-1792,DFN-CERT-2012-1979,DFN-CERT-2012-1829,DFN-CERT-2012-1530,DFN-CERT-2012-1380,DFN-CERT-2012-1377,DFN-CERT-2012-1292,DFN-CERT-2012-1214,DFN-CERT-2012-1213,DFN-CERT-2012-1180,DFN-CERT-2012-1156,DFN-CERT-2012-1155,DFN-CERT-2012-1039,DFN-CERT-2012-0956,DFN-CERT-2012-0908,DFN-CERT-2012-0868,DFN-CERT-2012-0867,DFN-CERT-2012-0848,DFN-CERT-2012-0838,DFN-CERT-2012-0776,DFN-CERT-2012-0722,DFN-CERT-2012-0638,DFN-CERT-2012-0627,DFN-CERT-2012-0451,DFN-CERT-2012-0418,DFN-CERT-2012-0354,DFN-CERT-2012-0234,DFN-CERT-2012-0221,DFN-CERT-2012-0177,DFN-CERT-2012-0170,DFN-CERT-2012-0146,DFN-CERT-2012-0142,DFN-CERT-2012-0126,DFN-CERT-2012-0123,DFN-CERT-2012-0095,DFN-CERT-2012-0051,DFN-CERT-2012-0047,DFN-CERT-2012-0021,DFN-CERT-2011-1953,DFN-CERT-2011-1946,DFN-CERT-2011-1844,DFN-CERT-2011-1826,DFN-CERT-2011-1774,DFN-CERT-2011-1743,DFN-CERT-2011-1738,DFN-CERT-2011-1706,DFN-CERT-2011-1628,DFN-CERT-2011-1627,DFN-CERT-2011-1619,DFN-CERT-2011-1482,WID-SEC-2023-1435,CB-K18/0799,CB-K16/1289,CB-K16/1096,CB-K15/1751,CB-K15/1266,CB-K15/0850,CB-K15/0764,CB-K15/0720,CB-K15/0548,CB-K15/0526,CB-K15/0509,CB-K15/0493,CB-K15/0384,CB-K15/0365,CB-K15/0364,CB-K15/0302,CB-K15/0192,CB-K15/0079,CB-K15/0016,CB-K14/1342,CB-K14/0231,CB-K13/0845,CB-K13/0796,CB-K13/0790",""
+10.0.0.1,,443,tcp,4.0,Medium,80,"Workaround","SSL/TLS: Diffie-Hellman Key Exchange Insufficient DH Group Strength Vulnerability","The SSL/TLS service uses Diffie-Hellman groups with insufficient strength
+  (key size < 2048).","Server Temporary Key Size: 1024 bits
+
+",1.3.6.1.4.1.25623.1.0.106223,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,e1007100-fde9-47a9-b7de-321bb2ff52f4,"An attacker might be able to decrypt the SSL/TLS communication offline.","Deploy (Ephemeral) Elliptic-Curve Diffie-Hellman (ECDHE) or use
+  a 2048-bit or stronger Diffie-Hellman group (see the references).
+
+  For Apache Web Servers:
+  Beginning with version 2.4.7, mod_ssl will use DH parameters which include primes with lengths of more than 1024 bits.","","The Diffie-Hellman group are some big numbers that are used as base for
+  the DH computations. They can be, and often are, fixed. The security of the final secret depends on the size
+  of these parameters. It was found that 512 and 768 bits to be weak, 1024 bits to be breakable by really
+  powerful attackers like governments.","Checks the DHE temporary public key size.
+Details:
+SSL/TLS: Diffie-Hellman Key Exchange Insufficient DH Group Strength Vulnerab...
+(OID: 1.3.6.1.4.1.25623.1.0.106223)
+Version used: 2024-09-30T08:38:05Z
+","","","",""
+10.0.0.1,,53,tcp,4.0,Medium,30,"VendorFix","Dnsmasq < 2.85 DNS Cache Poisoning Vulnerability","Dnsmasq is prone to a DNS cache poisoning vulnerability.","Installed version: 2.83
+Fixed version:     2.85
+Installation
+path / port:       53/tcp
+
+",1.3.6.1.4.1.25623.1.0.117321,"CVE-2021-3448",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,c1d0cdbd-5d5c-4563-aedf-0ab71d2d3009,"","Update to version 2.85 or later.","Dnsmasq prior to 2.85.","When configured to use a specific server for a given network
+  interface, dnsmasq uses a fixed port while forwarding queries. An attacker on the network, able to
+  find the outgoing port used by dnsmasq, only needs to guess the random transmission ID to forge a
+  reply and get it accepted by dnsmasq. This flaw makes a DNS Cache Poisoning attack much easier.
+  The highest threat from this vulnerability is to data integrity.","Checks if a vulnerable version is present on the target host.
+Details:
+Dnsmasq < 2.85 DNS Cache Poisoning Vulnerability
+(OID: 1.3.6.1.4.1.25623.1.0.117321)
+Version used: 2021-08-27T08:01:04Z
+","Product: cpe:/a:thekelleys:dnsmasq:2.83
+Method: Dnsmasq Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.117275)
+","","DFN-CERT-2022-1143,DFN-CERT-2022-0906,DFN-CERT-2021-2246,DFN-CERT-2021-0720,WID-SEC-2022-1335,WID-SEC-2022-1329,WID-SEC-2022-1228,WID-SEC-2022-0624",""
+10.0.0.92,,22,tcp,4.0,Medium,30,"VendorFix","OpenBSD OpenSSH < 9.1 Multiple Vulnerabilities","OpenBSD OpenSSH is prone to multiple vulnerabilities.","Installed version: 8.9p1
+Fixed version:     9.1
+Installation
+path / port:       22/tcp
+
+",1.3.6.1.4.1.25623.1.0.127244,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,ae9263c0-d6cf-47ed-b729-a9ace5f6c018,"","Update to version 9.1 or later.","OpenBSD OpenSSH prior to version 9.1.","The following vulnerabilities exist:
+
+  - A one-byte overflow in SSH- banner processing in ssh-keyscan.
+
+  - A double free() in error path of file hashing step in
+   signing/verify code in ssh-keygen.
+
+  - A double-free in error path in ssh-keysign.","Checks if a vulnerable version is present on the target host.
+Details:
+OpenBSD OpenSSH < 9.1 Multiple Vulnerabilities
+(OID: 1.3.6.1.4.1.25623.1.0.127244)
+Version used: 2025-01-21T05:37:33Z
+","Product: cpe:/a:openbsd:openssh:8.9p1
+Method: OpenSSH Detection Consolidation
+(OID: 1.3.6.1.4.1.25623.1.0.108577)
+","","",""
+10.0.0.175,,,,2.6,Low,80,"Mitigation","TCP Timestamps Information Disclosure","The remote host implements TCP timestamps and therefore allows
+  to compute the uptime.","It was detected that the host implements RFC1323/RFC7323.
+
+The following timestamps were retrieved with a delay of 1 seconds in-between:
+Packet 1: 323256294
+Packet 2: 323256401
+",1.3.6.1.4.1.25623.1.0.80091,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T17:02:17Z,b9e57185-6faa-4b0a-9b83-fd8e4732816c,"A side effect of this feature is that the uptime of the remote
+  host can sometimes be computed.","To disable TCP timestamps on linux add the line
+  'net.ipv4.tcp_timestamps = 0' to /etc/sysctl.conf. Execute 'sysctl -p' to apply the settings at
+  runtime.
+
+  To disable TCP timestamps on Windows execute 'netsh int tcp set global timestamps=disabled'
+
+  Starting with Windows Server 2008 and Vista, the timestamp can not be completely disabled.
+
+  The default behavior of the TCP/IP stack on this Systems is to not use the Timestamp options when
+  initiating TCP connections, but use them if the TCP peer that is initiating communication includes
+  them in their synchronize (SYN) segment.
+
+  See the references for more information.","TCP implementations that implement RFC1323/RFC7323.","The remote host implements TCP timestamps, as defined by
+  RFC1323/RFC7323.","Special IP packets are forged and sent with a little delay in
+  between to the target IP. The responses are searched for a timestamps. If found, the timestamps
+  are reported.
+Details:
+TCP Timestamps Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.80091)
+Version used: 2023-12-15T16:10:08Z
+","","","",""
+10.0.0.92,,22,tcp,2.6,Low,80,"Mitigation","Weak MAC Algorithm(s) Supported (SSH)","The remote SSH server is configured to allow / support weak MAC
+  algorithm(s).","The remote SSH server supports the following weak client-to-server MAC algorithm(s):
+
+umac-64-etm@openssh.com
+umac-64@openssh.com
+
+
+The remote SSH server supports the following weak server-to-client MAC algorithm(s):
+
+umac-64-etm@openssh.com
+umac-64@openssh.com
+",1.3.6.1.4.1.25623.1.0.105610,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,f9a970cf-14f3-4a8f-b254-01bdd1c35d0b,"","Disable the reported weak MAC algorithm(s).","","","Checks the supported MAC algorithms (client-to-server and
+  server-to-client) of the remote SSH server.
+
+  Currently weak MAC algorithms are defined as the following:
+
+  - MD5 based algorithms
+
+  - 96-bit based algorithms
+
+  - 64-bit based algorithms
+
+  - 'none' algorithm
+Details:
+Weak MAC Algorithm(s) Supported (SSH)
+(OID: 1.3.6.1.4.1.25623.1.0.105610)
+Version used: 2024-06-14T05:05:48Z
+","Product: cpe:/a:ietf:secure_shell_protocol
+Method: SSH Protocol Algorithms Supported
+(OID: 1.3.6.1.4.1.25623.1.0.105565)
+","","",""
+10.0.0.92,,,,2.6,Low,80,"Mitigation","TCP Timestamps Information Disclosure","The remote host implements TCP timestamps and therefore allows
+  to compute the uptime.","It was detected that the host implements RFC1323/RFC7323.
+
+The following timestamps were retrieved with a delay of 1 seconds in-between:
+Packet 1: 3526641301
+Packet 2: 3526642385
+",1.3.6.1.4.1.25623.1.0.80091,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,30902075-7c6c-4a24-8c23-53104646c7d5,"A side effect of this feature is that the uptime of the remote
+  host can sometimes be computed.","To disable TCP timestamps on linux add the line
+  'net.ipv4.tcp_timestamps = 0' to /etc/sysctl.conf. Execute 'sysctl -p' to apply the settings at
+  runtime.
+
+  To disable TCP timestamps on Windows execute 'netsh int tcp set global timestamps=disabled'
+
+  Starting with Windows Server 2008 and Vista, the timestamp can not be completely disabled.
+
+  The default behavior of the TCP/IP stack on this Systems is to not use the Timestamp options when
+  initiating TCP connections, but use them if the TCP peer that is initiating communication includes
+  them in their synchronize (SYN) segment.
+
+  See the references for more information.","TCP implementations that implement RFC1323/RFC7323.","The remote host implements TCP timestamps, as defined by
+  RFC1323/RFC7323.","Special IP packets are forged and sent with a little delay in
+  between to the target IP. The responses are searched for a timestamps. If found, the timestamps
+  are reported.
+Details:
+TCP Timestamps Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.80091)
+Version used: 2023-12-15T16:10:08Z
+","","","",""
+10.0.0.1,,,,2.6,Low,80,"Mitigation","TCP Timestamps Information Disclosure","The remote host implements TCP timestamps and therefore allows
+  to compute the uptime.","It was detected that the host implements RFC1323/RFC7323.
+
+The following timestamps were retrieved with a delay of 1 seconds in-between:
+Packet 1: 20795972
+Packet 2: 20797064
+",1.3.6.1.4.1.25623.1.0.80091,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,6336af1c-ad01-4d6f-8a79-40ba4c31c9e6,"A side effect of this feature is that the uptime of the remote
+  host can sometimes be computed.","To disable TCP timestamps on linux add the line
+  'net.ipv4.tcp_timestamps = 0' to /etc/sysctl.conf. Execute 'sysctl -p' to apply the settings at
+  runtime.
+
+  To disable TCP timestamps on Windows execute 'netsh int tcp set global timestamps=disabled'
+
+  Starting with Windows Server 2008 and Vista, the timestamp can not be completely disabled.
+
+  The default behavior of the TCP/IP stack on this Systems is to not use the Timestamp options when
+  initiating TCP connections, but use them if the TCP peer that is initiating communication includes
+  them in their synchronize (SYN) segment.
+
+  See the references for more information.","TCP implementations that implement RFC1323/RFC7323.","The remote host implements TCP timestamps, as defined by
+  RFC1323/RFC7323.","Special IP packets are forged and sent with a little delay in
+  between to the target IP. The responses are searched for a timestamps. If found, the timestamps
+  are reported.
+Details:
+TCP Timestamps Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.80091)
+Version used: 2023-12-15T16:10:08Z
+","","","",""
+10.0.0.116,,,,2.6,Low,80,"Mitigation","TCP Timestamps Information Disclosure","The remote host implements TCP timestamps and therefore allows
+  to compute the uptime.","It was detected that the host implements RFC1323/RFC7323.
+
+The following timestamps were retrieved with a delay of 1 seconds in-between:
+Packet 1: 1313578050
+Packet 2: 1313579139
+",1.3.6.1.4.1.25623.1.0.80091,"",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:56:36Z,09fd2454-8eaa-45a3-8428-9524c920d015,"A side effect of this feature is that the uptime of the remote
+  host can sometimes be computed.","To disable TCP timestamps on linux add the line
+  'net.ipv4.tcp_timestamps = 0' to /etc/sysctl.conf. Execute 'sysctl -p' to apply the settings at
+  runtime.
+
+  To disable TCP timestamps on Windows execute 'netsh int tcp set global timestamps=disabled'
+
+  Starting with Windows Server 2008 and Vista, the timestamp can not be completely disabled.
+
+  The default behavior of the TCP/IP stack on this Systems is to not use the Timestamp options when
+  initiating TCP connections, but use them if the TCP peer that is initiating communication includes
+  them in their synchronize (SYN) segment.
+
+  See the references for more information.","TCP implementations that implement RFC1323/RFC7323.","The remote host implements TCP timestamps, as defined by
+  RFC1323/RFC7323.","Special IP packets are forged and sent with a little delay in
+  between to the target IP. The responses are searched for a timestamps. If found, the timestamps
+  are reported.
+Details:
+TCP Timestamps Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.80091)
+Version used: 2023-12-15T16:10:08Z
+","","","",""
+10.0.0.1,,,,2.1,Low,80,"Mitigation","ICMP Timestamp Reply Information Disclosure","The remote host responded to an ICMP timestamp request.","The following response / ICMP packet has been received:
+- ICMP Type: 14
+- ICMP Code: 0
+",1.3.6.1.4.1.25623.1.0.103190,"CVE-1999-0524",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,c31d45b6-4eed-4ca6-a173-5f20ed702797,"This information could theoretically be used to exploit weak
+  time-based random number generators in other services.","Various mitigations are possible:
+
+  - Disable the support for ICMP timestamp on the remote host completely
+
+  - Protect the remote host by a firewall, and block ICMP packets passing through the firewall in
+  either direction (either completely or only for untrusted networks)","","The Timestamp Reply is an ICMP message which replies to a
+  Timestamp message. It consists of the originating timestamp sent by the sender of the Timestamp as
+  well as a receive timestamp and a transmit timestamp.","Sends an ICMP Timestamp (Type 13) request and checks if a
+  Timestamp Reply (Type 14) is received.
+Details:
+ICMP Timestamp Reply Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.103190)
+Version used: 2025-01-21T05:37:33Z
+","","","DFN-CERT-2014-0658,CB-K15/1514,CB-K14/0632",""
+10.0.0.92,,,,2.1,Low,80,"Mitigation","ICMP Timestamp Reply Information Disclosure","The remote host responded to an ICMP timestamp request.","The following response / ICMP packet has been received:
+- ICMP Type: 14
+- ICMP Code: 0
+",1.3.6.1.4.1.25623.1.0.103190,"CVE-1999-0524",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,010b88bf-9fed-4274-a294-22ee85f933d8,"This information could theoretically be used to exploit weak
+  time-based random number generators in other services.","Various mitigations are possible:
+
+  - Disable the support for ICMP timestamp on the remote host completely
+
+  - Protect the remote host by a firewall, and block ICMP packets passing through the firewall in
+  either direction (either completely or only for untrusted networks)","","The Timestamp Reply is an ICMP message which replies to a
+  Timestamp message. It consists of the originating timestamp sent by the sender of the Timestamp as
+  well as a receive timestamp and a transmit timestamp.","Sends an ICMP Timestamp (Type 13) request and checks if a
+  Timestamp Reply (Type 14) is received.
+Details:
+ICMP Timestamp Reply Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.103190)
+Version used: 2025-01-21T05:37:33Z
+","","","DFN-CERT-2014-0658,CB-K15/1514,CB-K14/0632",""
+10.0.0.190,,,,2.1,Low,80,"Mitigation","ICMP Timestamp Reply Information Disclosure","The remote host responded to an ICMP timestamp request.","The following response / ICMP packet has been received:
+- ICMP Type: 14
+- ICMP Code: 0
+",1.3.6.1.4.1.25623.1.0.103190,"CVE-1999-0524",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:51:06Z,ad6a5d3a-2f4a-4ccf-931c-fb1a905035e1,"This information could theoretically be used to exploit weak
+  time-based random number generators in other services.","Various mitigations are possible:
+
+  - Disable the support for ICMP timestamp on the remote host completely
+
+  - Protect the remote host by a firewall, and block ICMP packets passing through the firewall in
+  either direction (either completely or only for untrusted networks)","","The Timestamp Reply is an ICMP message which replies to a
+  Timestamp message. It consists of the originating timestamp sent by the sender of the Timestamp as
+  well as a receive timestamp and a transmit timestamp.","Sends an ICMP Timestamp (Type 13) request and checks if a
+  Timestamp Reply (Type 14) is received.
+Details:
+ICMP Timestamp Reply Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.103190)
+Version used: 2025-01-21T05:37:33Z
+","","","DFN-CERT-2014-0658,CB-K15/1514,CB-K14/0632",""
+10.0.0.141,,,,2.1,Low,80,"Mitigation","ICMP Timestamp Reply Information Disclosure","The remote host responded to an ICMP timestamp request.","The following response / ICMP packet has been received:
+- ICMP Type: 14
+- ICMP Code: 0
+",1.3.6.1.4.1.25623.1.0.103190,"CVE-1999-0524",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:36:29Z,d7c863b1-e5d6-47c1-b8b3-705dababd67f,"This information could theoretically be used to exploit weak
+  time-based random number generators in other services.","Various mitigations are possible:
+
+  - Disable the support for ICMP timestamp on the remote host completely
+
+  - Protect the remote host by a firewall, and block ICMP packets passing through the firewall in
+  either direction (either completely or only for untrusted networks)","","The Timestamp Reply is an ICMP message which replies to a
+  Timestamp message. It consists of the originating timestamp sent by the sender of the Timestamp as
+  well as a receive timestamp and a transmit timestamp.","Sends an ICMP Timestamp (Type 13) request and checks if a
+  Timestamp Reply (Type 14) is received.
+Details:
+ICMP Timestamp Reply Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.103190)
+Version used: 2025-01-21T05:37:33Z
+","","","DFN-CERT-2014-0658,CB-K15/1514,CB-K14/0632",""
+10.0.0.175,,,,2.1,Low,80,"Mitigation","ICMP Timestamp Reply Information Disclosure","The remote host responded to an ICMP timestamp request.","The following response / ICMP packet has been received:
+- ICMP Type: 14
+- ICMP Code: 0
+",1.3.6.1.4.1.25623.1.0.103190,"CVE-1999-0524",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T17:02:17Z,7e31f655-df18-4612-a2dc-65d0d11ab9c3,"This information could theoretically be used to exploit weak
+  time-based random number generators in other services.","Various mitigations are possible:
+
+  - Disable the support for ICMP timestamp on the remote host completely
+
+  - Protect the remote host by a firewall, and block ICMP packets passing through the firewall in
+  either direction (either completely or only for untrusted networks)","","The Timestamp Reply is an ICMP message which replies to a
+  Timestamp message. It consists of the originating timestamp sent by the sender of the Timestamp as
+  well as a receive timestamp and a transmit timestamp.","Sends an ICMP Timestamp (Type 13) request and checks if a
+  Timestamp Reply (Type 14) is received.
+Details:
+ICMP Timestamp Reply Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.103190)
+Version used: 2025-01-21T05:37:33Z
+","","","DFN-CERT-2014-0658,CB-K15/1514,CB-K14/0632",""
+10.0.0.116,,,,2.1,Low,80,"Mitigation","ICMP Timestamp Reply Information Disclosure","The remote host responded to an ICMP timestamp request.","The following response / ICMP packet has been received:
+- ICMP Type: 14
+- ICMP Code: 0
+",1.3.6.1.4.1.25623.1.0.103190,"CVE-1999-0524",33467d73-4d16-47b4-8cde-ab099da2c47f,"My network scan",2025-03-04T16:56:36Z,41043014-9cb2-4fab-ace6-1711b8520fe2,"This information could theoretically be used to exploit weak
+  time-based random number generators in other services.","Various mitigations are possible:
+
+  - Disable the support for ICMP timestamp on the remote host completely
+
+  - Protect the remote host by a firewall, and block ICMP packets passing through the firewall in
+  either direction (either completely or only for untrusted networks)","","The Timestamp Reply is an ICMP message which replies to a
+  Timestamp message. It consists of the originating timestamp sent by the sender of the Timestamp as
+  well as a receive timestamp and a transmit timestamp.","Sends an ICMP Timestamp (Type 13) request and checks if a
+  Timestamp Reply (Type 14) is received.
+Details:
+ICMP Timestamp Reply Information Disclosure
+(OID: 1.3.6.1.4.1.25623.1.0.103190)
+Version used: 2025-01-21T05:37:33Z
+","","","DFN-CERT-2014-0658,CB-K15/1514,CB-K14/0632",""

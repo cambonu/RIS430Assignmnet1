@@ -1,0 +1,17 @@
+nmap --script vuln 10.0.0.188
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-03-01 19:25 Eastern Standard Time
+Pre-scan script results:
+| broadcast-avahi-dos:
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.0.0.188
+Host is up (0.024s latency).
+Not shown: 998 closed tcp ports (reset)
+PORT      STATE SERVICE
+49152/tcp open  unknown
+62078/tcp open  iphone-sync
+MAC Address: 36:AA:2E:62:60:52 (Unknown)
+
+Nmap done: 1 IP address (1 host up) scanned in 47.89 seconds
